@@ -7,8 +7,8 @@
       "windowType": "dockable",
       "x": -8,
       "y": -8,
-      "width": 1936,
-      "height": 1056,
+      "width": 1292,
+      "height": 1036,
       "layout": {
         "children": [
           {
@@ -99,6 +99,32 @@
         "scene",
         "timeline"
       ]
+    },
+    "window-1525401905566": {
+      "main": false,
+      "url": "unpack://static/window.html",
+      "windowType": "dockable",
+      "x": 245,
+      "y": 217,
+      "width": 600,
+      "height": 562,
+      "layout": {
+        "children": [
+          {
+            "active": 0,
+            "children": [
+              "project-settings"
+            ],
+            "height": 526,
+            "type": "panel",
+            "width": 584
+          }
+        ],
+        "type": "dock-v"
+      },
+      "panels": [
+        "project-settings"
+      ]
     }
   },
   "panels": {
@@ -106,6 +132,12 @@
       "x": 672,
       "y": 242,
       "width": 580,
+      "height": 562
+    },
+    "project-settings": {
+      "x": 245,
+      "y": 217,
+      "width": 600,
       "height": 562
     }
   }

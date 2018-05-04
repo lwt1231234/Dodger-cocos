@@ -27,18 +27,46 @@ cc.Class({
         //         this._bar = value;
         //     }
         // },
+        BulletPrefab: cc.Prefab
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad :function() {
-        this.physicsManager = cc.director.getPhysicsManager();
-        this.physicsManager.enabled = true;
-     },
-
-    start () {
-        cc.director.getPhysicsManager().enabled = true;
+        //this.node.runAction(cc.repeatForever(cc.rotateBy(1,30)));
+        //var action = cc.rotateBy(1,30);
+        //this.node.runAction(action);
+        this.CreateBullet();
     },
 
-    // update (dt) {},
+    start () {
+        //cc.log(1);
+    },
+
+    update :function(dt) {
+        this.node.rotation += dt*10;
+    },
+
+    Rotate(){
+        //var action = cc.rotateBy(30);
+        //this.node.runAction(action);
+    },
+
+    CreateBullet(){
+        //cc.log(1);
+        var newBullet = cc.instantiate(this.BulletPrefab);
+        //newBullet.getComponent("BulletControl").init();
+        newBullet.x = 0;
+        newBullet.y = 0;
+        newBullet.parent = this.node;
+        cc.log(this.node.rotation);
+        cc.log(Math.PI);
+        cc.log(cc.pForAngle(this.node.rotation*Math.floor(Math.PI/180)).x);
+        cc.log(cc.pForAngle(this.node.rotation*Math.floor(Math.PI/180)).y);
+        newBullet.getComponent(cc.RigidBody).linearVelocity = cc.v2(cc.pForAngle(this.node.rotation*Math.PI/180).y*100,cc.pForAngle(this.node.rotation*Math.PI/180).x*100);
+
+        cc.log(newBullet);
+        this.scheduleOnce(function(){this.CreateBullet();}, 2);
+    }
+    
 });

@@ -225,12 +225,12 @@
     "relativePath": "prefab\\webview.prefab"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1525273541488,
+    "asset": 1525273667184,
     "meta": 1525273541486,
     "relativePath": "Scene"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1525273541488,
+    "asset": 1525274330608,
     "meta": 1525273541486,
     "relativePath": "Script"
   },
@@ -240,8 +240,8 @@
     "relativePath": "Script\\HelloWorld.js"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1525275568028,
-    "meta": 1525275568058,
+    "asset": 1525400961133,
+    "meta": 1525400961151,
     "relativePath": "Scene\\Main.fire"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
@@ -260,7 +260,7 @@
     "relativePath": "Texture\\HelloWorld.png"
   },
   "6e6f79e4-8f19-4e40-be9a-485f4a9bfaaf": {
-    "asset": 1525273782482,
+    "asset": 1525273868665,
     "meta": 1525273782488,
     "relativePath": "Picture"
   },
@@ -275,8 +275,38 @@
     "relativePath": "Picture\\Picture_Block.png"
   },
   "b3132a90-a6c2-4549-8788-c2fa993d38b8": {
-    "asset": 1525274404998,
-    "meta": 1525274405981,
+    "asset": 1525360540273,
+    "meta": 1525360550246,
     "relativePath": "Script\\GameManager.js"
+  },
+  "54f695a5-2594-4d64-9fb5-194b2722cdd7": {
+    "asset": 1525363323774,
+    "meta": 1525363323785,
+    "relativePath": "Prefab\\Block.prefab"
+  },
+  "7b22e7e2-3eab-4609-b746-fb6c9d170819": {
+    "asset": 1525360618573,
+    "meta": 1525360618575,
+    "relativePath": "Prefab"
+  },
+  "51f7b57c-9a33-4d56-a3fa-7b75c669e4d2": {
+    "asset": 1525360841929,
+    "meta": 1525360841984,
+    "relativePath": "Picture\\Picture_Turret.png"
+  },
+  "4e365874-d408-46c6-87e9-e6d42ea8eae7": {
+    "asset": 1525401975352,
+    "meta": 1525401975368,
+    "relativePath": "Prefab\\Bullet.prefab"
+  },
+  "8e45c786-7257-4a55-b7c8-9358b9acaabb": {
+    "asset": 1525399274360,
+    "meta": 1525399291026,
+    "relativePath": "Script\\BulletControl.js"
+  },
+  "dfdec900-1255-4700-8909-5f97f54a1f3f": {
+    "asset": 1525401808615,
+    "meta": 1525401809329,
+    "relativePath": "Script\\TurretControl.js"
   }
 }

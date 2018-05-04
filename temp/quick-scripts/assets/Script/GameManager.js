@@ -37,7 +37,10 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
+    onLoad: function onLoad() {
+        this.physicsManager = cc.director.getPhysicsManager();
+        this.physicsManager.enabled = true;
+    },
 
     start: function start() {
         cc.director.getPhysicsManager().enabled = true;

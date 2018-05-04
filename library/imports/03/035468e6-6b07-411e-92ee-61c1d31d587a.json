@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Picture_Turret",
+    "texture": "51f7b57c-9a33-4d56-a3fa-7b75c669e4d2",
+    "atlas": "",
+    "rect": [
+      9,
+      3,
+      78,
+      90
+    ],
+    "offset": [
+      -2,
+      1.5
+    ],
+    "originalSize": [
+      100,
+      99
+    ]
+  }
+}

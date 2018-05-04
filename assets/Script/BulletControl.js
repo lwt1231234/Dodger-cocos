@@ -31,13 +31,21 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad :function() {
-        this.physicsManager = cc.director.getPhysicsManager();
-        this.physicsManager.enabled = true;
+     onLoad :function() {
+     	
+     	//var Turret = cc.find("Turret");
+    	//this.node.x = Turret.x;
+    	//this.node.y = Turret.y;
+     	//this.getComponent(cc.RigidBody).linearVelocity = cc.v2(cc.pForAngle(Turret.rotation).x*100,-cc.pForAngle(Turret.rotation).y*100);
+     	//cc.log(2);
+     },
+
+     init(){
+
      },
 
     start () {
-        cc.director.getPhysicsManager().enabled = true;
+
     },
 
     // update (dt) {},
