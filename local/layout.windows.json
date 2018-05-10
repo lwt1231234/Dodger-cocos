@@ -7,8 +7,8 @@
       "windowType": "dockable",
       "x": -8,
       "y": -8,
-      "width": 1292,
-      "height": 1036,
+      "width": 1936,
+      "height": 1056,
       "layout": {
         "children": [
           {
@@ -45,7 +45,7 @@
                     "children": [
                       "scene"
                     ],
-                    "height": 701.984375,
+                    "height": 660,
                     "type": "panel",
                     "width": 819.984375
                   },
@@ -54,12 +54,12 @@
                     "children": [
                       "node-library"
                     ],
-                    "height": 701.984375,
+                    "height": 660,
                     "type": "panel",
                     "width": 310.984375
                   }
                 ],
-                "height": 701.984375,
+                "height": 660,
                 "type": "dock-h",
                 "width": 1133.984375
               },
@@ -69,7 +69,7 @@
                   "console",
                   "timeline"
                 ],
-                "height": 226,
+                "height": 268,
                 "type": "panel",
                 "width": 1133.984375
               }
@@ -99,32 +99,6 @@
         "scene",
         "timeline"
       ]
-    },
-    "window-1525401905566": {
-      "main": false,
-      "url": "unpack://static/window.html",
-      "windowType": "dockable",
-      "x": 245,
-      "y": 217,
-      "width": 600,
-      "height": 562,
-      "layout": {
-        "children": [
-          {
-            "active": 0,
-            "children": [
-              "project-settings"
-            ],
-            "height": 526,
-            "type": "panel",
-            "width": 584
-          }
-        ],
-        "type": "dock-v"
-      },
-      "panels": [
-        "project-settings"
-      ]
     }
   },
   "panels": {
@@ -135,10 +109,16 @@
       "height": 562
     },
     "project-settings": {
-      "x": 245,
-      "y": 217,
+      "x": 467,
+      "y": 205,
       "width": 600,
       "height": 562
+    },
+    "builder": {
+      "x": 702,
+      "y": 142,
+      "width": 516,
+      "height": 736
     }
   }
 }

@@ -1,82 +1,511 @@
-2018-05-03T15:08:31.949Z - normal: Load ~/.CocosCreator/settings.json
-2018-05-03T15:08:31.952Z - normal: checking language setting...
-2018-05-03T15:08:31.952Z - normal: Language: zh
-2018-05-03T15:08:35.927Z - success: protocol editor-framework registered
-2018-05-03T15:08:35.927Z - success: protocol app registered
-2018-05-03T15:08:35.927Z - success: protocol theme registered
-2018-05-03T15:08:35.927Z - success: protocol packages registered
-2018-05-03T15:08:35.928Z - success: protocol unpack registerred
-2018-05-03T15:08:35.928Z - success: protocol disable-commonjs registerred
-2018-05-03T15:08:36.635Z - normal: connected!
-2018-05-03T15:08:36.643Z - normal: Check project D:\Project\Dodger-cocos
-2018-05-03T15:08:36.650Z - normal: Initializing Cocos2d
-2018-05-03T15:08:37.860Z - normal: Initializing Asset Database
-2018-05-03T15:08:37.960Z - success: protocol uuid registerred
-2018-05-03T15:08:37.961Z - success: protocol db registerred
-2018-05-03T15:08:37.961Z - success: protocol thumbnail registerred
-2018-05-03T15:08:37.961Z - normal: Loading editor/builtin packages
-2018-05-03T15:08:38.351Z - success: anysdk loaded
-2018-05-03T15:08:38.579Z - success: assets loaded
-2018-05-03T15:08:38.587Z - success: builder loaded
-2018-05-03T15:08:38.595Z - success: cocos-analytics loaded
-2018-05-03T15:08:38.607Z - success: console loaded
-2018-05-03T15:08:38.679Z - success: fb-instant-games loaded
-2018-05-03T15:08:38.688Z - success: hierarchy loaded
-2018-05-03T15:08:38.690Z - success: inspector loaded
-2018-05-03T15:08:38.691Z - success: keystore loaded
-2018-05-03T15:08:38.695Z - success: node-library loaded
-2018-05-03T15:08:38.696Z - success: package-asset loaded
-2018-05-03T15:08:38.698Z - success: preferences loaded
-2018-05-03T15:08:38.699Z - success: project-exporter loaded
-2018-05-03T15:08:38.738Z - success: project-importer loaded
-2018-05-03T15:08:38.740Z - success: project-settings loaded
-2018-05-03T15:08:38.741Z - success: ui-kit loaded
-2018-05-03T15:08:38.748Z - success: ui-grid loaded
-2018-05-03T15:08:38.751Z - success: scene loaded
-2018-05-03T15:08:38.752Z - success: sprite-editor loaded
-2018-05-03T15:08:38.755Z - success: store loaded
-2018-05-03T15:08:38.759Z - success: timeline loaded
-2018-05-03T15:08:38.759Z - normal: Loading builtin packages
-2018-05-03T15:08:38.763Z - success: asset-db-debugger loaded
-2018-05-03T15:08:38.765Z - success: code-editor loaded
-2018-05-03T15:08:38.770Z - success: color-picker loaded
-2018-05-03T15:08:38.772Z - success: package-manager loaded
-2018-05-03T15:08:38.800Z - success: sdkbox loaded
-2018-05-03T15:08:38.802Z - success: tester loaded
-2018-05-03T15:08:38.805Z - success: ui-kit-preview-extra loaded
-2018-05-03T15:08:38.806Z - success: ui-kit-preview loaded
-2018-05-03T15:08:38.808Z - success: ui-tree loaded
-2018-05-03T15:08:40.345Z - normal: Initializing project D:\Project\Dodger-cocos
-2018-05-03T15:08:40.351Z - normal: Loading packages
-2018-05-03T15:08:40.361Z - normal: Watching packages
-2018-05-03T15:08:40.396Z - normal: Run Application
-2018-05-03T15:08:41.663Z - success: preview server running at http://localhost:7456
-2018-05-03T15:08:48.234Z - normal: 1.9.1
-2018-05-03T16:03:50.652Z - failed: [db-task][sync-changes] Failed to import asset D:\Project\Dodger-cocos\assets\Script\BulletControl.js, message: Compile error: SyntaxError: D:/Project/Dodger-cocos/assets/Script/BulletControl.js: Unexpected token, expected , (30:41)
-  28 |         //     }
-  29 |         // },
-> 30 |         Turrent: require('TurretControl');
-     |                                          ^
-  31 |     },
-  32 | 
-  33 |     // LIFE-CYCLE CALLBACKS:
-    at Parser.pp$5.raise (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
-    at Parser.pp.unexpected (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1761:8)
-    at Parser.pp.expect (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1749:33)
-    at Parser.pp$3.parseObj (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3978:12)
-    at Parser.pp$3.parseExprAtom (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3719:19)
-    at Parser.pp$3.parseExprSubscripts (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3494:19)
-    at Parser.pp$3.parseMaybeUnary (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3474:19)
-    at Parser.pp$3.parseExprOps (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3404:19)
-    at Parser.pp$3.parseMaybeConditional (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3381:19)
-    at Parser.pp$3.parseMaybeAssign (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3344:19)
-2018-05-03T16:06:06.242Z - error: Reference "Turrent" of "Bullet<BulletControl>" to external scene object "Turret" can not be saved in prefab asset.
-    at D:\Program Files\CocosCreator\resources\app.asar\editor\page\scene-utils\prefab-utils.js:1:4424
-    at t (D:\Program Files\CocosCreator\resources\app.asar\editor\page\scene-utils\prefab-utils.js:1:563)
-    at visitObjTypeProperties (D:\Program Files\CocosCreator\resources\app.asar\editor\page\scene-utils\prefab-utils.js:1:614)
-    at D:\Program Files\CocosCreator\resources\app.asar\editor\page\scene-utils\prefab-utils.js:1:4187
-    at visitNode (D:\Program Files\CocosCreator\resources\app.asar\editor\page\scene-utils\prefab-utils.js:1:197)
-    at Object.PrefabUtils.getDumpableNode (D:\Program Files\CocosCreator\resources\app.asar\editor\page\scene-utils\prefab-utils.js:1:4163)
-    at Object.PrefabUtils.createPrefabFrom (D:\Program Files\CocosCreator\resources\app.asar\editor\page\scene-utils\prefab-utils.js:1:4749)
-    at Object.createPrefab (D:\Program Files\CocosCreator\resources\app.asar\editor\page\scene-utils\index.js:1:15260)
-    at HTMLElement.scene:create-prefab (file:///D:/Program%20Files/CocosCreator/resources/app.asar/editor/builtin/scene/panel/scene.js:1:10470)
+2018-05-10T14:18:27.242Z - normal: Load ~/.CocosCreator/settings.json
+2018-05-10T14:18:27.245Z - normal: checking language setting...
+2018-05-10T14:18:27.245Z - normal: Language: zh
+2018-05-10T14:18:28.878Z - success: protocol editor-framework registered
+2018-05-10T14:18:28.878Z - success: protocol app registered
+2018-05-10T14:18:28.878Z - success: protocol theme registered
+2018-05-10T14:18:28.878Z - success: protocol packages registered
+2018-05-10T14:18:28.878Z - success: protocol unpack registerred
+2018-05-10T14:18:28.878Z - success: protocol disable-commonjs registerred
+2018-05-10T14:18:29.255Z - normal: connected!
+2018-05-10T14:18:29.260Z - normal: Check project D:\Project\Dodger-cocos
+2018-05-10T14:18:29.265Z - normal: Initializing Cocos2d
+2018-05-10T14:18:29.470Z - normal: Initializing Asset Database
+2018-05-10T14:18:29.501Z - success: protocol uuid registerred
+2018-05-10T14:18:29.501Z - success: protocol db registerred
+2018-05-10T14:18:29.501Z - success: protocol thumbnail registerred
+2018-05-10T14:18:29.501Z - normal: Loading editor/builtin packages
+2018-05-10T14:18:29.518Z - success: anysdk loaded
+2018-05-10T14:18:29.624Z - success: assets loaded
+2018-05-10T14:18:29.625Z - success: builder loaded
+2018-05-10T14:18:29.627Z - success: cocos-analytics loaded
+2018-05-10T14:18:29.629Z - success: console loaded
+2018-05-10T14:18:29.663Z - success: fb-instant-games loaded
+2018-05-10T14:18:29.666Z - success: hierarchy loaded
+2018-05-10T14:18:29.668Z - success: inspector loaded
+2018-05-10T14:18:29.669Z - success: keystore loaded
+2018-05-10T14:18:29.670Z - success: node-library loaded
+2018-05-10T14:18:29.671Z - success: package-asset loaded
+2018-05-10T14:18:29.673Z - success: preferences loaded
+2018-05-10T14:18:29.674Z - success: project-exporter loaded
+2018-05-10T14:18:29.687Z - success: project-importer loaded
+2018-05-10T14:18:29.689Z - success: project-settings loaded
+2018-05-10T14:18:29.691Z - success: ui-kit loaded
+2018-05-10T14:18:29.692Z - success: ui-grid loaded
+2018-05-10T14:18:29.694Z - success: scene loaded
+2018-05-10T14:18:29.694Z - success: sprite-editor loaded
+2018-05-10T14:18:29.696Z - success: store loaded
+2018-05-10T14:18:29.699Z - success: timeline loaded
+2018-05-10T14:18:29.699Z - normal: Loading builtin packages
+2018-05-10T14:18:29.701Z - success: asset-db-debugger loaded
+2018-05-10T14:18:29.702Z - success: code-editor loaded
+2018-05-10T14:18:29.702Z - success: color-picker loaded
+2018-05-10T14:18:29.704Z - success: package-manager loaded
+2018-05-10T14:18:29.707Z - success: sdkbox loaded
+2018-05-10T14:18:29.709Z - success: tester loaded
+2018-05-10T14:18:29.710Z - success: ui-kit-preview-extra loaded
+2018-05-10T14:18:29.711Z - success: ui-kit-preview loaded
+2018-05-10T14:18:29.712Z - success: ui-tree loaded
+2018-05-10T14:18:30.706Z - normal: Initializing project D:\Project\Dodger-cocos
+2018-05-10T14:18:30.727Z - normal: Loading packages
+2018-05-10T14:18:30.732Z - normal: Watching packages
+2018-05-10T14:18:30.742Z - normal: Run Application
+2018-05-10T14:18:31.279Z - success: preview server running at http://localhost:7456
+2018-05-10T14:18:35.142Z - normal: 1.9.1
+2018-05-10T14:18:35.439Z - warn: The 'type' attribute of 'StickControl.target' is undefined when loading script
+2018-05-10T14:27:15.854Z - warn: The Asset used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Stick"
+Missing uuid: "041228cd-f582-4ae9-8d4f-56650f1b9474"
+
+2018-05-10T14:27:15.855Z - warn: The Asset used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Stick"
+Missing uuid: "0090b22f-9aca-40d6-8374-80d3991293b2"
+
+2018-05-10T14:27:15.858Z - warn: The Asset used by component "cc.MissingScript" is missing. Detailed information:
+Node path: "GameManager"
+Missing uuid: "562f152f-8be7-4f48-bf7e-7fefe3b404ce"
+
+2018-05-10T14:27:15.858Z - warn: The Asset used by component "cc.MissingScript" is missing. Detailed information:
+Node path: "GameManager"
+Missing uuid: "0090b22f-9aca-40d6-8374-80d3991293b2"
+
+2018-05-10T14:27:15.859Z - warn: The Asset used by component "cc.Sprite" is missing. Detailed information:
+Node path: "StickBG"
+Missing uuid: "350dca94-d217-440e-ad76-41731e98d288"
+
+2018-05-10T14:27:15.859Z - warn: The Asset used by component "cc.Sprite" is missing. Detailed information:
+Node path: "StickBG"
+Missing uuid: "562f152f-8be7-4f48-bf7e-7fefe3b404ce"
+
+2018-05-10T14:28:03.419Z - warn: Script attached to "GameManager" is missing or invalid. Detailed information:
+Node path: "GameManager"
+Script UUID: "9f6c3180-ac4f-4f01-b63c-39c3dd724eb3"
+Class ID: "9f6c3GArE9PAbY8OcPdck6z"
+
+2018-05-10T14:28:20.880Z - warn: Script attached to "GameManager" is missing or invalid. Detailed information:
+Node path: "GameManager"
+Script UUID: "9f6c3180-ac4f-4f01-b63c-39c3dd724eb3"
+Class ID: "9f6c3GArE9PAbY8OcPdck6z"
+
+2018-05-10T14:30:35.776Z - warn: Script attached to "GameManager" is missing or invalid. Detailed information:
+Node path: "GameManager"
+Script UUID: "9f6c3180-ac4f-4f01-b63c-39c3dd724eb3"
+Class ID: "9f6c3GArE9PAbY8OcPdck6z"
+
+2018-05-10T14:30:46.955Z - warn: Script attached to "GameManager" is missing or invalid. Detailed information:
+Node path: "GameManager"
+Script UUID: "9f6c3180-ac4f-4f01-b63c-39c3dd724eb3"
+Class ID: "9f6c3GArE9PAbY8OcPdck6z"
+
+2018-05-10T14:31:07.700Z - warn: Script attached to "GameManager" is missing or invalid. Detailed information:
+Node path: "GameManager"
+Script UUID: "9f6c3180-ac4f-4f01-b63c-39c3dd724eb3"
+Class ID: "9f6c3GArE9PAbY8OcPdck6z"
+
+2018-05-10T14:31:19.025Z - warn: Script attached to "GameManager" is missing or invalid. Detailed information:
+Node path: "GameManager"
+Script UUID: "9f6c3180-ac4f-4f01-b63c-39c3dd724eb3"
+Class ID: "9f6c3GArE9PAbY8OcPdck6z"
+
+2018-05-10T15:08:39.843Z - error: scene 没有保存，请先保存相关信息再进行构建。
+    at Editor.Ipc.sendToPanel (eval at _evaluateAndCacheScript (D:\Program Files\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\resource-mgr.js:1:1020), <anonymous>:1:14928)
+    at EventEmitter.ipcRenderer.on.n (D:\Program Files\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:4493)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2018-05-10T15:08:59.399Z - normal: Start building with options : {
+  "androidStudio": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "D:\\Project\\Dodger-cocos\\build",
+  "debug": false,
+  "dest": "D:\\Project\\Dodger-cocos\\build\\wechatgame",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeEruda": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "scenes": [
+    "2d2f792f-a40c-49bb-a189-ed176a246e49"
+  ],
+  "sourceMaps": false,
+  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
+  "template": "link",
+  "title": "Dodger",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx2c1aef69fa32b3e8",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "xxteaKey": "5289e606-00b5-47",
+  "zipCompressJs": true,
+  "project": "D:\\Project\\Dodger-cocos",
+  "projectName": "Dodger",
+  "debugBuildWorker": false
+}
+2018-05-10T15:08:59.405Z - normal: Building D:\Project\Dodger-cocos
+2018-05-10T15:08:59.406Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-05-10T15:09:00.464Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-05-10T15:09:46.451Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:55568
+2018-05-10T15:09:46.454Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:55572
+2018-05-10T15:09:46.454Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:55574
+2018-05-10T15:09:46.454Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:55576
+2018-05-10T15:09:46.455Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:55578
+2018-05-10T15:09:48.176Z - normal: Compiled project javascript file successfully
+2018-05-10T15:09:48.177Z - normal: Start building assets
+2018-05-10T15:09:48.177Z - normal: Start spawn build-worker
+2018-05-10T15:09:48.809Z - normal: Finish spawn build-worker
+2018-05-10T15:09:48.809Z - normal: Start init build-worker
+2018-05-10T15:09:50.700Z - normal: 1.9.1
+2018-05-10T15:09:50.750Z - normal: Finish init build-worker
+2018-05-10T15:09:50.751Z - normal: Start build-assets in worker
+2018-05-10T15:09:51.113Z - normal: Finish build-assets in worker
+2018-05-10T15:09:51.123Z - normal: Finish building assets
+2018-05-10T15:09:51.130Z - normal: Start building raw assets
+2018-05-10T15:09:51.131Z - normal: Start building plugin scripts
+2018-05-10T15:09:51.142Z - normal: Finish building raw assets
+2018-05-10T15:09:51.171Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-05-10T15:09:51.267Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-05-10T15:10:53.619Z - error: 请在 [偏好设置 -> 原生开发环境] 中设置微信开发者工具路径。
+    at Object.run (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:387)
+    at EventEmitter.ipcMain.on (D:\Program Files\CocosCreator\resources\app.asar\editor\core\ipc\app-ipc.js:1:1115)
+    at emitTwo (events.js:106:13)
+    at EventEmitter.emit (events.js:194:7)
+    at WebContents.<anonymous> (D:\Program Files\CocosCreator\resources\electron.asar\browser\api\web-contents.js:247:13)
+    at emitTwo (events.js:106:13)
+    at WebContents.emit (events.js:194:7)
+2018-05-10T15:11:02.631Z - error: 请在 [偏好设置 -> 原生开发环境] 中设置微信开发者工具路径。
+    at Object.run (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:387)
+    at EventEmitter.ipcMain.on (D:\Program Files\CocosCreator\resources\app.asar\editor\core\ipc\app-ipc.js:1:1115)
+    at emitTwo (events.js:106:13)
+    at EventEmitter.emit (events.js:194:7)
+    at WebContents.<anonymous> (D:\Program Files\CocosCreator\resources\electron.asar\browser\api\web-contents.js:247:13)
+    at emitTwo (events.js:106:13)
+    at WebContents.emit (events.js:194:7)
+2018-05-10T15:12:43.264Z - error: 请在 [偏好设置 -> 原生开发环境] 中设置微信开发者工具路径。
+    at Object.run (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:387)
+    at EventEmitter.ipcMain.on (D:\Program Files\CocosCreator\resources\app.asar\editor\core\ipc\app-ipc.js:1:1115)
+    at emitTwo (events.js:106:13)
+    at EventEmitter.emit (events.js:194:7)
+    at WebContents.<anonymous> (D:\Program Files\CocosCreator\resources\electron.asar\browser\api\web-contents.js:247:13)
+    at emitTwo (events.js:106:13)
+    at WebContents.emit (events.js:194:7)
+2018-05-10T15:14:04.149Z - normal: Initializing...
+
+2018-05-10T15:14:04.155Z - normal: idePortFile: C:\Users\Sniper\AppData\Local\微信web开发者工具\User Data\Default\.ide
+
+2018-05-10T15:14:05.174Z - normal: starting ide...
+
+2018-05-10T15:14:08.491Z - normal: IDE server has started, listening on http://127.0.0.1:63728
+
+2018-05-10T15:14:08.493Z - normal: initialization finished
+
+2018-05-10T15:14:08.499Z - error: Runtime error: Error 
+ Error: getaddrinfo ENOTFOUND http://127.0.0.1 http://127.0.0.1:63728
+
+    at Socket.<anonymous> (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:1302)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at Pipe.onread (net.js:560:20)
+2018-05-10T15:14:08.500Z - error: Runtime error: Error 
+ Error: socket hang up
+
+    at Socket.<anonymous> (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:1302)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at Pipe.onread (net.js:560:20)
+2018-05-10T15:14:08.868Z - error: StatusCodeError: 400 - "{\"code\":40000,\"error\":\"错误 Error: 登录用户不是该小程序的开发者\"}"
+
+    at Socket.<anonymous> (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:1302)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at Pipe.onread (net.js:560:20)
+2018-05-10T15:16:50.583Z - normal: Start building with options : {
+  "androidStudio": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "D:\\Project\\Dodger-cocos\\build",
+  "debug": false,
+  "dest": "D:\\Project\\Dodger-cocos\\build\\wechatgame",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeEruda": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "scenes": [
+    "2d2f792f-a40c-49bb-a189-ed176a246e49"
+  ],
+  "sourceMaps": false,
+  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
+  "template": "link",
+  "title": "Dodger",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx2c1aef69fa32b3e8",
+    "isSubdomain": false,
+    "orientation": "landscape",
+    "subContext": ""
+  },
+  "xxteaKey": "5289e606-00b5-47",
+  "zipCompressJs": true,
+  "project": "D:\\Project\\Dodger-cocos",
+  "projectName": "Dodger",
+  "debugBuildWorker": false
+}
+2018-05-10T15:16:50.595Z - normal: Building D:\Project\Dodger-cocos
+2018-05-10T15:16:50.595Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-05-10T15:16:50.599Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-05-10T15:16:52.392Z - normal: Compiled project javascript file successfully
+2018-05-10T15:16:52.392Z - normal: Start building assets
+2018-05-10T15:16:52.392Z - normal: Start spawn build-worker
+2018-05-10T15:16:53.024Z - normal: Finish spawn build-worker
+2018-05-10T15:16:53.024Z - normal: Start init build-worker
+2018-05-10T15:16:54.935Z - normal: 1.9.1
+2018-05-10T15:16:54.984Z - normal: Finish init build-worker
+2018-05-10T15:16:54.984Z - normal: Start build-assets in worker
+2018-05-10T15:16:55.163Z - normal: Finish build-assets in worker
+2018-05-10T15:16:55.168Z - normal: Finish building assets
+2018-05-10T15:16:55.174Z - normal: Start building raw assets
+2018-05-10T15:16:55.175Z - normal: Start building plugin scripts
+2018-05-10T15:16:55.186Z - normal: Finish building raw assets
+2018-05-10T15:16:55.188Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-05-10T15:16:55.251Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-05-10T15:17:00.539Z - normal: Initializing...
+
+2018-05-10T15:17:00.547Z - normal: idePortFile: C:\Users\Sniper\AppData\Local\微信web开发者工具\User Data\Default\.ide
+
+2018-05-10T15:17:00.566Z - normal: IDE server has started, listening on http://127.0.0.1:63728
+
+2018-05-10T15:17:00.566Z - normal: initialization finished
+
+2018-05-10T15:17:00.778Z - error: StatusCodeError: 400 - "{\"code\":40000,\"error\":\"错误 Error: 登录用户不是该小程序的开发者\"}"
+
+    at Socket.<anonymous> (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:1302)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at Pipe.onread (net.js:560:20)
+2018-05-10T15:17:14.981Z - normal: Initializing...
+
+2018-05-10T15:17:14.989Z - normal: idePortFile: C:\Users\Sniper\AppData\Local\微信web开发者工具\User Data\Default\.ide
+
+2018-05-10T15:17:16.008Z - normal: starting ide...
+
+2018-05-10T15:17:19.267Z - normal: IDE server has started, listening on http://127.0.0.1:50774
+
+2018-05-10T15:17:19.269Z - normal: initialization finished
+
+2018-05-10T15:17:19.274Z - error: Runtime error: Error 
+ Error: getaddrinfo ENOTFOUND http://127.0.0.1 http://127.0.0.1:50774
+
+    at Socket.<anonymous> (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:1302)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at Pipe.onread (net.js:560:20)
+2018-05-10T15:17:19.275Z - error: Runtime error: Error 
+ Error: socket hang up
+
+    at Socket.<anonymous> (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:1302)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at Pipe.onread (net.js:560:20)
+2018-05-10T15:17:19.526Z - error: StatusCodeError: 400 - "{\"code\":40000,\"error\":\"错误 Error: 登录用户不是该小程序的开发者\"}"
+
+    at Socket.<anonymous> (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:1302)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at Pipe.onread (net.js:560:20)
+2018-05-10T15:19:47.041Z - normal: Start building with options : {
+  "androidStudio": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "D:\\Project\\Dodger-cocos\\build",
+  "debug": false,
+  "dest": "D:\\Project\\Dodger-cocos\\build\\wechatgame",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeEruda": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "scenes": [
+    "2d2f792f-a40c-49bb-a189-ed176a246e49"
+  ],
+  "sourceMaps": false,
+  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
+  "template": "link",
+  "title": "Dodger",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "",
+    "isSubdomain": false,
+    "orientation": "landscape",
+    "subContext": ""
+  },
+  "xxteaKey": "5289e606-00b5-47",
+  "zipCompressJs": true,
+  "project": "D:\\Project\\Dodger-cocos",
+  "projectName": "Dodger",
+  "debugBuildWorker": false
+}
+2018-05-10T15:19:47.076Z - normal: Building D:\Project\Dodger-cocos
+2018-05-10T15:19:47.076Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-05-10T15:19:47.079Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-05-10T15:19:48.813Z - normal: Compiled project javascript file successfully
+2018-05-10T15:19:48.813Z - normal: Start building assets
+2018-05-10T15:19:48.813Z - normal: Start spawn build-worker
+2018-05-10T15:19:49.453Z - normal: Finish spawn build-worker
+2018-05-10T15:19:49.453Z - normal: Start init build-worker
+2018-05-10T15:19:51.448Z - normal: 1.9.1
+2018-05-10T15:19:51.502Z - normal: Finish init build-worker
+2018-05-10T15:19:51.502Z - normal: Start build-assets in worker
+2018-05-10T15:19:51.682Z - normal: Finish build-assets in worker
+2018-05-10T15:19:51.686Z - normal: Finish building assets
+2018-05-10T15:19:51.692Z - normal: Start building raw assets
+2018-05-10T15:19:51.693Z - normal: Start building plugin scripts
+2018-05-10T15:19:51.707Z - normal: Finish building raw assets
+2018-05-10T15:19:51.711Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-05-10T15:19:51.768Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-05-10T15:20:03.226Z - normal: Initializing...
+
+2018-05-10T15:20:03.233Z - normal: idePortFile: C:\Users\Sniper\AppData\Local\微信web开发者工具\User Data\Default\.ide
+
+2018-05-10T15:20:04.250Z - normal: starting ide...
+
+2018-05-10T15:20:07.480Z - normal: IDE server has started, listening on http://127.0.0.1:62404
+
+2018-05-10T15:20:07.482Z - normal: initialization finished
+
+2018-05-10T15:20:07.486Z - error: Runtime error: Error 
+ Error: getaddrinfo ENOTFOUND http://127.0.0.1 http://127.0.0.1:62404
+
+    at Socket.<anonymous> (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:1302)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at Pipe.onread (net.js:560:20)
+2018-05-10T15:20:07.486Z - error: Runtime error: Error 
+ Error: socket hang up
+
+    at Socket.<anonymous> (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:1302)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at Pipe.onread (net.js:560:20)
+2018-05-10T15:20:08.203Z - normal: open IDE success
+
+2018-05-10T15:34:52.689Z - warn: The 'type' attribute of 'HelloWorld.label' is undefined when loading script
+2018-05-10T15:34:53.027Z - error: getComponent: Type must be non-nil
+    at Object.errorID (D:\Program Files\CocosCreator\resources\engine\CCDebugger.js:338:24)
+    at getConstructor (D:\Program Files\CocosCreator\resources\engine\cocos2d\core\utils\base-node.js:43:12)
+    at cc_Node.getComponent (D:\Program Files\CocosCreator\resources\engine\cocos2d\core\utils\base-node.js:748:27)
+    at HTMLElement.scene:query-node-info (file:///D:/Program%20Files/CocosCreator/resources/app.asar/editor/builtin/scene/panel/scene.js:1:7215)
+    at Object.Panel._dispatch (D:\Program Files\CocosCreator\resources\app.asar\editor-framework\lib\renderer\panel.js:1:2283)
+    at EventEmitter.ipcRenderer.on.o (D:\Program Files\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:3960)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
