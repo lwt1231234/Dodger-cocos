@@ -1,9 +1,15 @@
-var Common = require('JoystickCommon');
+var Common = require('GameCommon');
 
 cc.Class({
     extends: cc.Component,
 
     properties: {
+        GameManager: {
+            default: null,
+            type: cc.Node,
+            visible: false,
+        },
+
         dot: {
             default: null,
             type: cc.Node,
@@ -17,6 +23,7 @@ cc.Class({
         },
         _playerNode: {
             default: null,
+            type: cc.Node,
             displayName: '被操作的目标Node',
         },
 
@@ -36,15 +43,15 @@ cc.Class({
             displayName: '变速距离',
         },
 
-        _speed: 0,          //实际速度
-        speed1: 1,         //一段速度
-        speed2: 10,         //二段速度
+        _speed: 0,     
+
         _opacity: 0,        //透明度
     },
 
 
     onLoad: function()
     {
+        this.GameManager = cc.find("GameManager");
         // joy下的Game组件
         this._joyCom = this.node.parent.getComponent('JoyControl');
         // game组件下的player节点
@@ -86,15 +93,17 @@ cc.Class({
      //全方向移动
     _allDirectionsMove: function()
     {
-        this._playerNode.x += Math.cos(this._angle * (Math.PI/180)) * this._speed;
-        this._playerNode.y += Math.sin(this._angle * (Math.PI/180)) * this._speed;
+        //this._playerNode.x += Math.cos(this._angle * (Math.PI/180)) * this._speed;
+        //this._playerNode.y += Math.sin(this._angle * (Math.PI/180)) * this._speed;
+        this._playerNode.getComponent(cc.RigidBody).linearVelocity 
+        = cc.v2(Math.cos(this._angle * (Math.PI/180)) * this._speed * 5,
+                Math.sin(this._angle * (Math.PI/180)) * this._speed * 5);
     },
 
      //计算两点间的距离并返回
     _getDistance: function(pos1, pos2)
     {
-        return Math.sqrt(Math.pow(pos1.x - pos2.x, 2) +
-        Math.pow(pos1.y - pos2.y, 2));
+        return Math.sqrt(Math.pow(pos1.x - pos2.x, 2) + Math.pow(pos1.y - pos2.y, 2));
     },
 
     /*角度/弧度转换
@@ -121,15 +130,18 @@ cc.Class({
     {
         //触摸点和遥控杆中心的距离
         var distance = this._getDistance(point, this.node.getPosition());
+        this._speed1 = this.GameManager.getComponent('GameManager').PlayerSpeed1;
+        this._speed2 = this.GameManager.getComponent('GameManager').PlayerSpeed2;
+
 
         //如果半径
         if(distance < this.radius)
         {
-            this._speed = this.speed1;
+            this._speed = this._speed1;
         }
         else
         {
-            this._speed = this.speed2;
+            this._speed = this._speed2;
         }
     },
 

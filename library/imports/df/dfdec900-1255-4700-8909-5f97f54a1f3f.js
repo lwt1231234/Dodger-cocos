@@ -2,7 +2,7 @@
 cc._RF.push(module, 'dfdeckAElVHAIkJX5f1Sh8/', 'TurretControl');
 // Script/TurretControl.js
 
-"use strict";
+'use strict';
 
 // Learn cc.Class:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
@@ -18,40 +18,44 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        // foo: {
-        //     // ATTRIBUTES:
-        //     default: null,        // The default value will be used only when the component attaching
-        //                           // to a node for the first time
-        //     type: cc.SpriteFrame, // optional, default is typeof default
-        //     serializable: true,   // optional, default is true
-        // },
-        // bar: {
-        //     get () {
-        //         return this._bar;
-        //     },
-        //     set (value) {
-        //         this._bar = value;
-        //     }
-        // },
-        BulletPrefab: cc.Prefab
+        GameManager: {
+            default: null,
+            type: cc.Node,
+            visible: false
+        },
+
+        BulletPrefab: {
+            default: null,
+            type: cc.Prefab
+        },
+        ShootTimer: {
+            default: null,
+            visible: false
+        }
     },
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad: function onLoad() {
-        //this.node.runAction(cc.repeatForever(cc.rotateBy(1,30)));
-        //var action = cc.rotateBy(1,30);
-        //this.node.runAction(action);
-        this.CreateBullet();
-    },
+    onLoad: function onLoad() {},
 
     start: function start() {
-        //cc.log(1);
+        this.GameManager = cc.find("GameManager");
+        this.CreateBullet();
+        this.ShootTimer = 0;
     },
 
 
     update: function update(dt) {
-        this.node.rotation += dt * 10;
+
+        var RotationSpeed = this.GameManager.getComponent('GameManager').RotationSpeed;
+        RotationSpeed = 10 + RotationSpeed;
+        RotationSpeed = RotationSpeed * this.GameManager.getComponent('GameManager').GameSpeed;
+        this.node.rotation += dt * RotationSpeed;
+
+        this.ShootTimer -= dt * this.GameManager.getComponent('GameManager').GameSpeed;
+        if (this.ShootTimer <= 0) {
+            this.CreateBullet();
+        }
     },
 
     Rotate: function Rotate() {
@@ -59,22 +63,18 @@ cc.Class({
         //this.node.runAction(action);
     },
     CreateBullet: function CreateBullet() {
-        //cc.log(1);
         var newBullet = cc.instantiate(this.BulletPrefab);
-        //newBullet.getComponent("BulletControl").init();
         newBullet.x = 0;
         newBullet.y = 0;
         newBullet.parent = this.node;
-        cc.log(this.node.rotation);
-        cc.log(Math.PI);
-        cc.log(cc.pForAngle(this.node.rotation * Math.floor(Math.PI / 180)).x);
-        cc.log(cc.pForAngle(this.node.rotation * Math.floor(Math.PI / 180)).y);
-        newBullet.getComponent(cc.RigidBody).linearVelocity = cc.v2(cc.pForAngle(this.node.rotation * Math.PI / 180).y * 100, cc.pForAngle(this.node.rotation * Math.PI / 180).x * 100);
 
-        cc.log(newBullet);
-        this.scheduleOnce(function () {
-            this.CreateBullet();
-        }, 2);
+        var BulletSpeed = this.GameManager.getComponent('GameManager').BulletSpeed;
+        BulletSpeed = 100 + 10 * BulletSpeed;
+        newBullet.getComponent(cc.RigidBody).linearVelocity = cc.v2(cc.pForAngle(this.node.rotation * Math.PI / 180).y * BulletSpeed, cc.pForAngle(this.node.rotation * Math.PI / 180).x * BulletSpeed);
+
+        var ShootSpeed = this.GameManager.getComponent('GameManager').ShootSpeed;
+        ShootSpeed = 2 * 10 / (10 + ShootSpeed);
+        this.ShootTimer = ShootSpeed;
     }
 });
 

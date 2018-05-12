@@ -12,41 +12,114 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        // foo: {
-        //     // ATTRIBUTES:
-        //     default: null,        // The default value will be used only when the component attaching
-        //                           // to a node for the first time
-        //     type: cc.SpriteFrame, // optional, default is typeof default
-        //     serializable: true,   // optional, default is true
-        // },
-        // bar: {
-        //     get () {
-        //         return this._bar;
-        //     },
-        //     set (value) {
-        //         this._bar = value;
-        //     }
-        // },
+        GameManager: {
+            default: null,
+            type: cc.Node,
+            visible: false,
+        },
+        NormalBulletSpeed: {
+            default: null,
+            visible: false,
+        },
+        GameSpeedThis: {
+            default: null,
+            visible: false,
+        },
+
+        GameSpeedThis: {
+            default: null,
+            visible: false,
+        },
+        Enlargex: {
+            default: null,
+            visible: false,
+        },
+        Enlargey: {
+            default: null,
+            visible: false,
+        },
+
     },
 
     // LIFE-CYCLE CALLBACKS:
 
      onLoad :function() {
-     	
-     	//var Turret = cc.find("Turret");
-    	//this.node.x = Turret.x;
-    	//this.node.y = Turret.y;
-     	//this.getComponent(cc.RigidBody).linearVelocity = cc.v2(cc.pForAngle(Turret.rotation).x*100,-cc.pForAngle(Turret.rotation).y*100);
-     	//cc.log(2);
-     },
-
-     init(){
-
+        this.GameManager = cc.find("GameManager");
+        var BulletLifeTime = this.GameManager.getComponent('GameManager').BulletLifeTime;
+        this.scheduleOnce(function(){this.TImeOut();}, BulletLifeTime);
+        this.GameSpeedThis = 1;
+        this.Enlargex =false;
+        this.Enlargey =false;
      },
 
     start () {
 
     },
 
-    // update (dt) {},
+    TImeOut(){
+        this.node.destroy();
+    },
+
+    update (dt) {
+        var GameSpeed = this.GameManager.getComponent('GameManager').GameSpeed;
+        if(this.GameSpeedThis ==1 && GameSpeed != 1){
+            var xspeed = this.node.getComponent(cc.RigidBody).linearVelocity.x;
+            var yspeed = this.node.getComponent(cc.RigidBody).linearVelocity.y;
+            this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(xspeed*GameSpeed,yspeed*GameSpeed);
+            this.GameSpeedThis = GameSpeed;
+        }
+        if(this.GameSpeedThis !=1 && GameSpeed == 1){
+            var xspeed = this.node.getComponent(cc.RigidBody).linearVelocity.x;
+            var yspeed = this.node.getComponent(cc.RigidBody).linearVelocity.y;
+            this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(xspeed/this.GameSpeedThis,yspeed/this.GameSpeedThis);
+            this.GameSpeedThis = 1;
+        }
+    },
+
+    onBeginContact: function (contact, selfCollider, otherCollider) {
+        var xspeed = this.node.getComponent(cc.RigidBody).linearVelocity.x;
+        if(xspeed<33&&xspeed>=0){
+            xspeed +=35;
+            this.Enlargex = true;
+        }
+        if(xspeed>-33&&xspeed<=0){
+            xspeed -=35;
+            this.Enlargex = true;
+        }
+
+        var yspeed = this.node.getComponent(cc.RigidBody).linearVelocity.y;
+
+        if(yspeed<33&&yspeed>=0){
+            yspeed +=35;
+            this.Enlargey = true;
+        }
+        if(yspeed>-33&&yspeed<=0){
+            yspeed -=35;
+            this.Enlargey = true;
+        }
+
+        this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(xspeed,yspeed);
+    },
+
+    onEndContact: function (contact, selfCollider, otherCollider) {
+        var xspeed = this.node.getComponent(cc.RigidBody).linearVelocity.x;
+        if(this.Enlargex){
+            if(xspeed>0)
+                xspeed-=35;
+            else
+                xspeed+=35;
+            this.Enlargex = false;
+        }
+        var yspeed = this.node.getComponent(cc.RigidBody).linearVelocity.y;
+
+        if(this.Enlargey){
+            if(yspeed>0)
+                yspeed-=35;
+            else
+                yspeed+=35;
+            this.Enlargey = false;
+        }
+
+        this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(xspeed,yspeed);
+    },
 });

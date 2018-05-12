@@ -59,8 +59,8 @@
     "_scaleY": 0.5,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 265,
-      "y": 326
+      "x": 529,
+      "y": 226
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -115,8 +115,8 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
-    "bullet": false
+    "enabledContactListener": true,
+    "bullet": true
   },
   {
     "__type__": "cc.PhysicsCircleCollider",
@@ -127,10 +127,10 @@
     },
     "_enabled": true,
     "tag": 0,
-    "_density": 1,
+    "_density": 10000,
     "_sensor": false,
     "_friction": 0,
-    "_restitution": 1,
+    "_restitution": 1.01,
     "body": null,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -146,7 +146,12 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true
+    "_enabled": true,
+    "GameManager": null,
+    "NormalBulletSpeed": null,
+    "GameSpeedThis": null,
+    "Enlargex": null,
+    "Enlargey": null
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -154,9 +159,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "4e365874-d408-46c6-87e9-e6d42ea8eae7"
+      "__id__": 0
     },
-    "fileId": "80yv4Vs09ILK5CNzvSRNPQ",
+    "fileId": "f9RTgIQchKa78EFqce2UJE",
     "sync": false
   }
 ]

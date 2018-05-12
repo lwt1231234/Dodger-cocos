@@ -1,10 +1,16 @@
-var Common = require('JoystickCommon');
+var Common = require('GameCommon');
 var JoystickBG = require('JoystickBG');
 
 cc.Class({
     extends: cc.Component,
 
     properties: {
+        GameManager: {
+            default: null,
+            type: cc.Node,
+            visible: false,
+        },
+
         dot: {
             default: null,
             type: cc.Node,
@@ -57,6 +63,8 @@ cc.Class({
     },
 
     onLoad: function () {
+        this.GameManager = cc.find("GameManager");
+        
         this._createStickSprite();
         //当触摸类型为FOLLOW会在此对圆圈的触摸监听
         if(this.touchType == Common.TouchType.FOLLOW){
@@ -131,7 +139,6 @@ cc.Class({
     _touchEndEvent: function(){
         this.dot.setPosition(this.ring.node.getPosition());
         this.ring._speed = 0;
-        cc.log(1);
     },
 
 });

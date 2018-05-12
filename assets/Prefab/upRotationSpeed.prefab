@@ -1,17 +1,16 @@
 [
   {
     "__type__": "cc.Prefab",
-    "_name": "Bullet",
+    "_name": "",
     "_objFlags": 0,
     "_rawFiles": null,
     "data": {
       "__id__": 1
-    },
-    "asyncLoadAssets": false
+    }
   },
   {
     "__type__": "cc.Node",
-    "_name": "Bullet",
+    "_name": "upRotationSpeed",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -56,19 +55,19 @@
     },
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 0.5,
-    "_scaleY": 0.5,
+    "_scaleX": 0.25,
+    "_scaleY": 0.25,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 529,
-      "y": 226
+      "x": 250,
+      "y": 33.1
     },
     "_skewX": 0,
     "_skewY": 0,
     "_localZOrder": 0,
     "_globalZOrder": 0,
     "_opacityModifyRGB": false,
-    "groupIndex": 1
+    "groupIndex": 3
   },
   {
     "__type__": "cc.Sprite",
@@ -79,7 +78,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "dd3bded7-697b-4eed-8368-5e21beaa7612"
+      "__uuid__": "9ec4d774-e591-4e18-9dec-0b6427a06aa4"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -97,6 +96,16 @@
     "_atlas": null
   },
   {
+    "__type__": "6b8918x1NFBE7e2NZ3BZFJT",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "Type": 1
+  },
+  {
     "__type__": "cc.RigidBody",
     "_name": "",
     "_objFlags": 0,
@@ -104,7 +113,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_type": 2,
+    "_type": 0,
     "_allowSleep": true,
     "_gravityScale": 0,
     "_linearDamping": 0,
@@ -116,8 +125,8 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": true,
-    "bullet": true
+    "enabledContactListener": false,
+    "bullet": false
   },
   {
     "__type__": "cc.PhysicsCircleCollider",
@@ -128,31 +137,17 @@
     },
     "_enabled": true,
     "tag": 0,
-    "_density": 10000,
+    "_density": 1,
     "_sensor": false,
-    "_friction": 0,
-    "_restitution": 1.01,
+    "_friction": 0.2,
+    "_restitution": 0,
     "body": null,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
       "y": 0
     },
-    "_radius": 27
-  },
-  {
-    "__type__": "8e45ceGcldKVbfIk1i5rKq7",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "GameManager": null,
-    "NormalBulletSpeed": null,
-    "GameSpeedThis": null,
-    "Enlargex": null,
-    "Enlargey": null
+    "_radius": 25
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -162,7 +157,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "f9RTgIQchKa78EFqce2UJE",
+    "fileId": "c7VWmPorpPlL5LqDtFWYOX",
     "sync": false
   }
 ]

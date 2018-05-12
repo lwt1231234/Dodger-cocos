@@ -4,7 +4,7 @@ cc.Class({
     properties: {
         label: {
             default: null,
-            type: cc.Node
+            type: cc.Label,
         },
         // defaults, set visually when attaching this script to the Canvas
         text: 'Hello, World!'
