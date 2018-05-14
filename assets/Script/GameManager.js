@@ -42,6 +42,10 @@ cc.Class({
             default: null,
             visible: false,
         },
+        GamePause :{
+            default: null,
+            visible: false,
+        },
                             //难度属性
         RotationSpeed :{
             default: null,
@@ -90,11 +94,23 @@ cc.Class({
             default: null,
             visible: false,
         },
+        ItemNum :{
+            default: null,
+            visible: false,
+        },
         label_Score: {
             default: null,
             type: cc.Label,
         },
-                            //
+        Player: {
+            default: null,
+            type: cc.Node,
+        },
+        Turret: {
+            default: null,
+            type: cc.Node,
+        },
+                            //特定点位
         Block1: {
             default: null,
             type: cc.Node,
@@ -117,6 +133,26 @@ cc.Class({
             default: null,
             type: cc.Prefab,
         },
+        upShootSpeedPrefab: {
+            default: null,
+            type: cc.Prefab,
+        },
+        upBulletSpeedPrefab: {
+            default: null,
+            type: cc.Prefab,
+        },
+        upBulletLifeTimePrefab: {
+            default: null,
+            type: cc.Prefab,
+        },
+        upPlayerSpeedPrefab: {
+            default: null,
+            type: cc.Prefab,
+        },
+        upSkill_1_MAXPrefab: {
+            default: null,
+            type: cc.Prefab,
+        },
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -134,25 +170,60 @@ cc.Class({
         this.PlayerSpeed1 = 10;
         this.PlayerSpeed2 = 20;
 
-        this.RotationSpeed = 2;
+        this.RotationSpeed = 1;
         this.ShootSpeed = 10;
         this.BulletSpeed = 1;
-        this.BulletLifeTime = 20;
+        this.BulletLifeTime = 5;
 
         this.Skill_1_On = false;
         this.Skill_1_Level = 1;
         this.Skill_1_Time = 5;
         this.Skill_1_Max = 5;
-        this.GameSpeed = 1;
 
+        this.GameSpeed = 1;
         this.Score = 0;
+        this.ItemNum = 0;
+
+        this.Player.x = 400;
+        this.Player.y = 325;
+
+        this.GameSpeed = 1;
+        this.GamePause = false;
 
         this.ItemLifeTime1 = 0;
-        this.ItemLifeTime2 = 0;
+        this.ItemLifeTime2 = 10;
         
 
         this.UpdateData();
-        this.SwapItem();
+        this.ItemNum++;
+        this.SwapBadItem();
+
+    },
+
+    GameOver(){
+        this.GamePause = true;
+        cc.log('test');
+        this.scheduleOnce(function() {
+                    this.GameReset();
+                    }, 5);
+        
+    },
+
+    GameReset(){
+        var childernlist = this.node.children;
+        //cc.log(this.node.childrenCount);
+        for(var i=0;i<this.node.childrenCount;i++){
+            cc.log(childernlist[i]);
+            childernlist[i].destroy();
+        }
+
+        this.Turret.getComponent('TurretControl').GameReset();
+
+        this.scheduleOnce(function() {
+                    this.GameInit();
+                    }, 0.1);
+        
+
     },
 
     start () {
@@ -160,30 +231,31 @@ cc.Class({
     },
 
     update (dt) {
-        if(this.Skill_1_On){
-            if (this.Skill_1_Time>0) {
-                this.GameSpeed = 1/(1+this.Skill_1_Level);
-                this.Skill_1_Time -=dt;
-                if(this.Skill_1_Time<0)
+        if(this.GamePause)
+            this.GameSpeed = 0;
+        else{
+            if(this.Skill_1_On){
+                if (this.Skill_1_Time>0) {
+                    this.GameSpeed = 1/(1+this.Skill_1_Level);
+                    this.Skill_1_Time -=dt;
+                    if(this.Skill_1_Time<0)
+                        this.Skill_1_Time = 0;
+                    this.UpdateData();
+                }
+                else{
+                    this.GameSpeed = 1;
                     this.Skill_1_Time = 0;
-                this.UpdateData();
+                }
+                     
             }
             else{
                 this.GameSpeed = 1;
-                this.Skill_1_Time = 0;
-            }
-                 
-        }
-        else{
-            this.GameSpeed = 1;
-            if(this.Skill_1_Time<this.Skill_1_Max){
-                this.Skill_1_Time+=dt/3;
-                this.UpdateData();
+                if(this.Skill_1_Time<this.Skill_1_Max){
+                    this.Skill_1_Time+=dt/3;
+                    this.UpdateData();
+                }
             }
         }
-            
-
-
     },
 
     UpdateData :function(){
@@ -206,16 +278,18 @@ cc.Class({
             min = 250;
             x = Math.random()*(max-min+1)+min;
 
-            max = 267;
-            min = 33;
+            max = 600;
+            min = 35;
             y = Math.random()*(max-min+1)+min;
-            if(this._getDistance(cc.v2(x,y),this.Block1.getPosition())<30)
+            if(this._getDistance(cc.v2(x,y),this.Block1.getPosition())<35)
                 continue;
-            if(this._getDistance(cc.v2(x,y),this.Block2.getPosition())<30)
+            if(this._getDistance(cc.v2(x,y),this.Block2.getPosition())<35)
                 continue;
-            if(this._getDistance(cc.v2(x,y),this.Block3.getPosition())<30)
+            if(this._getDistance(cc.v2(x,y),this.Block3.getPosition())<35)
                 continue;
-            if(this._getDistance(cc.v2(x,y),this.Block4.getPosition())<30)
+            if(this._getDistance(cc.v2(x,y),this.Block4.getPosition())<35)
+                continue;
+            if(this._getDistance(cc.v2(x,y),this.Turret.getPosition())<35)
                 continue;
             break;
         }while(true);
@@ -228,13 +302,45 @@ cc.Class({
         return Math.sqrt(Math.pow(pos1.x - pos2.x, 2) + Math.pow(pos1.y - pos2.y, 2));
     },
 
-    SwapItem :function(){
-        var newItem = cc.instantiate(this.upRotationSpeedPrefab);
+    SwapGoodItem :function(){
+        var Itemlist = new Array(this.upPlayerSpeedPrefab,
+                                this.upSkill_1_MAXPrefab);
+        var i = Math.floor(Math.random()*2);
+
+        var newItem = cc.instantiate(Itemlist[i]);
 
         newItem.parent = this.node;
         var postion= this._getARandomPositon();
         newItem.x = postion.x;
         newItem.y = postion.y;
+    },
+
+    SwapBadItem :function(){
+        var Itemlist = new Array(this.upRotationSpeedPrefab,
+                                this.upShootSpeedPrefab,
+                                this.upBulletSpeedPrefab,
+                                this.upBulletLifeTimePrefab);
+        var i = Math.floor(Math.random()*4);
+
+        var newItem = cc.instantiate(Itemlist[i]);
+
+        newItem.parent = this.node;
+        var postion= this._getARandomPositon();
+        newItem.x = postion.x;
+        newItem.y = postion.y;
+    },
+
+    SwapItem :function(){
+        if(this.Score==10){
+            this.SwapBadItem();
+        }
+        if(this.Score==30){
+            this.SwapBadItem();
+        }
+        if((this.Score%5)==0)
+            this.SwapGoodItem();
+        else
+            this.SwapBadItem();
     },
 
 
@@ -243,7 +349,39 @@ cc.Class({
         this.Score +=1;
         this.UpdateData();
         this.SwapItem();
+    },
 
-        cc.log(Common.ItemType[2]);
+    upShootSpeed: function(){
+        this.ShootSpeed+=1;
+        this.Score +=1;
+        this.UpdateData();
+        this.SwapItem();
+    },
+
+    upBulletSpeed: function(){
+        this.BulletSpeed+=1;
+        this.Score +=1;
+        this.UpdateData();
+        this.SwapItem();
+    },
+    upBulletLifeTime: function(){
+        this.BulletLifeTime+=1;
+        this.Score +=1;
+        this.UpdateData();
+        this.SwapItem();
+    },
+
+    upPlayerSpeed: function(){
+        this.PlayerSpeed2+=1;
+        this.Score +=1;
+        this.UpdateData();
+        this.SwapItem();
+    },
+
+    upSkill_1_MAX: function(){
+        this.Skill_1_Max+=1;
+        this.Score +=1;
+        this.UpdateData();
+        this.SwapItem();
     },
 });

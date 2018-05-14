@@ -83,15 +83,23 @@ cc.Class({
 
     onBeginContact: function onBeginContact(contact, selfCollider, otherCollider) {
         var xspeed = this.node.getComponent(cc.RigidBody).linearVelocity.x;
-        if (xspeed < 33 && xspeed > -33) {
-            xspeed *= 10;
+        if (xspeed < 33 && xspeed >= 0) {
+            xspeed += 35;
+            this.Enlargex = true;
+        }
+        if (xspeed > -33 && xspeed <= 0) {
+            xspeed -= 35;
             this.Enlargex = true;
         }
 
         var yspeed = this.node.getComponent(cc.RigidBody).linearVelocity.y;
 
-        if (yspeed < 33 && yspeed > -33) {
-            yspeed *= 10;
+        if (yspeed < 33 && yspeed >= 0) {
+            yspeed += 35;
+            this.Enlargey = true;
+        }
+        if (yspeed > -33 && yspeed <= 0) {
+            yspeed -= 35;
             this.Enlargey = true;
         }
 
@@ -101,13 +109,13 @@ cc.Class({
     onEndContact: function onEndContact(contact, selfCollider, otherCollider) {
         var xspeed = this.node.getComponent(cc.RigidBody).linearVelocity.x;
         if (this.Enlargex) {
-            xspeed /= 10;
+            if (xspeed > 0) xspeed -= 35;else xspeed += 35;
             this.Enlargex = false;
         }
         var yspeed = this.node.getComponent(cc.RigidBody).linearVelocity.y;
 
         if (this.Enlargey) {
-            yspeed /= 10;
+            if (yspeed > 0) yspeed -= 35;else yspeed += 35;
             this.Enlargey = false;
         }
 

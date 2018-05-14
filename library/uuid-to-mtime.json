@@ -230,13 +230,13 @@
     "relativePath": "Scene"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1525962579996,
+    "asset": 1526129391224,
     "meta": 1525273541486,
     "relativePath": "Script"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1526141057587,
-    "meta": 1526141057599,
+    "asset": 1526215707316,
+    "meta": 1526215707345,
     "relativePath": "Scene\\Main.fire"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
@@ -255,7 +255,7 @@
     "relativePath": "Texture\\HelloWorld.png"
   },
   "6e6f79e4-8f19-4e40-be9a-485f4a9bfaaf": {
-    "asset": 1525961946855,
+    "asset": 1526128348725,
     "meta": 1525273782488,
     "relativePath": "Picture"
   },
@@ -275,7 +275,7 @@
     "relativePath": "Prefab\\Block.prefab"
   },
   "7b22e7e2-3eab-4609-b746-fb6c9d170819": {
-    "asset": 1525961930992,
+    "asset": 1526129590617,
     "meta": 1525360618575,
     "relativePath": "Prefab"
   },
@@ -310,7 +310,7 @@
     "relativePath": "Script\\Test\\HelloWorld.js"
   },
   "a2779523-9c69-41dc-865d-f46157951149": {
-    "asset": 1526107484125,
+    "asset": 1526107488689,
     "meta": 1526107484129,
     "relativePath": "Script\\Test"
   },
@@ -320,8 +320,8 @@
     "relativePath": "Script\\SkillButton.js"
   },
   "8e45c786-7257-4a55-b7c8-9358b9acaabb": {
-    "asset": 1526115685919,
-    "meta": 1526115686849,
+    "asset": 1526116540161,
+    "meta": 1526175208200,
     "relativePath": "Script\\BulletControl.js"
   },
   "5d47455f-e5cd-49bd-bd3f-78c276566e75": {
@@ -370,7 +370,7 @@
     "relativePath": "Picture\\Circel\\66.png"
   },
   "2fa5b253-18ed-4066-a76d-0ef93250309d": {
-    "asset": 1526128331215,
+    "asset": 1526128348725,
     "meta": 1526128331218,
     "relativePath": "Picture\\Circel"
   },
@@ -380,38 +380,63 @@
     "relativePath": "Script\\JoyControl.js"
   },
   "1171d6e5-25da-4c0c-8759-18e2596a4d4f": {
-    "asset": 1526136188184,
-    "meta": 1526136188200,
+    "asset": 1526182640873,
+    "meta": 1526182640878,
     "relativePath": "Prefab\\upRotationSpeed.prefab"
   },
-  "fca2096d-dd1c-40d1-8071-399c3b2fa657": {
-    "asset": 1526129902927,
-    "meta": 1526129911392,
-    "relativePath": "Script\\JoystickBG.js"
-  },
-  "dfdec900-1255-4700-8909-5f97f54a1f3f": {
-    "asset": 1526131977386,
-    "meta": 1526131985587,
-    "relativePath": "Script\\TurretControl.js"
-  },
-  "6b891f31-d4d1-4113-b7b6-359dc1645253": {
-    "asset": 1526139413224,
-    "meta": 1526139430529,
-    "relativePath": "Script\\Item.js"
-  },
-  "f3ad8cf2-895e-4cdc-a3b6-be9b68d4aae4": {
-    "asset": 1526139677928,
-    "meta": 1526139793679,
-    "relativePath": "Script\\PlayerControl.js"
-  },
   "49131e55-711e-4893-bee1-5760cae4e69d": {
-    "asset": 1526140230591,
-    "meta": 1526140233929,
+    "asset": 1526176399537,
+    "meta": 1526176540378,
     "relativePath": "Script\\GameCommon.js"
   },
+  "5e181923-f2ce-44a3-a28a-4dbeba142f20": {
+    "asset": 1526182643593,
+    "meta": 1526182643599,
+    "relativePath": "Prefab\\upShootSpeed.prefab"
+  },
+  "13854aae-154c-49a8-822f-2ed40c27d807": {
+    "asset": 1526182626611,
+    "meta": 1526182626618,
+    "relativePath": "Prefab\\upBulletLifeTime.prefab"
+  },
+  "c23cb0f8-92dc-4f30-b269-d437b5d52e35": {
+    "asset": 1526182634589,
+    "meta": 1526182634593,
+    "relativePath": "Prefab\\upBulletSpeed.prefab"
+  },
+  "b30a9c70-e1cd-48b7-8269-a4586b0839d0": {
+    "asset": 1526182637970,
+    "meta": 1526182637974,
+    "relativePath": "Prefab\\upPlayerSpeed.prefab"
+  },
+  "aa577df8-6294-470a-aed4-28ab3195f673": {
+    "asset": 1526182647031,
+    "meta": 1526182647036,
+    "relativePath": "Prefab\\upSkill_1_MAX.prefab"
+  },
+  "dfdec900-1255-4700-8909-5f97f54a1f3f": {
+    "asset": 1526178774594,
+    "meta": 1526178777109,
+    "relativePath": "Script\\TurretControl.js"
+  },
+  "fca2096d-dd1c-40d1-8071-399c3b2fa657": {
+    "asset": 1526179213621,
+    "meta": 1526179217109,
+    "relativePath": "Script\\JoystickBG.js"
+  },
+  "f3ad8cf2-895e-4cdc-a3b6-be9b68d4aae4": {
+    "asset": 1526181053491,
+    "meta": 1526181062267,
+    "relativePath": "Script\\PlayerControl.js"
+  },
+  "6b891f31-d4d1-4113-b7b6-359dc1645253": {
+    "asset": 1526214565414,
+    "meta": 1526215489253,
+    "relativePath": "Script\\Item.js"
+  },
   "b3132a90-a6c2-4549-8788-c2fa993d38b8": {
-    "asset": 1526140999617,
-    "meta": 1526141003249,
+    "asset": 1526216462367,
+    "meta": 1526216477448,
     "relativePath": "Script\\GameManager.js"
   }
 }

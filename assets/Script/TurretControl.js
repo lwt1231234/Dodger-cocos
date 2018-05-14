@@ -26,6 +26,10 @@ cc.Class({
             default: null,
             visible: false,
         },
+        BulletParent:{
+            default: null,
+            visible: false,
+        },
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -36,8 +40,21 @@ cc.Class({
 
     start () {
         this.GameManager = cc.find("GameManager");
+        this.GameInit();
+    },
+
+    GameInit(){
+        this.BulletParent = new cc.Node("BulletParent");
+        this.BulletParent.parent = this.node;
+        this.BulletParent.x=0;
+        this.BulletParent.y=0;
         this.CreateBullet();
         this.ShootTimer = 0;
+    },
+
+    GameReset :function(){
+        this.BulletParent.destroy();
+        this.GameInit();
     },
 
     update :function(dt) {
@@ -54,16 +71,11 @@ cc.Class({
 
     },
 
-    Rotate(){
-        //var action = cc.rotateBy(30);
-        //this.node.runAction(action);
-    },
-
     CreateBullet(){
         var newBullet = cc.instantiate(this.BulletPrefab);
         newBullet.x = 0;
         newBullet.y = 0;
-        newBullet.parent = this.node;
+        newBullet.parent = this.BulletParent;
 
         var BulletSpeed = this.GameManager.getComponent('GameManager').BulletSpeed;
         BulletSpeed =100+10*BulletSpeed;

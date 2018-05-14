@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "upRotationSpeed",
+    "_name": "upShootSpeed",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -63,8 +63,8 @@
     "_scaleY": 0.25,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 546.9,
-      "y": 131.3
+      "x": 546.8,
+      "y": 168.8
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -117,8 +117,8 @@
     "_scaleY": 4,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -1,
-      "y": 0.5
+      "x": -1.7,
+      "y": -0.1
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -157,7 +157,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "c1yN7buSdFZYV7fxCgxUfh",
+    "fileId": "b2jYq/RIZOto7lrznqMZoA",
     "sync": false
   },
   {
@@ -169,7 +169,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "9ec4d774-e591-4e18-9dec-0b6427a06aa4"
+      "__uuid__": "79fb1963-ddd3-4794-95ac-3d05badd5311"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -195,7 +195,7 @@
     },
     "_enabled": true,
     "GameManager": null,
-    "Type": 0,
+    "Type": 1,
     "LifeTime": null,
     "laberTimer": {
       "__id__": 3
@@ -253,7 +253,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "7d4DSi1RxISrchmMuQH0Ub",
+    "fileId": "20H1hItP9D06EmbDq+NlsD",
     "sync": false
   }
 ]

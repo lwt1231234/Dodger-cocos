@@ -12,12 +12,12 @@ module.exports = {
     }),
 
     ItemType : cc.Enum({
-        upRotationSpeed: 1,
-        upShootSpeed: 2,
-        upBulletSpeed: 3,
-        upBulletLifeTime: 4,
-        upPlayerSpeed: 5,
-        upSkill_1_MAX: 6,
+        upRotationSpeed: 0,
+        upShootSpeed: 1,
+        upBulletSpeed: 2,
+        upBulletLifeTime: 3,
+        upPlayerSpeed: 4,
+        upSkill_1_MAX: 5,
     }),
 
 };

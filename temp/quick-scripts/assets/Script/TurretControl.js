@@ -2,7 +2,7 @@
 cc._RF.push(module, 'dfdeckAElVHAIkJX5f1Sh8/', 'TurretControl', __filename);
 // Script/TurretControl.js
 
-'use strict';
+"use strict";
 
 // Learn cc.Class:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
@@ -31,6 +31,10 @@ cc.Class({
         ShootTimer: {
             default: null,
             visible: false
+        },
+        BulletParent: {
+            default: null,
+            visible: false
         }
     },
 
@@ -40,10 +44,22 @@ cc.Class({
 
     start: function start() {
         this.GameManager = cc.find("GameManager");
+        this.GameInit();
+    },
+    GameInit: function GameInit() {
+        this.BulletParent = new cc.Node("BulletParent");
+        this.BulletParent.parent = this.node;
+        this.BulletParent.x = 0;
+        this.BulletParent.y = 0;
         this.CreateBullet();
         this.ShootTimer = 0;
     },
 
+
+    GameReset: function GameReset() {
+        this.BulletParent.destroy();
+        this.GameInit();
+    },
 
     update: function update(dt) {
 
@@ -58,15 +74,11 @@ cc.Class({
         }
     },
 
-    Rotate: function Rotate() {
-        //var action = cc.rotateBy(30);
-        //this.node.runAction(action);
-    },
     CreateBullet: function CreateBullet() {
         var newBullet = cc.instantiate(this.BulletPrefab);
         newBullet.x = 0;
         newBullet.y = 0;
-        newBullet.parent = this.node;
+        newBullet.parent = this.BulletParent;
 
         var BulletSpeed = this.GameManager.getComponent('GameManager').BulletSpeed;
         BulletSpeed = 100 + 10 * BulletSpeed;

@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "upRotationSpeed",
+    "_name": "upSkill_1_MAX",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -63,8 +63,8 @@
     "_scaleY": 0.25,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 546.9,
-      "y": 131.3
+      "x": 511.5,
+      "y": 144.3
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -95,9 +95,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 0,
+      "g": 0,
+      "b": 0,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -117,8 +117,8 @@
     "_scaleY": 4,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -1,
-      "y": 0.5
+      "x": -1.7,
+      "y": -0.9
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -157,7 +157,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "c1yN7buSdFZYV7fxCgxUfh",
+    "fileId": "98JvO9ufhLvK36KsMQYxX1",
     "sync": false
   },
   {
@@ -169,7 +169,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "9ec4d774-e591-4e18-9dec-0b6427a06aa4"
+      "__uuid__": "4279942a-3ff6-4267-b7a0-080dbac0c2f4"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -195,7 +195,7 @@
     },
     "_enabled": true,
     "GameManager": null,
-    "Type": 0,
+    "Type": 5,
     "LifeTime": null,
     "laberTimer": {
       "__id__": 3
@@ -253,7 +253,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "7d4DSi1RxISrchmMuQH0Ub",
+    "fileId": "dffH5Oc/pMCZbQfLH6rtXG",
     "sync": false
   }
 ]

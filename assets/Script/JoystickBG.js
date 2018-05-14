@@ -95,9 +95,12 @@ cc.Class({
     {
         //this._playerNode.x += Math.cos(this._angle * (Math.PI/180)) * this._speed;
         //this._playerNode.y += Math.sin(this._angle * (Math.PI/180)) * this._speed;
-        this._playerNode.getComponent(cc.RigidBody).linearVelocity 
-        = cc.v2(Math.cos(this._angle * (Math.PI/180)) * this._speed * 5,
-                Math.sin(this._angle * (Math.PI/180)) * this._speed * 5);
+        if(!this.GameManager.getComponent('GameManager').GamePause)
+            this._playerNode.getComponent(cc.RigidBody).linearVelocity 
+            = cc.v2(Math.cos(this._angle * (Math.PI/180)) * this._speed * 5,
+                    Math.sin(this._angle * (Math.PI/180)) * this._speed * 5);
+        else
+            this._playerNode.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
     },
 
      //计算两点间的距离并返回
