@@ -4392,7 +4392,7 @@
       "width": 1136,
       "height": 640
     },
-    "_fitWidth": true,
-    "_fitHeight": true
+    "_fitWidth": false,
+    "_fitHeight": false
   }
 ]
