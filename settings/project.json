@@ -35,7 +35,7 @@
   "design-resolution-width": 1136,
   "excluded-modules": [],
   "fit-height": true,
-  "fit-width": false,
+  "fit-width": true,
   "group-list": [
     "default",
     "Bullet",
@@ -48,6 +48,5 @@
     "width": 960
   },
   "use-customize-simulator": false,
-  "use-project-simulator-setting": false,
-  "start-scene": "current"
+  "use-project-simulator-setting": false
 }
