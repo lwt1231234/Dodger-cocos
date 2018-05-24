@@ -63,7 +63,7 @@ cc.Class({
     },
 
     onLoad: function () {
-        this.GameManager = cc.find("GameManager");
+        this.GameManager = cc.find("Canvas/GameManager");
         
         this._createStickSprite();
         //当触摸类型为FOLLOW会在此对圆圈的触摸监听

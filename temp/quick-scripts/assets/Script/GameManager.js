@@ -10,6 +10,10 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        Canvas: {
+            default: null,
+            type: cc.Node
+        },
         //玩家属性
         PlayerSpeed1: {
             default: null,
@@ -158,6 +162,35 @@ cc.Class({
         upSkill_1_MAXPrefab: {
             default: null,
             type: cc.Prefab
+        },
+        GetShieldPrefab: {
+            default: null,
+            type: cc.Prefab
+        },
+
+        PointRotationSpeedPrefab: {
+            default: null,
+            type: cc.Prefab
+        },
+        PointShootSpeedPrefab: {
+            default: null,
+            type: cc.Prefab
+        },
+        PointBulletSpeedPrefab: {
+            default: null,
+            type: cc.Prefab
+        },
+        PointBulletLifeTimePrefab: {
+            default: null,
+            type: cc.Prefab
+        },
+        PointPlayerSpeedPrefab: {
+            default: null,
+            type: cc.Prefab
+        },
+        PointSkill_1_MAXPrefab: {
+            default: null,
+            type: cc.Prefab
         }
     },
 
@@ -173,11 +206,14 @@ cc.Class({
     },
 
     GameInit: function GameInit() {
+        this.Player.getComponent(cc.RigidBody).angularVelocity = 0;
+        this.Player.rotation = 0;
+
         this.PlayerSpeed1 = 10;
         this.PlayerSpeed2 = 20;
 
         this.RotationSpeed = 1;
-        this.ShootSpeed = 10;
+        this.ShootSpeed = 1;
         this.BulletSpeed = 1;
         this.BulletLifeTime = 5;
 
@@ -190,8 +226,8 @@ cc.Class({
         this.Score = 0;
         this.ItemNum = 0;
 
-        this.Player.x = 400;
-        this.Player.y = 325;
+        this.Player.x = -200;
+        this.Player.y = 0;
 
         this.GameSpeed = 1;
         this.GamePause = false;
@@ -205,7 +241,6 @@ cc.Class({
     },
     GameOver: function GameOver() {
         this.GamePause = true;
-        cc.log('test');
         this.scheduleOnce(function () {
             this.GameReset();
         }, 5);
@@ -214,7 +249,7 @@ cc.Class({
         var childernlist = this.node.children;
         //cc.log(this.node.childrenCount);
         for (var i = 0; i < this.node.childrenCount; i++) {
-            cc.log(childernlist[i]);
+            //cc.log(childernlist[i]);
             childernlist[i].destroy();
         }
 
@@ -245,6 +280,7 @@ cc.Class({
                 }
             }
         }
+        //cc.log(this.GameSpeed);
     },
 
 
@@ -263,18 +299,44 @@ cc.Class({
     _getARandomPositon: function _getARandomPositon() {
         var max, min, x, y;
         do {
-            max = 880;
-            min = 250;
+            var min_distance = 20;
+            var max_distance = 1000;
+
+            if (this.Score >= 0 && this.Score < 5) {
+                min_distance = 100;
+                max_distance = 150;
+            }
+            if (this.Score >= 5 && this.Score < 15) {
+                min_distance = 150;
+                max_distance = 200;
+            }
+            if (this.Score >= 15 && this.Score < 25) {
+                min_distance = 200;
+                max_distance = 250;
+            }
+            if (this.Score >= 25 && this.Score < 35) {
+                min_distance = 250;
+                max_distance = 300;
+            }
+            if (this.Score >= 35 && this.Score < 50) {
+                min_distance = 300;
+                max_distance = 400;
+            }
+
+            max = Math.min(315, this.Player.getPosition().x + max_distance);
+            min = Math.max(-315, this.Player.getPosition().x - max_distance);
             x = Math.random() * (max - min + 1) + min;
 
-            max = 600;
-            min = 35;
+            max = Math.min(285, this.Player.getPosition().y + max_distance);
+            min = Math.max(-285, this.Player.getPosition().y - max_distance);
             y = Math.random() * (max - min + 1) + min;
+            //是否离4个方块太近
             if (this._getDistance(cc.v2(x, y), this.Block1.getPosition()) < 35) continue;
             if (this._getDistance(cc.v2(x, y), this.Block2.getPosition()) < 35) continue;
             if (this._getDistance(cc.v2(x, y), this.Block3.getPosition()) < 35) continue;
             if (this._getDistance(cc.v2(x, y), this.Block4.getPosition()) < 35) continue;
             if (this._getDistance(cc.v2(x, y), this.Turret.getPosition()) < 35) continue;
+            if (this._getDistance(cc.v2(x, y), this.Player.getPosition()) < min_distance) continue;
             break;
         } while (true);
 
@@ -285,11 +347,13 @@ cc.Class({
         return Math.sqrt(Math.pow(pos1.x - pos2.x, 2) + Math.pow(pos1.y - pos2.y, 2));
     },
 
-    SwapGoodItem: function SwapGoodItem() {
-        var Itemlist = new Array(this.upPlayerSpeedPrefab, this.upSkill_1_MAXPrefab);
-        var i = Math.floor(Math.random() * 2);
+    SwapGoodItem: function SwapGoodItem(ItemType) {
+        var Itemlist = new Array(this.upPlayerSpeedPrefab, this.upSkill_1_MAXPrefab, this.GetShieldPrefab);
+        var i;
+        if (this.Player.getComponent('PlayerControl').HaveShield) i = Math.floor(Math.random() * 2);else i = Math.floor(Math.random() * 3);
 
-        var newItem = cc.instantiate(Itemlist[i]);
+        var newItem;
+        if (ItemType == null) newItem = cc.instantiate(Itemlist[i]);else newItem = cc.instantiate(ItemType);
 
         newItem.parent = this.node;
         var postion = this._getARandomPositon();
@@ -300,6 +364,7 @@ cc.Class({
     SwapBadItem: function SwapBadItem() {
         var Itemlist = new Array(this.upRotationSpeedPrefab, this.upShootSpeedPrefab, this.upBulletSpeedPrefab, this.upBulletLifeTimePrefab);
         var i = Math.floor(Math.random() * 4);
+        if (this.Score < 4) i = this.Score;
 
         var newItem = cc.instantiate(Itemlist[i]);
 
@@ -310,27 +375,48 @@ cc.Class({
     },
 
     SwapItem: function SwapItem() {
-        if (this.Score == 10) {
+
+        if (this.Score == 5) {
+            this.SwapBadItem();
+        }
+        if (this.Score == 15) {
             this.SwapBadItem();
         }
         if (this.Score == 30) {
             this.SwapBadItem();
         }
-        if (this.Score % 5 == 0) this.SwapGoodItem();else this.SwapBadItem();
+        if (this.Score % 5 == 0) {
+            if (this.Score == 5) this.SwapGoodItem(this.GetShieldPrefab);else this.SwapGoodItem();
+        } else this.SwapBadItem();
     },
 
+    createPoint: function createPoint(point_id, pointTarget) {
+        var Pointlist = new Array(this.PointRotationSpeedPrefab, this.PointShootSpeedPrefab, this.PointBulletSpeedPrefab, this.PointBulletLifeTimePrefab, this.PointPlayerSpeedPrefab, this.PointSkill_1_MAXPrefab);
+
+        var newPoint = cc.instantiate(Pointlist[point_id]);
+        newPoint.parent = this.Canvas;
+        newPoint.x = this.Player.getPosition().x;
+        newPoint.y = this.Player.getPosition().y;
+        cc.log(pointTarget);
+        cc.log(pointTarget.getChildByName("1"));
+        newPoint.getComponent('PointControl').target = pointTarget.getChildByName("1");
+    },
+
+
     upRotationSpeed: function upRotationSpeed() {
-        this.RotationSpeed += 1;
+        this.RotationSpeed += 2;
         this.Score += 1;
         this.UpdateData();
         this.SwapItem();
+        this.createPoint(0, this.label_RotationSpeed.node);
     },
 
     upShootSpeed: function upShootSpeed() {
-        this.ShootSpeed += 1;
+        this.ShootSpeed += 2;
         this.Score += 1;
         this.UpdateData();
         this.SwapItem();
+        this.createPoint(1, this.label_ShootSpeed.node);
     },
 
     upBulletSpeed: function upBulletSpeed() {
@@ -338,23 +424,33 @@ cc.Class({
         this.Score += 1;
         this.UpdateData();
         this.SwapItem();
+        this.createPoint(2, this.label_BulletSpeed.node);
     },
     upBulletLifeTime: function upBulletLifeTime() {
         this.BulletLifeTime += 1;
         this.Score += 1;
         this.UpdateData();
         this.SwapItem();
+        this.createPoint(3, this.label_BulletLifeTime.node);
     },
 
     upPlayerSpeed: function upPlayerSpeed() {
-        this.PlayerSpeed2 += 1;
+        this.PlayerSpeed2 += 2;
         this.Score += 1;
         this.UpdateData();
         this.SwapItem();
+        this.createPoint(4, this.label_PlayerSpeed.node);
     },
 
     upSkill_1_MAX: function upSkill_1_MAX() {
-        this.Skill_1_Max += 1;
+        this.Skill_1_Max += 2;
+        this.Score += 1;
+        this.UpdateData();
+        this.SwapItem();
+        this.createPoint(5, this.label_Skill_1_Time.node);
+    },
+
+    GetShield: function GetShield() {
         this.Score += 1;
         this.UpdateData();
         this.SwapItem();

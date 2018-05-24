@@ -29,7 +29,7 @@ cc.Class({
     // onLoad () {},
 
     start () {
-        this.GameManager = cc.find("GameManager");
+        this.GameManager = cc.find("Canvas/GameManager");
         if(this.Type<Common.ItemType.upPlayerSpeed)
             this.LifeTime = this.GameManager.getComponent('GameManager').ItemLifeTime1;
         else
@@ -38,6 +38,8 @@ cc.Class({
             this.laberTimer.string = '';
         else
             this.laberTimer.string = this.LifeTime.toString();
+
+        this.OnMove = false;
     },
 
      update (dt) {
@@ -54,6 +56,5 @@ cc.Class({
             else
                 this.laberTimer.string = Math.floor(this.LifeTime).toString();
         }
-
      },
 });

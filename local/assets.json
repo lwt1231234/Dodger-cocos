@@ -5,7 +5,7 @@
       "id": "mount-assets"
     },
     {
-      "folded": false,
+      "folded": true,
       "id": "29f52784-2fca-467b-92e7-8fd9ef8c57b7"
     },
     {
@@ -18,10 +18,6 @@
     },
     {
       "folded": false,
-      "id": "7b81d4e8-ec84-4716-968d-500ac1d78a54"
-    },
-    {
-      "folded": false,
       "id": "6e6f79e4-8f19-4e40-be9a-485f4a9bfaaf"
     },
     {
@@ -30,23 +26,23 @@
     },
     {
       "folded": false,
+      "id": "775deefc-54a1-4899-8800-e92821e28c7d"
+    },
+    {
+      "folded": true,
+      "id": "708b6b3a-d257-48fe-938f-9858423bca93"
+    },
+    {
+      "folded": false,
       "id": "2fa5b253-18ed-4066-a76d-0ef93250309d"
     },
     {
       "folded": true,
-      "id": "d2cf6c81-4eab-4961-9cc0-0fb252bbc7c4"
+      "id": "960384a5-4566-45a8-9fdd-78c7b2533164"
     },
     {
       "folded": true,
-      "id": "be83e3fd-b469-497e-9ae1-5b8f120416f4"
-    },
-    {
-      "folded": true,
-      "id": "e8547dc5-05be-4a80-a22b-1b842204c9e5"
-    },
-    {
-      "folded": true,
-      "id": "9aeff128-2e17-4e86-a925-7101f9b6e618"
+      "id": "07fb6b86-36b7-48b5-a5d4-eb3647b2ab8f"
     },
     {
       "folded": true,
@@ -54,7 +50,31 @@
     },
     {
       "folded": true,
+      "id": "e8547dc5-05be-4a80-a22b-1b842204c9e5"
+    },
+    {
+      "folded": true,
+      "id": "d2cf6c81-4eab-4961-9cc0-0fb252bbc7c4"
+    },
+    {
+      "folded": true,
+      "id": "9aeff128-2e17-4e86-a925-7101f9b6e618"
+    },
+    {
+      "folded": true,
       "id": "172976eb-1df4-4bd8-a76e-2f6ca9afb562"
+    },
+    {
+      "folded": true,
+      "id": "5d47455f-e5cd-49bd-bd3f-78c276566e75"
+    },
+    {
+      "folded": true,
+      "id": "be83e3fd-b469-497e-9ae1-5b8f120416f4"
+    },
+    {
+      "folded": true,
+      "id": "aa87fe11-4777-40b4-800a-b3e5195c4cdb"
     },
     {
       "folded": true,
@@ -66,23 +86,7 @@
     },
     {
       "folded": true,
-      "id": "5d47455f-e5cd-49bd-bd3f-78c276566e75"
-    },
-    {
-      "folded": true,
-      "id": "aa87fe11-4777-40b4-800a-b3e5195c4cdb"
-    },
-    {
-      "folded": true,
-      "id": "6aa0aa6a-ebee-4155-a088-a687a6aadec4"
-    },
-    {
-      "folded": true,
       "id": "27dcfe00-e10f-42a1-b05b-37194f509288"
-    },
-    {
-      "folded": true,
-      "id": "a8027877-d8d6-4645-97a0-52d4a0123dba"
     },
     {
       "folded": true,
@@ -91,6 +95,10 @@
     {
       "folded": true,
       "id": "51f7b57c-9a33-4d56-a3fa-7b75c669e4d2"
+    },
+    {
+      "folded": true,
+      "id": "f58949bb-3160-4170-98d9-554d8765ce89"
     },
     {
       "folded": true,

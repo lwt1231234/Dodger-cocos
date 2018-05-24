@@ -1,13 +1,3 @@
-// Learn cc.Class:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
-
 cc.Class({
     extends: cc.Component,
 
@@ -39,7 +29,7 @@ cc.Class({
     },
 
     start () {
-        this.GameManager = cc.find("GameManager");
+        this.GameManager = cc.find("Canvas/GameManager");
         this.GameInit();
     },
 
@@ -78,7 +68,7 @@ cc.Class({
         newBullet.parent = this.BulletParent;
 
         var BulletSpeed = this.GameManager.getComponent('GameManager').BulletSpeed;
-        BulletSpeed =100+10*BulletSpeed;
+        BulletSpeed =200+5*BulletSpeed;
         newBullet.getComponent(cc.RigidBody).linearVelocity = cc.v2(cc.pForAngle(this.node.rotation*Math.PI/180).y*BulletSpeed,cc.pForAngle(this.node.rotation*Math.PI/180).x*BulletSpeed);
 
         var ShootSpeed = this.GameManager.getComponent('GameManager').ShootSpeed;

@@ -51,7 +51,7 @@ cc.Class({
 
     onLoad: function()
     {
-        this.GameManager = cc.find("GameManager");
+        this.GameManager = cc.find("Canvas/GameManager");
         // joy下的Game组件
         this._joyCom = this.node.parent.getComponent('JoyControl');
         // game组件下的player节点
@@ -95,12 +95,27 @@ cc.Class({
     {
         //this._playerNode.x += Math.cos(this._angle * (Math.PI/180)) * this._speed;
         //this._playerNode.y += Math.sin(this._angle * (Math.PI/180)) * this._speed;
+        //cc.log(this._angle);
         if(!this.GameManager.getComponent('GameManager').GamePause)
             this._playerNode.getComponent(cc.RigidBody).linearVelocity 
             = cc.v2(Math.cos(this._angle * (Math.PI/180)) * this._speed * 5,
                     Math.sin(this._angle * (Math.PI/180)) * this._speed * 5);
         else
             this._playerNode.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
+
+        //cc.log(this.GameManager.getComponent('Keyboard').Input);
+        if(this.GameManager.getComponent('Keyboard').Input == true){
+            var KeyAngle = this.GameManager.getComponent('Keyboard').Angle;
+            this._speed2 = this.GameManager.getComponent('GameManager').PlayerSpeed2;
+
+            var Keyv2 = cc.v2(Math.cos(KeyAngle * (Math.PI/180)) * this._speed2 * 5,
+                        Math.sin(KeyAngle * (Math.PI/180)) * this._speed2 * 5);
+            if(!this.GameManager.getComponent('GameManager').GamePause)
+                this._playerNode.getComponent(cc.RigidBody).linearVelocity = Keyv2;
+            else
+                this._playerNode.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
+        }
+        
     },
 
      //计算两点间的距离并返回

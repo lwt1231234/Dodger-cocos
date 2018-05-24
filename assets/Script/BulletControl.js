@@ -44,7 +44,7 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
      onLoad :function() {
-        this.GameManager = cc.find("GameManager");
+        this.GameManager = cc.find("Canvas/GameManager");
         var BulletLifeTime = this.GameManager.getComponent('GameManager').BulletLifeTime;
         this.scheduleOnce(function(){this.TImeOut();}, BulletLifeTime);
         this.GameSpeedThis = 1;
@@ -74,6 +74,11 @@ cc.Class({
             this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(xspeed/this.GameSpeedThis,yspeed/this.GameSpeedThis);
             this.GameSpeedThis = 1;
         }
+        if(this.GameSpeedThis !=1 && GameSpeed == 0){
+            this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
+            this.GameSpeedThis = 1;
+        }
+        
     },
 
     onBeginContact: function (contact, selfCollider, otherCollider) {

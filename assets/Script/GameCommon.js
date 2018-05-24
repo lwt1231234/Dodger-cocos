@@ -18,6 +18,7 @@ module.exports = {
         upBulletLifeTime: 3,
         upPlayerSpeed: 4,
         upSkill_1_MAX: 5,
+        GetShield: 6,
     }),
 
 };
