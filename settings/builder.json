@@ -28,7 +28,7 @@
   "renderMode": "0",
   "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
   "title": "Dodger",
-  "webOrientation": "landscape",
+  "webOrientation": "auto",
   "wechatgame": {
     "REMOTE_SERVER_ROOT": "",
     "appid": "wx8b8e5e1ce338c472",
