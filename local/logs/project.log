@@ -1,58 +1,59 @@
-2018-05-24T11:02:18.656Z - normal: Load ~/.CocosCreator/settings.json
-2018-05-24T11:02:18.659Z - normal: checking language setting...
-2018-05-24T11:02:18.659Z - normal: Language: zh
-2018-05-24T11:02:20.356Z - success: protocol editor-framework registered
-2018-05-24T11:02:20.356Z - success: protocol app registered
-2018-05-24T11:02:20.356Z - success: protocol theme registered
-2018-05-24T11:02:20.356Z - success: protocol packages registered
-2018-05-24T11:02:20.356Z - success: protocol unpack registerred
-2018-05-24T11:02:20.357Z - success: protocol disable-commonjs registerred
-2018-05-24T11:02:20.637Z - normal: connected!
-2018-05-24T11:02:20.639Z - normal: Check project D:\Project\Dodger-cocos
-2018-05-24T11:02:20.642Z - normal: Initializing Cocos2d
-2018-05-24T11:02:20.833Z - normal: Initializing Asset Database
-2018-05-24T11:02:20.862Z - success: protocol uuid registerred
-2018-05-24T11:02:20.862Z - success: protocol db registerred
-2018-05-24T11:02:20.862Z - success: protocol thumbnail registerred
-2018-05-24T11:02:20.862Z - normal: Loading editor/builtin packages
-2018-05-24T11:02:20.879Z - success: anysdk loaded
-2018-05-24T11:02:20.981Z - success: assets loaded
-2018-05-24T11:02:20.982Z - success: builder loaded
-2018-05-24T11:02:20.988Z - success: cocos-analytics loaded
-2018-05-24T11:02:20.991Z - success: console loaded
-2018-05-24T11:02:21.024Z - success: fb-instant-games loaded
-2018-05-24T11:02:21.026Z - success: hierarchy loaded
-2018-05-24T11:02:21.028Z - success: inspector loaded
-2018-05-24T11:02:21.029Z - success: keystore loaded
-2018-05-24T11:02:21.031Z - success: node-library loaded
-2018-05-24T11:02:21.032Z - success: package-asset loaded
-2018-05-24T11:02:21.034Z - success: preferences loaded
-2018-05-24T11:02:21.035Z - success: project-exporter loaded
-2018-05-24T11:02:21.047Z - success: project-importer loaded
-2018-05-24T11:02:21.048Z - success: project-settings loaded
-2018-05-24T11:02:21.050Z - success: ui-kit loaded
-2018-05-24T11:02:21.051Z - success: ui-grid loaded
-2018-05-24T11:02:21.053Z - success: scene loaded
-2018-05-24T11:02:21.054Z - success: sprite-editor loaded
-2018-05-24T11:02:21.056Z - success: store loaded
-2018-05-24T11:02:21.058Z - success: timeline loaded
-2018-05-24T11:02:21.058Z - normal: Loading builtin packages
-2018-05-24T11:02:21.060Z - success: asset-db-debugger loaded
-2018-05-24T11:02:21.061Z - success: code-editor loaded
-2018-05-24T11:02:21.061Z - success: color-picker loaded
-2018-05-24T11:02:21.063Z - success: package-manager loaded
-2018-05-24T11:02:21.066Z - success: sdkbox loaded
-2018-05-24T11:02:21.068Z - success: tester loaded
-2018-05-24T11:02:21.069Z - success: ui-kit-preview-extra loaded
-2018-05-24T11:02:21.070Z - success: ui-kit-preview loaded
-2018-05-24T11:02:21.071Z - success: ui-tree loaded
-2018-05-24T11:02:22.022Z - normal: Initializing project D:\Project\Dodger-cocos
-2018-05-24T11:02:22.024Z - normal: Loading packages
-2018-05-24T11:02:22.028Z - normal: Watching packages
-2018-05-24T11:02:22.037Z - normal: Run Application
-2018-05-24T11:02:22.391Z - success: preview server running at http://localhost:7456
-2018-05-24T11:02:25.969Z - normal: 1.9.1
-2018-05-24T11:04:38.028Z - normal: Start building with options : {
+2018-05-31T02:16:31.999Z - normal: Load ~/.CocosCreator/settings.json
+2018-05-31T02:16:32.003Z - normal: checking language setting...
+2018-05-31T02:16:32.003Z - normal: Language: zh
+2018-05-31T02:16:35.280Z - success: protocol editor-framework registered
+2018-05-31T02:16:35.280Z - success: protocol app registered
+2018-05-31T02:16:35.280Z - success: protocol theme registered
+2018-05-31T02:16:35.280Z - success: protocol packages registered
+2018-05-31T02:16:35.280Z - success: protocol unpack registerred
+2018-05-31T02:16:35.281Z - success: protocol disable-commonjs registerred
+2018-05-31T02:16:35.379Z - normal: connected!
+2018-05-31T02:16:35.391Z - normal: Check project D:\Project\Dodger-cocos
+2018-05-31T02:16:35.412Z - normal: Initializing Cocos2d
+2018-05-31T02:16:36.094Z - normal: Initializing Asset Database
+2018-05-31T02:16:36.164Z - success: protocol uuid registerred
+2018-05-31T02:16:36.164Z - success: protocol db registerred
+2018-05-31T02:16:36.164Z - success: protocol thumbnail registerred
+2018-05-31T02:16:36.164Z - normal: Loading editor/builtin packages
+2018-05-31T02:16:36.208Z - success: anysdk loaded
+2018-05-31T02:16:36.362Z - success: assets loaded
+2018-05-31T02:16:36.365Z - success: builder loaded
+2018-05-31T02:16:36.367Z - success: cocos-analytics loaded
+2018-05-31T02:16:36.369Z - success: console loaded
+2018-05-31T02:16:36.405Z - success: fb-instant-games loaded
+2018-05-31T02:16:36.408Z - success: hierarchy loaded
+2018-05-31T02:16:36.416Z - success: inspector loaded
+2018-05-31T02:16:36.417Z - success: keystore loaded
+2018-05-31T02:16:36.425Z - success: node-library loaded
+2018-05-31T02:16:36.426Z - success: package-asset loaded
+2018-05-31T02:16:36.428Z - success: preferences loaded
+2018-05-31T02:16:36.429Z - success: project-exporter loaded
+2018-05-31T02:16:36.443Z - success: project-importer loaded
+2018-05-31T02:16:36.444Z - success: project-settings loaded
+2018-05-31T02:16:36.446Z - success: ui-kit loaded
+2018-05-31T02:16:36.456Z - success: ui-grid loaded
+2018-05-31T02:16:36.459Z - success: scene loaded
+2018-05-31T02:16:36.460Z - success: sprite-editor loaded
+2018-05-31T02:16:36.463Z - success: store loaded
+2018-05-31T02:16:36.467Z - success: timeline loaded
+2018-05-31T02:16:36.467Z - normal: Loading builtin packages
+2018-05-31T02:16:36.472Z - success: asset-db-debugger loaded
+2018-05-31T02:16:36.473Z - success: code-editor loaded
+2018-05-31T02:16:36.479Z - success: color-picker loaded
+2018-05-31T02:16:36.481Z - success: package-manager loaded
+2018-05-31T02:16:36.486Z - success: sdkbox loaded
+2018-05-31T02:16:36.489Z - success: tester loaded
+2018-05-31T02:16:36.490Z - success: ui-kit-preview-extra loaded
+2018-05-31T02:16:36.491Z - success: ui-kit-preview loaded
+2018-05-31T02:16:36.493Z - success: ui-tree loaded
+2018-05-31T02:16:38.609Z - normal: Initializing project D:\Project\Dodger-cocos
+2018-05-31T02:16:38.623Z - normal: Loading packages
+2018-05-31T02:16:38.627Z - normal: Watching packages
+2018-05-31T02:16:38.661Z - normal: Run Application
+2018-05-31T02:16:40.302Z - success: preview server running at http://localhost:7456
+2018-05-31T02:16:47.059Z - normal: 1.9.1
+2018-05-31T02:28:01.288Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:11103
+2018-05-31T02:39:10.696Z - normal: Start building with options : {
   "androidStudio": true,
   "apiLevel": "",
   "appABIs": [],
@@ -114,26 +115,536 @@
   "projectName": "Dodger",
   "debugBuildWorker": false
 }
-2018-05-24T11:04:38.035Z - normal: Building D:\Project\Dodger-cocos
-2018-05-24T11:04:38.035Z - normal: Destination D:\Project\Dodger-cocos\build\web-mobile
-2018-05-24T11:04:38.331Z - normal: Delete D:\Project\Dodger-cocos\build\web-mobile\**\*
-2018-05-24T11:04:40.248Z - normal: Compiled project javascript file successfully
-2018-05-24T11:04:40.248Z - normal: Start building assets
-2018-05-24T11:04:40.248Z - normal: Start spawn build-worker
-2018-05-24T11:04:40.842Z - normal: Finish spawn build-worker
-2018-05-24T11:04:40.842Z - normal: Start init build-worker
-2018-05-24T11:04:42.686Z - normal: 1.9.1
-2018-05-24T11:04:42.744Z - normal: Finish init build-worker
-2018-05-24T11:04:42.744Z - normal: Start build-assets in worker
-2018-05-24T11:04:43.019Z - normal: Finish build-assets in worker
-2018-05-24T11:04:43.023Z - normal: Finish building assets
-2018-05-24T11:04:43.033Z - normal: Start building raw assets
-2018-05-24T11:04:43.034Z - normal: Start building plugin scripts
-2018-05-24T11:04:43.348Z - normal: Finish building raw assets
-2018-05-24T11:04:43.357Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
-2018-05-24T11:04:43.364Z - normal: Generating html from D:\Program Files\CocosCreator\resources\static\build-templates\web-mobile\template\index.html
-2018-05-24T11:04:43.378Z - normal: Built to "D:\Project\Dodger-cocos\build\web-mobile" successfully
-2018-05-24T11:09:01.604Z - normal: Start building with options : {
+2018-05-31T02:39:10.705Z - normal: Building D:\Project\Dodger-cocos
+2018-05-31T02:39:10.705Z - normal: Destination D:\Project\Dodger-cocos\build\web-mobile
+2018-05-31T02:39:11.388Z - normal: Delete D:\Project\Dodger-cocos\build\web-mobile\**\*
+2018-05-31T02:39:13.935Z - normal: Compiled project javascript file successfully
+2018-05-31T02:39:13.936Z - normal: Start building assets
+2018-05-31T02:39:13.936Z - normal: Start spawn build-worker
+2018-05-31T02:39:14.564Z - normal: Finish spawn build-worker
+2018-05-31T02:39:14.565Z - normal: Start init build-worker
+2018-05-31T02:39:16.338Z - normal: 1.9.1
+2018-05-31T02:39:16.392Z - normal: Finish init build-worker
+2018-05-31T02:39:16.393Z - normal: Start build-assets in worker
+2018-05-31T02:39:16.713Z - normal: Finish build-assets in worker
+2018-05-31T02:39:16.717Z - normal: Finish building assets
+2018-05-31T02:39:16.727Z - normal: Start building raw assets
+2018-05-31T02:39:16.728Z - normal: Start building plugin scripts
+2018-05-31T02:39:16.742Z - normal: Finish building raw assets
+2018-05-31T02:39:16.776Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-05-31T02:39:16.804Z - normal: Generating html from D:\Program Files\CocosCreator\resources\static\build-templates\web-mobile\template\index.html
+2018-05-31T02:39:16.808Z - normal: Built to "D:\Project\Dodger-cocos\build\web-mobile" successfully
+2018-05-31T02:39:28.117Z - normal: Start building with options : {
+  "androidStudio": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "D:\\Project\\Dodger-cocos\\build",
+  "debug": false,
+  "dest": "D:\\Project\\Dodger-cocos\\build\\wechatgame",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeEruda": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "scenes": [
+    "2d2f792f-a40c-49bb-a189-ed176a246e49"
+  ],
+  "sourceMaps": false,
+  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
+  "template": "link",
+  "title": "Dodger",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "landscape",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx8b8e5e1ce338c472",
+    "isSubdomain": false,
+    "orientation": "landscape",
+    "subContext": ""
+  },
+  "xxteaKey": "5289e606-00b5-47",
+  "zipCompressJs": true,
+  "project": "D:\\Project\\Dodger-cocos",
+  "projectName": "Dodger",
+  "debugBuildWorker": false
+}
+2018-05-31T02:39:28.119Z - normal: Building D:\Project\Dodger-cocos
+2018-05-31T02:39:28.120Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-05-31T02:39:28.120Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-05-31T02:39:30.208Z - normal: Compiled project javascript file successfully
+2018-05-31T02:39:30.208Z - normal: Start building assets
+2018-05-31T02:39:30.208Z - normal: Start spawn build-worker
+2018-05-31T02:39:30.810Z - normal: Finish spawn build-worker
+2018-05-31T02:39:30.810Z - normal: Start init build-worker
+2018-05-31T02:39:32.610Z - normal: 1.9.1
+2018-05-31T02:39:32.671Z - normal: Finish init build-worker
+2018-05-31T02:39:32.671Z - normal: Start build-assets in worker
+2018-05-31T02:39:32.945Z - normal: Finish build-assets in worker
+2018-05-31T02:39:32.950Z - normal: Finish building assets
+2018-05-31T02:39:32.958Z - normal: Start building raw assets
+2018-05-31T02:39:32.959Z - normal: Start building plugin scripts
+2018-05-31T02:39:32.991Z - normal: Finish building raw assets
+2018-05-31T02:39:32.999Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-05-31T02:39:33.163Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-05-31T02:40:11.773Z - normal: Initializing...
+
+2018-05-31T02:40:11.825Z - normal: idePortFile: C:\Users\Sniper\AppData\Local\微信web开发者工具\User Data\Default\.ide
+
+2018-05-31T02:40:12.890Z - normal: starting ide...
+
+2018-05-31T02:40:25.523Z - normal: IDE server has started, listening on http://127.0.0.1:51256
+
+2018-05-31T02:40:25.584Z - normal: initialization finished
+
+2018-05-31T02:40:25.590Z - error: Runtime error: Error 
+ Error: getaddrinfo ENOTFOUND http://127.0.0.1 http://127.0.0.1:51256
+
+    at Socket.<anonymous> (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:1302)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at Pipe.onread (net.js:560:20)
+2018-05-31T02:40:25.591Z - error: Runtime error: Error 
+ Error: socket hang up
+
+    at Socket.<anonymous> (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:1302)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at Pipe.onread (net.js:560:20)
+2018-05-31T02:40:26.531Z - normal: open IDE success
+
+2018-05-31T02:42:56.380Z - normal: Start building with options : {
+  "androidStudio": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "D:\\Project\\Dodger-cocos\\build",
+  "debug": false,
+  "dest": "D:\\Project\\Dodger-cocos\\build\\wechatgame",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeEruda": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "scenes": [
+    "2d2f792f-a40c-49bb-a189-ed176a246e49"
+  ],
+  "sourceMaps": false,
+  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
+  "template": "link",
+  "title": "Dodger",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "landscape",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx8b8e5e1ce338c472",
+    "isSubdomain": false,
+    "orientation": "landscape",
+    "subContext": ""
+  },
+  "xxteaKey": "5289e606-00b5-47",
+  "zipCompressJs": true,
+  "project": "D:\\Project\\Dodger-cocos",
+  "projectName": "Dodger",
+  "debugBuildWorker": false
+}
+2018-05-31T02:42:56.400Z - normal: Building D:\Project\Dodger-cocos
+2018-05-31T02:42:56.400Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-05-31T02:42:56.402Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-05-31T02:42:59.033Z - normal: Compiled project javascript file successfully
+2018-05-31T02:42:59.033Z - normal: Start building assets
+2018-05-31T02:42:59.034Z - normal: Start spawn build-worker
+2018-05-31T02:42:59.887Z - normal: Finish spawn build-worker
+2018-05-31T02:42:59.888Z - normal: Start init build-worker
+2018-05-31T02:43:01.816Z - normal: 1.9.1
+2018-05-31T02:43:01.871Z - normal: Finish init build-worker
+2018-05-31T02:43:01.872Z - normal: Start build-assets in worker
+2018-05-31T02:43:02.230Z - normal: Finish build-assets in worker
+2018-05-31T02:43:02.244Z - normal: Finish building assets
+2018-05-31T02:43:02.253Z - normal: Start building raw assets
+2018-05-31T02:43:02.254Z - normal: Start building plugin scripts
+2018-05-31T02:43:02.279Z - normal: Finish building raw assets
+2018-05-31T02:43:02.283Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-05-31T02:43:02.381Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-05-31T08:31:47.169Z - normal: Start building with options : {
+  "androidStudio": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "D:\\Project\\Dodger-cocos\\build",
+  "debug": false,
+  "dest": "D:\\Project\\Dodger-cocos\\build\\wechatgame",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeEruda": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "scenes": [
+    "2d2f792f-a40c-49bb-a189-ed176a246e49"
+  ],
+  "sourceMaps": false,
+  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
+  "template": "link",
+  "title": "Dodger",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "landscape",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx8b8e5e1ce338c472",
+    "isSubdomain": false,
+    "orientation": "landscape",
+    "subContext": ""
+  },
+  "xxteaKey": "5289e606-00b5-47",
+  "zipCompressJs": true,
+  "project": "D:\\Project\\Dodger-cocos",
+  "projectName": "Dodger",
+  "debugBuildWorker": false
+}
+2018-05-31T08:31:47.186Z - normal: Building D:\Project\Dodger-cocos
+2018-05-31T08:31:47.187Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-05-31T08:31:47.192Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-05-31T08:31:50.608Z - normal: Compiled project javascript file successfully
+2018-05-31T08:31:50.608Z - normal: Start building assets
+2018-05-31T08:31:50.608Z - normal: Start spawn build-worker
+2018-05-31T08:31:51.288Z - normal: Finish spawn build-worker
+2018-05-31T08:31:51.288Z - normal: Start init build-worker
+2018-05-31T08:31:53.150Z - normal: 1.9.1
+2018-05-31T08:31:53.208Z - normal: Finish init build-worker
+2018-05-31T08:31:53.209Z - normal: Start build-assets in worker
+2018-05-31T08:31:53.622Z - normal: Finish build-assets in worker
+2018-05-31T08:31:53.626Z - normal: Finish building assets
+2018-05-31T08:31:53.636Z - normal: Start building raw assets
+2018-05-31T08:31:53.637Z - normal: Start building plugin scripts
+2018-05-31T08:31:53.654Z - normal: Finish building raw assets
+2018-05-31T08:31:53.657Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-05-31T08:31:53.743Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-05-31T08:33:33.833Z - normal: Start building with options : {
+  "androidStudio": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "D:\\Project\\Dodger-cocos\\build",
+  "debug": false,
+  "dest": "D:\\Project\\Dodger-cocos\\build\\wechatgame",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeEruda": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "scenes": [
+    "2d2f792f-a40c-49bb-a189-ed176a246e49"
+  ],
+  "sourceMaps": false,
+  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
+  "template": "link",
+  "title": "Dodger",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "landscape",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx8b8e5e1ce338c472",
+    "isSubdomain": false,
+    "orientation": "landscape",
+    "subContext": ""
+  },
+  "xxteaKey": "5289e606-00b5-47",
+  "zipCompressJs": true,
+  "project": "D:\\Project\\Dodger-cocos",
+  "projectName": "Dodger",
+  "debugBuildWorker": false
+}
+2018-05-31T08:33:33.851Z - normal: Building D:\Project\Dodger-cocos
+2018-05-31T08:33:33.851Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-05-31T08:33:33.855Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-05-31T08:33:36.391Z - normal: Compiled project javascript file successfully
+2018-05-31T08:33:36.391Z - normal: Start building assets
+2018-05-31T08:33:36.391Z - normal: Start spawn build-worker
+2018-05-31T08:33:37.057Z - normal: Finish spawn build-worker
+2018-05-31T08:33:37.057Z - normal: Start init build-worker
+2018-05-31T08:33:38.930Z - normal: 1.9.1
+2018-05-31T08:33:38.991Z - normal: Finish init build-worker
+2018-05-31T08:33:38.991Z - normal: Start build-assets in worker
+2018-05-31T08:33:39.306Z - normal: Finish build-assets in worker
+2018-05-31T08:33:39.311Z - normal: Finish building assets
+2018-05-31T08:33:39.320Z - normal: Start building raw assets
+2018-05-31T08:33:39.320Z - normal: Start building plugin scripts
+2018-05-31T08:33:39.339Z - normal: Finish building raw assets
+2018-05-31T08:33:39.346Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-05-31T08:33:39.421Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-05-31T08:47:45.464Z - normal: Start building with options : {
+  "androidStudio": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "D:\\Project\\Dodger-cocos\\build",
+  "debug": false,
+  "dest": "D:\\Project\\Dodger-cocos\\build\\wechatgame",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeEruda": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "scenes": [
+    "2d2f792f-a40c-49bb-a189-ed176a246e49"
+  ],
+  "sourceMaps": false,
+  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
+  "template": "link",
+  "title": "Dodger",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "landscape",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx8b8e5e1ce338c472",
+    "isSubdomain": false,
+    "orientation": "landscape",
+    "subContext": ""
+  },
+  "xxteaKey": "5289e606-00b5-47",
+  "zipCompressJs": true,
+  "project": "D:\\Project\\Dodger-cocos",
+  "projectName": "Dodger",
+  "debugBuildWorker": false
+}
+2018-05-31T08:47:45.471Z - normal: Building D:\Project\Dodger-cocos
+2018-05-31T08:47:45.471Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-05-31T08:47:45.472Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-05-31T08:47:48.258Z - normal: Compiled project javascript file successfully
+2018-05-31T08:47:48.259Z - normal: Start building assets
+2018-05-31T08:47:48.259Z - normal: Start spawn build-worker
+2018-05-31T08:47:49.175Z - normal: Finish spawn build-worker
+2018-05-31T08:47:49.175Z - normal: Start init build-worker
+2018-05-31T08:47:51.168Z - normal: 1.9.1
+2018-05-31T08:47:51.231Z - normal: Finish init build-worker
+2018-05-31T08:47:51.231Z - normal: Start build-assets in worker
+2018-05-31T08:47:51.601Z - normal: Finish build-assets in worker
+2018-05-31T08:47:51.605Z - normal: Finish building assets
+2018-05-31T08:47:51.612Z - normal: Start building raw assets
+2018-05-31T08:47:51.613Z - normal: Start building plugin scripts
+2018-05-31T08:47:51.631Z - normal: Finish building raw assets
+2018-05-31T08:47:51.634Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-05-31T08:47:51.737Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-05-31T08:48:34.163Z - normal: Start building with options : {
+  "androidStudio": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "D:\\Project\\Dodger-cocos\\build",
+  "debug": false,
+  "dest": "D:\\Project\\Dodger-cocos\\build\\wechatgame",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeEruda": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "scenes": [
+    "2d2f792f-a40c-49bb-a189-ed176a246e49"
+  ],
+  "sourceMaps": false,
+  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
+  "template": "link",
+  "title": "Dodger",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "landscape",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx8b8e5e1ce338c472",
+    "isSubdomain": false,
+    "orientation": "landscape",
+    "subContext": ""
+  },
+  "xxteaKey": "5289e606-00b5-47",
+  "zipCompressJs": true,
+  "project": "D:\\Project\\Dodger-cocos",
+  "projectName": "Dodger",
+  "debugBuildWorker": false
+}
+2018-05-31T08:48:34.165Z - normal: Building D:\Project\Dodger-cocos
+2018-05-31T08:48:34.165Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-05-31T08:48:34.166Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-05-31T08:48:36.619Z - normal: Compiled project javascript file successfully
+2018-05-31T08:48:36.619Z - normal: Start building assets
+2018-05-31T08:48:36.619Z - normal: Start spawn build-worker
+2018-05-31T08:48:37.471Z - normal: Finish spawn build-worker
+2018-05-31T08:48:37.472Z - normal: Start init build-worker
+2018-05-31T08:48:39.583Z - normal: 1.9.1
+2018-05-31T08:48:39.644Z - normal: Finish init build-worker
+2018-05-31T08:48:39.645Z - normal: Start build-assets in worker
+2018-05-31T08:48:40.010Z - normal: Finish build-assets in worker
+2018-05-31T08:48:40.016Z - normal: Finish building assets
+2018-05-31T08:48:40.023Z - normal: Start building raw assets
+2018-05-31T08:48:40.023Z - normal: Start building plugin scripts
+2018-05-31T08:48:40.046Z - normal: Finish building raw assets
+2018-05-31T08:48:40.047Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-05-31T08:48:40.136Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-06-01T08:07:19.892Z - normal: Start building with options : {
   "androidStudio": true,
   "apiLevel": "",
   "appABIs": [],
@@ -195,265 +706,22 @@
   "projectName": "Dodger",
   "debugBuildWorker": false
 }
-2018-05-24T11:09:01.614Z - normal: Building D:\Project\Dodger-cocos
-2018-05-24T11:09:01.615Z - normal: Destination D:\Project\Dodger-cocos\build\web-mobile
-2018-05-24T11:09:01.617Z - normal: Delete D:\Project\Dodger-cocos\build\web-mobile\**\*
-2018-05-24T11:09:03.609Z - normal: Compiled project javascript file successfully
-2018-05-24T11:09:03.610Z - normal: Start building assets
-2018-05-24T11:09:03.610Z - normal: Start spawn build-worker
-2018-05-24T11:09:04.247Z - normal: Finish spawn build-worker
-2018-05-24T11:09:04.247Z - normal: Start init build-worker
-2018-05-24T11:09:06.059Z - normal: 1.9.1
-2018-05-24T11:09:06.117Z - normal: Finish init build-worker
-2018-05-24T11:09:06.117Z - normal: Start build-assets in worker
-2018-05-24T11:09:06.376Z - normal: Finish build-assets in worker
-2018-05-24T11:09:06.380Z - normal: Finish building assets
-2018-05-24T11:09:06.386Z - normal: Start building raw assets
-2018-05-24T11:09:06.387Z - normal: Start building plugin scripts
-2018-05-24T11:09:06.417Z - normal: Finish building raw assets
-2018-05-24T11:09:06.425Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
-2018-05-24T11:09:06.434Z - normal: Generating html from D:\Program Files\CocosCreator\resources\static\build-templates\web-mobile\template\index.html
-2018-05-24T11:09:06.446Z - normal: Built to "D:\Project\Dodger-cocos\build\web-mobile" successfully
-2018-05-24T11:12:53.474Z - normal: Start building with options : {
-  "androidStudio": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "appKey": "",
-  "appSecret": "",
-  "buildPath": "D:\\Project\\Dodger-cocos\\build",
-  "debug": false,
-  "dest": "D:\\Project\\Dodger-cocos\\build\\web-mobile",
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeAnySDK": false,
-  "includeEruda": false,
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "jailbreakPlatform": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "oauthLoginServer": "",
-  "optimizeHotUpdate": false,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.helloworld",
-  "platform": "web-mobile",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "privateKey": "",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait"
-  },
-  "renderMode": "0",
-  "scenes": [
-    "2d2f792f-a40c-49bb-a189-ed176a246e49"
-  ],
-  "sourceMaps": false,
-  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
-  "template": "link",
-  "title": "Dodger",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "landscape",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx8b8e5e1ce338c472",
-    "isSubdomain": false,
-    "orientation": "landscape",
-    "subContext": ""
-  },
-  "xxteaKey": "5289e606-00b5-47",
-  "zipCompressJs": true,
-  "project": "D:\\Project\\Dodger-cocos",
-  "projectName": "Dodger",
-  "debugBuildWorker": false
-}
-2018-05-24T11:12:53.483Z - normal: Building D:\Project\Dodger-cocos
-2018-05-24T11:12:53.483Z - normal: Destination D:\Project\Dodger-cocos\build\web-mobile
-2018-05-24T11:12:53.483Z - normal: Delete D:\Project\Dodger-cocos\build\web-mobile\**\*
-2018-05-24T11:12:55.510Z - normal: Compiled project javascript file successfully
-2018-05-24T11:12:55.510Z - normal: Start building assets
-2018-05-24T11:12:55.510Z - normal: Start spawn build-worker
-2018-05-24T11:12:56.170Z - normal: Finish spawn build-worker
-2018-05-24T11:12:56.171Z - normal: Start init build-worker
-2018-05-24T11:12:58.150Z - normal: 1.9.1
-2018-05-24T11:12:58.207Z - normal: Finish init build-worker
-2018-05-24T11:12:58.207Z - normal: Start build-assets in worker
-2018-05-24T11:12:58.486Z - normal: Finish build-assets in worker
-2018-05-24T11:12:58.490Z - normal: Finish building assets
-2018-05-24T11:12:58.497Z - normal: Start building raw assets
-2018-05-24T11:12:58.498Z - normal: Start building plugin scripts
-2018-05-24T11:12:58.524Z - normal: Finish building raw assets
-2018-05-24T11:12:58.542Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
-2018-05-24T11:12:58.546Z - normal: Generating html from D:\Program Files\CocosCreator\resources\static\build-templates\web-mobile\template\index.html
-2018-05-24T11:12:58.559Z - normal: Built to "D:\Project\Dodger-cocos\build\web-mobile" successfully
-2018-05-24T11:15:18.436Z - normal: Start building with options : {
-  "androidStudio": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "appKey": "",
-  "appSecret": "",
-  "buildPath": "D:\\Project\\Dodger-cocos\\build",
-  "debug": false,
-  "dest": "D:\\Project\\Dodger-cocos\\build\\web-mobile",
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeAnySDK": false,
-  "includeEruda": false,
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "jailbreakPlatform": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "oauthLoginServer": "",
-  "optimizeHotUpdate": false,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.helloworld",
-  "platform": "web-mobile",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "privateKey": "",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait"
-  },
-  "renderMode": "0",
-  "scenes": [
-    "2d2f792f-a40c-49bb-a189-ed176a246e49"
-  ],
-  "sourceMaps": false,
-  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
-  "template": "link",
-  "title": "Dodger",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "landscape",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx8b8e5e1ce338c472",
-    "isSubdomain": false,
-    "orientation": "landscape",
-    "subContext": ""
-  },
-  "xxteaKey": "5289e606-00b5-47",
-  "zipCompressJs": true,
-  "project": "D:\\Project\\Dodger-cocos",
-  "projectName": "Dodger",
-  "debugBuildWorker": false
-}
-2018-05-24T11:15:18.448Z - normal: Building D:\Project\Dodger-cocos
-2018-05-24T11:15:18.448Z - normal: Destination D:\Project\Dodger-cocos\build\web-mobile
-2018-05-24T11:15:18.449Z - normal: Delete D:\Project\Dodger-cocos\build\web-mobile\**\*
-2018-05-24T11:15:20.446Z - normal: Compiled project javascript file successfully
-2018-05-24T11:15:20.446Z - normal: Start building assets
-2018-05-24T11:15:20.447Z - normal: Start spawn build-worker
-2018-05-24T11:15:21.109Z - normal: Finish spawn build-worker
-2018-05-24T11:15:21.109Z - normal: Start init build-worker
-2018-05-24T11:15:23.065Z - normal: 1.9.1
-2018-05-24T11:15:23.122Z - normal: Finish init build-worker
-2018-05-24T11:15:23.122Z - normal: Start build-assets in worker
-2018-05-24T11:15:23.415Z - normal: Finish build-assets in worker
-2018-05-24T11:15:23.419Z - normal: Finish building assets
-2018-05-24T11:15:23.425Z - normal: Start building raw assets
-2018-05-24T11:15:23.426Z - normal: Start building plugin scripts
-2018-05-24T11:15:23.440Z - normal: Finish building raw assets
-2018-05-24T11:15:23.448Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
-2018-05-24T11:15:23.461Z - normal: Generating html from D:\Program Files\CocosCreator\resources\static\build-templates\web-mobile\template\index.html
-2018-05-24T11:15:23.471Z - normal: Built to "D:\Project\Dodger-cocos\build\web-mobile" successfully
-2018-05-24T11:24:59.403Z - normal: Start building with options : {
-  "androidStudio": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "appKey": "",
-  "appSecret": "",
-  "buildPath": "D:\\Project\\Dodger-cocos\\build",
-  "debug": false,
-  "dest": "D:\\Project\\Dodger-cocos\\build\\web-mobile",
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeAnySDK": false,
-  "includeEruda": false,
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "jailbreakPlatform": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "oauthLoginServer": "",
-  "optimizeHotUpdate": false,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.helloworld",
-  "platform": "web-mobile",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "privateKey": "",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait"
-  },
-  "renderMode": "0",
-  "scenes": [
-    "2d2f792f-a40c-49bb-a189-ed176a246e49"
-  ],
-  "sourceMaps": false,
-  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
-  "template": "link",
-  "title": "Dodger",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx8b8e5e1ce338c472",
-    "isSubdomain": false,
-    "orientation": "landscape",
-    "subContext": ""
-  },
-  "xxteaKey": "5289e606-00b5-47",
-  "zipCompressJs": true,
-  "project": "D:\\Project\\Dodger-cocos",
-  "projectName": "Dodger",
-  "debugBuildWorker": false
-}
-2018-05-24T11:24:59.438Z - normal: Building D:\Project\Dodger-cocos
-2018-05-24T11:24:59.438Z - normal: Destination D:\Project\Dodger-cocos\build\web-mobile
-2018-05-24T11:24:59.440Z - normal: Delete D:\Project\Dodger-cocos\build\web-mobile\**\*
-2018-05-24T11:25:01.405Z - normal: Compiled project javascript file successfully
-2018-05-24T11:25:01.405Z - normal: Start building assets
-2018-05-24T11:25:01.406Z - normal: Start spawn build-worker
-2018-05-24T11:25:02.012Z - normal: Finish spawn build-worker
-2018-05-24T11:25:02.012Z - normal: Start init build-worker
-2018-05-24T11:25:03.828Z - normal: 1.9.1
-2018-05-24T11:25:03.887Z - normal: Finish init build-worker
-2018-05-24T11:25:03.887Z - normal: Start build-assets in worker
-2018-05-24T11:25:04.176Z - normal: Finish build-assets in worker
-2018-05-24T11:25:04.180Z - normal: Finish building assets
-2018-05-24T11:25:04.188Z - normal: Start building raw assets
-2018-05-24T11:25:04.189Z - normal: Start building plugin scripts
-2018-05-24T11:25:04.204Z - normal: Finish building raw assets
-2018-05-24T11:25:04.210Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
-2018-05-24T11:25:04.222Z - normal: Generating html from D:\Program Files\CocosCreator\resources\static\build-templates\web-mobile\template\index.html
-2018-05-24T11:25:04.237Z - normal: Built to "D:\Project\Dodger-cocos\build\web-mobile" successfully
+2018-06-01T08:07:19.909Z - normal: Building D:\Project\Dodger-cocos
+2018-06-01T08:07:19.909Z - normal: Destination D:\Project\Dodger-cocos\build\web-mobile
+2018-06-01T08:07:19.912Z - normal: Delete D:\Project\Dodger-cocos\build\web-mobile\**\*
+2018-06-01T08:07:23.499Z - normal: Compiled project javascript file successfully
+2018-06-01T08:07:23.499Z - normal: Start building assets
+2018-06-01T08:07:23.500Z - normal: Start spawn build-worker
+2018-06-01T08:07:24.145Z - normal: Finish spawn build-worker
+2018-06-01T08:07:24.145Z - normal: Start init build-worker
+2018-06-01T08:07:26.100Z - normal: 1.9.1
+2018-06-01T08:07:26.186Z - normal: Finish init build-worker
+2018-06-01T08:07:26.186Z - normal: Start build-assets in worker
+2018-06-01T08:07:26.533Z - normal: Finish build-assets in worker
+2018-06-01T08:07:26.538Z - normal: Finish building assets
+2018-06-01T08:07:26.548Z - normal: Start building raw assets
+2018-06-01T08:07:26.548Z - normal: Start building plugin scripts
+2018-06-01T08:07:26.569Z - normal: Finish building raw assets
+2018-06-01T08:07:26.580Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-06-01T08:07:26.635Z - normal: Generating html from D:\Program Files\CocosCreator\resources\static\build-templates\web-mobile\template\index.html
+2018-06-01T08:07:26.639Z - normal: Built to "D:\Project\Dodger-cocos\build\web-mobile" successfully

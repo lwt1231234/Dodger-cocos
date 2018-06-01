@@ -30,7 +30,7 @@ cc.Class({
 
     start () {
         this.GameManager = cc.find("Canvas/GameManager");
-        this.GameInit();
+        //this.GameInit();
     },
 
     GameInit(){
@@ -70,6 +70,11 @@ cc.Class({
         var BulletSpeed = this.GameManager.getComponent('GameManager').BulletSpeed;
         BulletSpeed =200+5*BulletSpeed;
         newBullet.getComponent(cc.RigidBody).linearVelocity = cc.v2(cc.pForAngle(this.node.rotation*Math.PI/180).y*BulletSpeed,cc.pForAngle(this.node.rotation*Math.PI/180).x*BulletSpeed);
+
+        var BulletScale = this.GameManager.getComponent('GameManager').Score;
+        BulletScale = 20/(20+BulletScale)+0.2
+
+        newBullet.scale=cc.v2(BulletScale,BulletScale);
 
         var ShootSpeed = this.GameManager.getComponent('GameManager').ShootSpeed;
         ShootSpeed = 2*10/(10+ShootSpeed)

@@ -235,8 +235,8 @@
     "relativePath": "Script"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1527160791853,
-    "meta": 1527160791859,
+    "asset": 1527756511523,
+    "meta": 1527756511530,
     "relativePath": "Scene\\Main.fire"
   },
   "6e6f79e4-8f19-4e40-be9a-485f4a9bfaaf": {
@@ -489,14 +489,19 @@
     "meta": 1527157115876,
     "relativePath": "Script\\Test\\HelloWorld.js"
   },
+  "3fe89d80-56b0-4709-b3d6-b8d8e285afe8": {
+    "asset": 1527736157672,
+    "meta": 1527736189113,
+    "relativePath": "Script\\GuideUIControl.js"
+  },
   "dfdec900-1255-4700-8909-5f97f54a1f3f": {
-    "asset": 1527157111136,
-    "meta": 1527157115877,
+    "asset": 1527736602337,
+    "meta": 1527736604544,
     "relativePath": "Script\\TurretControl.js"
   },
   "b3132a90-a6c2-4549-8788-c2fa993d38b8": {
-    "asset": 1527158930721,
-    "meta": 1527158931413,
+    "asset": 1527756435795,
+    "meta": 1527756437989,
     "relativePath": "Script\\GameManager.js"
   }
 }

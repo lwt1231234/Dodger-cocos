@@ -55,6 +55,10 @@ cc.Class({
             default: null,
             visible: false,
         },
+        BulletScale :{
+            default: null,
+            visible: false,
+        },
         label_RotationSpeed: {
             default: null,
             type: cc.Label,
@@ -106,6 +110,10 @@ cc.Class({
             default: null,
             type: cc.Label,
         },
+        label_GameOverScore: {
+            default: null,
+            type: cc.Label,
+        },
         Player: {
             default: null,
             type: cc.Node,
@@ -128,6 +136,15 @@ cc.Class({
             type: cc.Node,
         }, 
         Block4: {
+            default: null,
+            type: cc.Node,
+        }, 
+                            //UI
+        GuideUI: {
+            default: null,
+            type: cc.Node,
+        },
+        GameOverUI: {
             default: null,
             type: cc.Node,
         }, 
@@ -195,8 +212,11 @@ cc.Class({
         this.physicsManager = cc.director.getPhysicsManager();
         this.physicsManager.enabled = true;
 
+        this.GameSpeed = 0;
+        this.GamePause = true;
         //初始化游戏参数
-        this.GameInit();
+        this.GuideUI.active = true;
+        //this.GameInit();
      },
 
     GameInit(){
@@ -207,6 +227,7 @@ cc.Class({
         this.PlayerSpeed2 = 20;
 
         this.RotationSpeed = 1;
+        this.BulletScale = 1;
         this.ShootSpeed = 1;
         this.BulletSpeed = 1;
         this.BulletLifeTime = 5;
@@ -234,6 +255,8 @@ cc.Class({
         this.ItemNum++;
         this.SwapBadItem();
 
+        this.Turret.getComponent('TurretControl').GameInit();
+
     },
 
     GameOver(){
@@ -254,11 +277,8 @@ cc.Class({
 
         this.Turret.getComponent('TurretControl').GameReset();
 
-        this.scheduleOnce(function() {
-                    this.GameInit();
-                    }, 0.1);
-        
-
+        this.GameOverUI.active = true;
+        this.label_GameOverScore.string='得分：'+this.Score.toString();
     },
 
     start () {
@@ -448,6 +468,7 @@ cc.Class({
 
     upRotationSpeed: function(){
         this.RotationSpeed+=2;
+        this.BulletScale+=1;
         this.Score +=1;
         this.UpdateData();
         this.SwapItem();
