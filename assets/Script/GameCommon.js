@@ -21,4 +21,9 @@ module.exports = {
         GetShield: 6,
     }),
 
+    ActiveSkillType : cc.Enum({
+        SlowTime: 0,
+        Bomb: 1,
+    }),
+
 };

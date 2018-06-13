@@ -1,140 +1,109 @@
-2018-05-31T02:16:31.999Z - normal: Load ~/.CocosCreator/settings.json
-2018-05-31T02:16:32.003Z - normal: checking language setting...
-2018-05-31T02:16:32.003Z - normal: Language: zh
-2018-05-31T02:16:35.280Z - success: protocol editor-framework registered
-2018-05-31T02:16:35.280Z - success: protocol app registered
-2018-05-31T02:16:35.280Z - success: protocol theme registered
-2018-05-31T02:16:35.280Z - success: protocol packages registered
-2018-05-31T02:16:35.280Z - success: protocol unpack registerred
-2018-05-31T02:16:35.281Z - success: protocol disable-commonjs registerred
-2018-05-31T02:16:35.379Z - normal: connected!
-2018-05-31T02:16:35.391Z - normal: Check project D:\Project\Dodger-cocos
-2018-05-31T02:16:35.412Z - normal: Initializing Cocos2d
-2018-05-31T02:16:36.094Z - normal: Initializing Asset Database
-2018-05-31T02:16:36.164Z - success: protocol uuid registerred
-2018-05-31T02:16:36.164Z - success: protocol db registerred
-2018-05-31T02:16:36.164Z - success: protocol thumbnail registerred
-2018-05-31T02:16:36.164Z - normal: Loading editor/builtin packages
-2018-05-31T02:16:36.208Z - success: anysdk loaded
-2018-05-31T02:16:36.362Z - success: assets loaded
-2018-05-31T02:16:36.365Z - success: builder loaded
-2018-05-31T02:16:36.367Z - success: cocos-analytics loaded
-2018-05-31T02:16:36.369Z - success: console loaded
-2018-05-31T02:16:36.405Z - success: fb-instant-games loaded
-2018-05-31T02:16:36.408Z - success: hierarchy loaded
-2018-05-31T02:16:36.416Z - success: inspector loaded
-2018-05-31T02:16:36.417Z - success: keystore loaded
-2018-05-31T02:16:36.425Z - success: node-library loaded
-2018-05-31T02:16:36.426Z - success: package-asset loaded
-2018-05-31T02:16:36.428Z - success: preferences loaded
-2018-05-31T02:16:36.429Z - success: project-exporter loaded
-2018-05-31T02:16:36.443Z - success: project-importer loaded
-2018-05-31T02:16:36.444Z - success: project-settings loaded
-2018-05-31T02:16:36.446Z - success: ui-kit loaded
-2018-05-31T02:16:36.456Z - success: ui-grid loaded
-2018-05-31T02:16:36.459Z - success: scene loaded
-2018-05-31T02:16:36.460Z - success: sprite-editor loaded
-2018-05-31T02:16:36.463Z - success: store loaded
-2018-05-31T02:16:36.467Z - success: timeline loaded
-2018-05-31T02:16:36.467Z - normal: Loading builtin packages
-2018-05-31T02:16:36.472Z - success: asset-db-debugger loaded
-2018-05-31T02:16:36.473Z - success: code-editor loaded
-2018-05-31T02:16:36.479Z - success: color-picker loaded
-2018-05-31T02:16:36.481Z - success: package-manager loaded
-2018-05-31T02:16:36.486Z - success: sdkbox loaded
-2018-05-31T02:16:36.489Z - success: tester loaded
-2018-05-31T02:16:36.490Z - success: ui-kit-preview-extra loaded
-2018-05-31T02:16:36.491Z - success: ui-kit-preview loaded
-2018-05-31T02:16:36.493Z - success: ui-tree loaded
-2018-05-31T02:16:38.609Z - normal: Initializing project D:\Project\Dodger-cocos
-2018-05-31T02:16:38.623Z - normal: Loading packages
-2018-05-31T02:16:38.627Z - normal: Watching packages
-2018-05-31T02:16:38.661Z - normal: Run Application
-2018-05-31T02:16:40.302Z - success: preview server running at http://localhost:7456
-2018-05-31T02:16:47.059Z - normal: 1.9.1
-2018-05-31T02:28:01.288Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:11103
-2018-05-31T02:39:10.696Z - normal: Start building with options : {
-  "androidStudio": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "appKey": "",
-  "appSecret": "",
-  "buildPath": "D:\\Project\\Dodger-cocos\\build",
-  "debug": false,
-  "dest": "D:\\Project\\Dodger-cocos\\build\\web-mobile",
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeAnySDK": false,
-  "includeEruda": false,
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "jailbreakPlatform": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "oauthLoginServer": "",
-  "optimizeHotUpdate": false,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.helloworld",
-  "platform": "web-mobile",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "privateKey": "",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait"
-  },
-  "renderMode": "0",
-  "scenes": [
-    "2d2f792f-a40c-49bb-a189-ed176a246e49"
-  ],
-  "sourceMaps": false,
-  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
-  "template": "link",
-  "title": "Dodger",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "landscape",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx8b8e5e1ce338c472",
-    "isSubdomain": false,
-    "orientation": "landscape",
-    "subContext": ""
-  },
-  "xxteaKey": "5289e606-00b5-47",
-  "zipCompressJs": true,
-  "project": "D:\\Project\\Dodger-cocos",
-  "projectName": "Dodger",
-  "debugBuildWorker": false
-}
-2018-05-31T02:39:10.705Z - normal: Building D:\Project\Dodger-cocos
-2018-05-31T02:39:10.705Z - normal: Destination D:\Project\Dodger-cocos\build\web-mobile
-2018-05-31T02:39:11.388Z - normal: Delete D:\Project\Dodger-cocos\build\web-mobile\**\*
-2018-05-31T02:39:13.935Z - normal: Compiled project javascript file successfully
-2018-05-31T02:39:13.936Z - normal: Start building assets
-2018-05-31T02:39:13.936Z - normal: Start spawn build-worker
-2018-05-31T02:39:14.564Z - normal: Finish spawn build-worker
-2018-05-31T02:39:14.565Z - normal: Start init build-worker
-2018-05-31T02:39:16.338Z - normal: 1.9.1
-2018-05-31T02:39:16.392Z - normal: Finish init build-worker
-2018-05-31T02:39:16.393Z - normal: Start build-assets in worker
-2018-05-31T02:39:16.713Z - normal: Finish build-assets in worker
-2018-05-31T02:39:16.717Z - normal: Finish building assets
-2018-05-31T02:39:16.727Z - normal: Start building raw assets
-2018-05-31T02:39:16.728Z - normal: Start building plugin scripts
-2018-05-31T02:39:16.742Z - normal: Finish building raw assets
-2018-05-31T02:39:16.776Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
-2018-05-31T02:39:16.804Z - normal: Generating html from D:\Program Files\CocosCreator\resources\static\build-templates\web-mobile\template\index.html
-2018-05-31T02:39:16.808Z - normal: Built to "D:\Project\Dodger-cocos\build\web-mobile" successfully
-2018-05-31T02:39:28.117Z - normal: Start building with options : {
+2018-06-13T11:28:13.842Z - normal: Load ~/.CocosCreator/settings.json
+2018-06-13T11:28:13.842Z - normal: checking language setting...
+2018-06-13T11:28:13.842Z - normal: Language: zh
+2018-06-13T11:28:16.463Z - success: protocol editor-framework registered
+2018-06-13T11:28:16.463Z - success: protocol app registered
+2018-06-13T11:28:16.463Z - success: protocol theme registered
+2018-06-13T11:28:16.463Z - success: protocol packages registered
+2018-06-13T11:28:16.463Z - success: protocol unpack registerred
+2018-06-13T11:28:16.463Z - success: protocol disable-commonjs registerred
+2018-06-13T11:28:16.697Z - normal: connected!
+2018-06-13T11:28:16.697Z - normal: Check project D:\Project\Dodger-cocos
+2018-06-13T11:28:16.728Z - normal: Initializing Cocos2d
+2018-06-13T11:28:16.915Z - normal: Initializing Asset Database
+2018-06-13T11:28:17.025Z - success: protocol uuid registerred
+2018-06-13T11:28:17.025Z - success: protocol db registerred
+2018-06-13T11:28:17.025Z - success: protocol thumbnail registerred
+2018-06-13T11:28:17.025Z - normal: Loading editor/builtin packages
+2018-06-13T11:28:17.087Z - success: anysdk loaded
+2018-06-13T11:28:17.274Z - success: assets loaded
+2018-06-13T11:28:17.274Z - success: builder loaded
+2018-06-13T11:28:17.274Z - success: cocos-analytics loaded
+2018-06-13T11:28:17.274Z - success: console loaded
+2018-06-13T11:28:17.305Z - success: fb-instant-games loaded
+2018-06-13T11:28:17.305Z - success: hierarchy loaded
+2018-06-13T11:28:17.305Z - success: inspector loaded
+2018-06-13T11:28:17.337Z - success: keystore loaded
+2018-06-13T11:28:17.352Z - success: node-library loaded
+2018-06-13T11:28:17.352Z - success: package-asset loaded
+2018-06-13T11:28:17.352Z - success: preferences loaded
+2018-06-13T11:28:17.352Z - success: project-exporter loaded
+2018-06-13T11:28:17.368Z - success: project-importer loaded
+2018-06-13T11:28:17.368Z - success: project-settings loaded
+2018-06-13T11:28:17.368Z - success: ui-kit loaded
+2018-06-13T11:28:17.368Z - success: ui-grid loaded
+2018-06-13T11:28:17.368Z - success: scene loaded
+2018-06-13T11:28:17.368Z - success: sprite-editor loaded
+2018-06-13T11:28:17.368Z - success: store loaded
+2018-06-13T11:28:17.383Z - success: timeline loaded
+2018-06-13T11:28:17.383Z - normal: Loading builtin packages
+2018-06-13T11:28:17.383Z - success: asset-db-debugger loaded
+2018-06-13T11:28:17.383Z - success: code-editor loaded
+2018-06-13T11:28:17.383Z - success: color-picker loaded
+2018-06-13T11:28:17.399Z - success: package-manager loaded
+2018-06-13T11:28:17.399Z - success: sdkbox loaded
+2018-06-13T11:28:17.399Z - success: tester loaded
+2018-06-13T11:28:17.399Z - success: ui-kit-preview-extra loaded
+2018-06-13T11:28:17.415Z - success: ui-kit-preview loaded
+2018-06-13T11:28:17.415Z - success: ui-tree loaded
+2018-06-13T11:28:18.678Z - normal: Initializing project D:\Project\Dodger-cocos
+2018-06-13T11:28:18.709Z - normal: Loading packages
+2018-06-13T11:28:18.709Z - normal: Watching packages
+2018-06-13T11:28:18.756Z - normal: Run Application
+2018-06-13T11:28:20.582Z - success: preview server running at http://localhost:7456
+2018-06-13T11:28:26.218Z - normal: 1.9.1
+2018-06-13T11:28:26.582Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T11:40:03.049Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T11:43:41.037Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T11:44:24.963Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T11:44:35.896Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T11:44:40.360Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T11:51:12.847Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T11:52:20.185Z - failed: [db-task][sync-changes] Failed to import asset D:\Project\Dodger-cocos\assets\Script\GameManager.js, message: Compile error: SyntaxError: D:/Project/Dodger-cocos/assets/Script/GameManager.js: Unexpected token, expected , (577:34)
+  575 | 
+  576 |     Skill_1_Start: function(){
+> 577 |         cc.log((this.Skill_1_Type);
+      |                                   ^
+  578 |         if(this.Skill_1_Type = Common.ActiveSkillType.Bomb){
+  579 |             if(this.Skill_1_Time>=5){
+  580 |                 this.Player.getComponent('PlayerControl').UseBomb();
+    at Parser.pp$5.raise (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp.expect (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (D:\Program Files\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3344:19)
+2018-06-13T11:52:20.433Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T11:52:37.614Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T11:53:17.486Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T11:55:09.017Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T11:56:35.281Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T11:57:31.224Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T11:59:09.104Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T11:59:35.309Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:01:39.071Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:03:13.662Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:03:52.663Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:04:23.038Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:05:01.964Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:06:07.947Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:06:32.146Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:07:33.899Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:07:59.881Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:09:13.158Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:10:53.690Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:11:41.408Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:12:11.540Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:19:28.108Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:20:54.575Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:21:13.569Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:21:58.185Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:22:33.194Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:22:44.937Z - normal: Start building with options : {
   "androidStudio": true,
   "apiLevel": "",
   "appABIs": [],
@@ -196,36 +165,37 @@
   "projectName": "Dodger",
   "debugBuildWorker": false
 }
-2018-05-31T02:39:28.119Z - normal: Building D:\Project\Dodger-cocos
-2018-05-31T02:39:28.120Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
-2018-05-31T02:39:28.120Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
-2018-05-31T02:39:30.208Z - normal: Compiled project javascript file successfully
-2018-05-31T02:39:30.208Z - normal: Start building assets
-2018-05-31T02:39:30.208Z - normal: Start spawn build-worker
-2018-05-31T02:39:30.810Z - normal: Finish spawn build-worker
-2018-05-31T02:39:30.810Z - normal: Start init build-worker
-2018-05-31T02:39:32.610Z - normal: 1.9.1
-2018-05-31T02:39:32.671Z - normal: Finish init build-worker
-2018-05-31T02:39:32.671Z - normal: Start build-assets in worker
-2018-05-31T02:39:32.945Z - normal: Finish build-assets in worker
-2018-05-31T02:39:32.950Z - normal: Finish building assets
-2018-05-31T02:39:32.958Z - normal: Start building raw assets
-2018-05-31T02:39:32.959Z - normal: Start building plugin scripts
-2018-05-31T02:39:32.991Z - normal: Finish building raw assets
-2018-05-31T02:39:32.999Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
-2018-05-31T02:39:33.163Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
-2018-05-31T02:40:11.773Z - normal: Initializing...
+2018-06-13T12:22:44.938Z - normal: Building D:\Project\Dodger-cocos
+2018-06-13T12:22:44.939Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-06-13T12:22:45.435Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-06-13T12:22:47.681Z - normal: Compiled project javascript file successfully
+2018-06-13T12:22:47.682Z - normal: Start building assets
+2018-06-13T12:22:47.682Z - normal: Start spawn build-worker
+2018-06-13T12:22:48.340Z - normal: Finish spawn build-worker
+2018-06-13T12:22:48.340Z - normal: Start init build-worker
+2018-06-13T12:22:50.276Z - normal: 1.9.1
+2018-06-13T12:22:50.331Z - warn: Warning 5511, please go to https://github.com/cocos-creator/engine/blob/master/EngineErrorMap.md#5511 to see details. Arguments: ChooseActiveSkill, SkillList
+2018-06-13T12:22:50.348Z - normal: Finish init build-worker
+2018-06-13T12:22:50.348Z - normal: Start build-assets in worker
+2018-06-13T12:22:50.694Z - normal: Finish build-assets in worker
+2018-06-13T12:22:50.700Z - normal: Finish building assets
+2018-06-13T12:22:50.707Z - normal: Start building raw assets
+2018-06-13T12:22:50.708Z - normal: Start building plugin scripts
+2018-06-13T12:22:50.719Z - normal: Finish building raw assets
+2018-06-13T12:22:50.722Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-06-13T12:22:50.794Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-06-13T12:22:54.415Z - normal: Initializing...
 
-2018-05-31T02:40:11.825Z - normal: idePortFile: C:\Users\Sniper\AppData\Local\微信web开发者工具\User Data\Default\.ide
+2018-06-13T12:22:54.423Z - normal: idePortFile: C:\Users\Sniper\AppData\Local\微信web开发者工具\User Data\Default\.ide
 
-2018-05-31T02:40:12.890Z - normal: starting ide...
+2018-06-13T12:22:55.438Z - normal: starting ide...
 
-2018-05-31T02:40:25.523Z - normal: IDE server has started, listening on http://127.0.0.1:51256
+2018-06-13T12:23:00.299Z - normal: IDE server has started, listening on http://127.0.0.1:50584
 
-2018-05-31T02:40:25.584Z - normal: initialization finished
+2018-06-13T12:23:00.300Z - normal: initialization finished
 
-2018-05-31T02:40:25.590Z - error: Runtime error: Error 
- Error: getaddrinfo ENOTFOUND http://127.0.0.1 http://127.0.0.1:51256
+2018-06-13T12:23:00.307Z - error: Runtime error: Error 
+ Error: getaddrinfo ENOTFOUND http://127.0.0.1 http://127.0.0.1:50584
 
     at Socket.<anonymous> (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:1302)
     at emitOne (events.js:96:13)
@@ -233,7 +203,7 @@
     at readableAddChunk (_stream_readable.js:178:18)
     at Socket.Readable.push (_stream_readable.js:136:10)
     at Pipe.onread (net.js:560:20)
-2018-05-31T02:40:25.591Z - error: Runtime error: Error 
+2018-06-13T12:23:00.308Z - error: Runtime error: Error 
  Error: socket hang up
 
     at Socket.<anonymous> (D:\Program Files\CocosCreator\resources\app.asar\editor\core\wechat-game.js:1:1302)
@@ -242,9 +212,23 @@
     at readableAddChunk (_stream_readable.js:178:18)
     at Socket.Readable.push (_stream_readable.js:136:10)
     at Pipe.onread (net.js:560:20)
-2018-05-31T02:40:26.531Z - normal: open IDE success
+2018-06-13T12:23:01.053Z - normal: open IDE success
 
-2018-05-31T02:42:56.380Z - normal: Start building with options : {
+2018-06-13T12:30:40.187Z - warn: 找不到微信开发程序版本信息路径 [D:\Program Files (x86)\Tencent\微信web开发者工具\package.nw\package.json]。
+2018-06-13T12:30:40.189Z - warn: 微信开发程序版本过低，不能享用所有功能，请尽快升级。
+2018-06-13T12:30:40.641Z - normal: Initializing...
+
+2018-06-13T12:30:40.650Z - normal: idePortFile: C:\Users\Sniper\AppData\Local\微信web开发者工具\User Data\Default\.ide
+
+2018-06-13T12:30:41.663Z - normal: starting ide...
+
+2018-06-13T12:30:45.107Z - normal: IDE server has started, listening on http://127.0.0.1:34620
+
+2018-06-13T12:30:45.108Z - normal: initialization finished
+
+2018-06-13T12:30:45.437Z - normal: open IDE success
+
+2018-06-13T12:30:58.455Z - normal: Start building with options : {
   "androidStudio": true,
   "apiLevel": "",
   "appABIs": [],
@@ -306,25 +290,30 @@
   "projectName": "Dodger",
   "debugBuildWorker": false
 }
-2018-05-31T02:42:56.400Z - normal: Building D:\Project\Dodger-cocos
-2018-05-31T02:42:56.400Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
-2018-05-31T02:42:56.402Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
-2018-05-31T02:42:59.033Z - normal: Compiled project javascript file successfully
-2018-05-31T02:42:59.033Z - normal: Start building assets
-2018-05-31T02:42:59.034Z - normal: Start spawn build-worker
-2018-05-31T02:42:59.887Z - normal: Finish spawn build-worker
-2018-05-31T02:42:59.888Z - normal: Start init build-worker
-2018-05-31T02:43:01.816Z - normal: 1.9.1
-2018-05-31T02:43:01.871Z - normal: Finish init build-worker
-2018-05-31T02:43:01.872Z - normal: Start build-assets in worker
-2018-05-31T02:43:02.230Z - normal: Finish build-assets in worker
-2018-05-31T02:43:02.244Z - normal: Finish building assets
-2018-05-31T02:43:02.253Z - normal: Start building raw assets
-2018-05-31T02:43:02.254Z - normal: Start building plugin scripts
-2018-05-31T02:43:02.279Z - normal: Finish building raw assets
-2018-05-31T02:43:02.283Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
-2018-05-31T02:43:02.381Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
-2018-05-31T08:31:47.169Z - normal: Start building with options : {
+2018-06-13T12:30:58.461Z - normal: Building D:\Project\Dodger-cocos
+2018-06-13T12:30:58.461Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-06-13T12:30:58.463Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-06-13T12:31:00.928Z - normal: Compiled project javascript file successfully
+2018-06-13T12:31:00.929Z - normal: Start building assets
+2018-06-13T12:31:00.929Z - normal: Start spawn build-worker
+2018-06-13T12:31:01.604Z - normal: Finish spawn build-worker
+2018-06-13T12:31:01.604Z - normal: Start init build-worker
+2018-06-13T12:31:03.651Z - normal: 1.9.1
+2018-06-13T12:31:03.702Z - warn: Warning 5511, please go to https://github.com/cocos-creator/engine/blob/master/EngineErrorMap.md#5511 to see details. Arguments: ChooseActiveSkill, SkillList
+2018-06-13T12:31:03.718Z - normal: Finish init build-worker
+2018-06-13T12:31:03.718Z - normal: Start build-assets in worker
+2018-06-13T12:31:04.108Z - normal: Finish build-assets in worker
+2018-06-13T12:31:04.112Z - normal: Finish building assets
+2018-06-13T12:31:04.142Z - normal: Start building raw assets
+2018-06-13T12:31:04.143Z - normal: Start building plugin scripts
+2018-06-13T12:31:04.242Z - normal: Finish building raw assets
+2018-06-13T12:31:04.246Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-06-13T12:31:04.323Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-06-13T12:35:55.621Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:36:26.794Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:41:57.810Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:42:08.968Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:42:55.550Z - normal: Start building with options : {
   "androidStudio": true,
   "apiLevel": "",
   "appABIs": [],
@@ -386,25 +375,30 @@
   "projectName": "Dodger",
   "debugBuildWorker": false
 }
-2018-05-31T08:31:47.186Z - normal: Building D:\Project\Dodger-cocos
-2018-05-31T08:31:47.187Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
-2018-05-31T08:31:47.192Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
-2018-05-31T08:31:50.608Z - normal: Compiled project javascript file successfully
-2018-05-31T08:31:50.608Z - normal: Start building assets
-2018-05-31T08:31:50.608Z - normal: Start spawn build-worker
-2018-05-31T08:31:51.288Z - normal: Finish spawn build-worker
-2018-05-31T08:31:51.288Z - normal: Start init build-worker
-2018-05-31T08:31:53.150Z - normal: 1.9.1
-2018-05-31T08:31:53.208Z - normal: Finish init build-worker
-2018-05-31T08:31:53.209Z - normal: Start build-assets in worker
-2018-05-31T08:31:53.622Z - normal: Finish build-assets in worker
-2018-05-31T08:31:53.626Z - normal: Finish building assets
-2018-05-31T08:31:53.636Z - normal: Start building raw assets
-2018-05-31T08:31:53.637Z - normal: Start building plugin scripts
-2018-05-31T08:31:53.654Z - normal: Finish building raw assets
-2018-05-31T08:31:53.657Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
-2018-05-31T08:31:53.743Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
-2018-05-31T08:33:33.833Z - normal: Start building with options : {
+2018-06-13T12:42:55.556Z - normal: Building D:\Project\Dodger-cocos
+2018-06-13T12:42:55.556Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-06-13T12:42:55.557Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-06-13T12:42:58.110Z - normal: Compiled project javascript file successfully
+2018-06-13T12:42:58.110Z - normal: Start building assets
+2018-06-13T12:42:58.110Z - normal: Start spawn build-worker
+2018-06-13T12:42:58.780Z - normal: Finish spawn build-worker
+2018-06-13T12:42:58.780Z - normal: Start init build-worker
+2018-06-13T12:43:00.787Z - normal: 1.9.1
+2018-06-13T12:43:00.852Z - warn: Warning 5511, please go to https://github.com/cocos-creator/engine/blob/master/EngineErrorMap.md#5511 to see details. Arguments: ChooseActiveSkill, SkillList
+2018-06-13T12:43:00.868Z - normal: Finish init build-worker
+2018-06-13T12:43:00.869Z - normal: Start build-assets in worker
+2018-06-13T12:43:01.227Z - normal: Finish build-assets in worker
+2018-06-13T12:43:01.236Z - normal: Finish building assets
+2018-06-13T12:43:01.243Z - normal: Start building raw assets
+2018-06-13T12:43:01.244Z - normal: Start building plugin scripts
+2018-06-13T12:43:01.260Z - normal: Finish building raw assets
+2018-06-13T12:43:01.263Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-06-13T12:43:01.337Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-06-13T12:46:29.966Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:46:47.872Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:47:06.674Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:47:39.076Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:48:00.128Z - normal: Start building with options : {
   "androidStudio": true,
   "apiLevel": "",
   "appABIs": [],
@@ -466,25 +460,27 @@
   "projectName": "Dodger",
   "debugBuildWorker": false
 }
-2018-05-31T08:33:33.851Z - normal: Building D:\Project\Dodger-cocos
-2018-05-31T08:33:33.851Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
-2018-05-31T08:33:33.855Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
-2018-05-31T08:33:36.391Z - normal: Compiled project javascript file successfully
-2018-05-31T08:33:36.391Z - normal: Start building assets
-2018-05-31T08:33:36.391Z - normal: Start spawn build-worker
-2018-05-31T08:33:37.057Z - normal: Finish spawn build-worker
-2018-05-31T08:33:37.057Z - normal: Start init build-worker
-2018-05-31T08:33:38.930Z - normal: 1.9.1
-2018-05-31T08:33:38.991Z - normal: Finish init build-worker
-2018-05-31T08:33:38.991Z - normal: Start build-assets in worker
-2018-05-31T08:33:39.306Z - normal: Finish build-assets in worker
-2018-05-31T08:33:39.311Z - normal: Finish building assets
-2018-05-31T08:33:39.320Z - normal: Start building raw assets
-2018-05-31T08:33:39.320Z - normal: Start building plugin scripts
-2018-05-31T08:33:39.339Z - normal: Finish building raw assets
-2018-05-31T08:33:39.346Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
-2018-05-31T08:33:39.421Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
-2018-05-31T08:47:45.464Z - normal: Start building with options : {
+2018-06-13T12:48:00.134Z - normal: Building D:\Project\Dodger-cocos
+2018-06-13T12:48:00.134Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-06-13T12:48:00.135Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-06-13T12:48:02.639Z - normal: Compiled project javascript file successfully
+2018-06-13T12:48:02.639Z - normal: Start building assets
+2018-06-13T12:48:02.639Z - normal: Start spawn build-worker
+2018-06-13T12:48:03.308Z - normal: Finish spawn build-worker
+2018-06-13T12:48:03.309Z - normal: Start init build-worker
+2018-06-13T12:48:05.286Z - normal: 1.9.1
+2018-06-13T12:48:05.336Z - warn: Warning 5511, please go to https://github.com/cocos-creator/engine/blob/master/EngineErrorMap.md#5511 to see details. Arguments: ChooseActiveSkill, SkillList
+2018-06-13T12:48:05.364Z - normal: Finish init build-worker
+2018-06-13T12:48:05.364Z - normal: Start build-assets in worker
+2018-06-13T12:48:05.719Z - normal: Finish build-assets in worker
+2018-06-13T12:48:05.723Z - normal: Finish building assets
+2018-06-13T12:48:05.730Z - normal: Start building raw assets
+2018-06-13T12:48:05.731Z - normal: Start building plugin scripts
+2018-06-13T12:48:05.774Z - normal: Finish building raw assets
+2018-06-13T12:48:05.778Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-06-13T12:48:05.860Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-06-13T12:49:55.007Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:49:57.253Z - normal: Start building with options : {
   "androidStudio": true,
   "apiLevel": "",
   "appABIs": [],
@@ -546,25 +542,27 @@
   "projectName": "Dodger",
   "debugBuildWorker": false
 }
-2018-05-31T08:47:45.471Z - normal: Building D:\Project\Dodger-cocos
-2018-05-31T08:47:45.471Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
-2018-05-31T08:47:45.472Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
-2018-05-31T08:47:48.258Z - normal: Compiled project javascript file successfully
-2018-05-31T08:47:48.259Z - normal: Start building assets
-2018-05-31T08:47:48.259Z - normal: Start spawn build-worker
-2018-05-31T08:47:49.175Z - normal: Finish spawn build-worker
-2018-05-31T08:47:49.175Z - normal: Start init build-worker
-2018-05-31T08:47:51.168Z - normal: 1.9.1
-2018-05-31T08:47:51.231Z - normal: Finish init build-worker
-2018-05-31T08:47:51.231Z - normal: Start build-assets in worker
-2018-05-31T08:47:51.601Z - normal: Finish build-assets in worker
-2018-05-31T08:47:51.605Z - normal: Finish building assets
-2018-05-31T08:47:51.612Z - normal: Start building raw assets
-2018-05-31T08:47:51.613Z - normal: Start building plugin scripts
-2018-05-31T08:47:51.631Z - normal: Finish building raw assets
-2018-05-31T08:47:51.634Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
-2018-05-31T08:47:51.737Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
-2018-05-31T08:48:34.163Z - normal: Start building with options : {
+2018-06-13T12:49:57.260Z - normal: Building D:\Project\Dodger-cocos
+2018-06-13T12:49:57.260Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-06-13T12:49:57.261Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-06-13T12:49:59.942Z - normal: Compiled project javascript file successfully
+2018-06-13T12:49:59.943Z - normal: Start building assets
+2018-06-13T12:49:59.943Z - normal: Start spawn build-worker
+2018-06-13T12:50:00.605Z - normal: Finish spawn build-worker
+2018-06-13T12:50:00.605Z - normal: Start init build-worker
+2018-06-13T12:50:02.626Z - normal: 1.9.1
+2018-06-13T12:50:02.674Z - warn: Warning 5511, please go to https://github.com/cocos-creator/engine/blob/master/EngineErrorMap.md#5511 to see details. Arguments: ChooseActiveSkill, SkillList
+2018-06-13T12:50:02.692Z - normal: Finish init build-worker
+2018-06-13T12:50:02.692Z - normal: Start build-assets in worker
+2018-06-13T12:50:03.032Z - normal: Finish build-assets in worker
+2018-06-13T12:50:03.036Z - normal: Finish building assets
+2018-06-13T12:50:03.043Z - normal: Start building raw assets
+2018-06-13T12:50:03.044Z - normal: Start building plugin scripts
+2018-06-13T12:50:03.072Z - normal: Finish building raw assets
+2018-06-13T12:50:03.074Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-06-13T12:50:03.157Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-06-13T12:51:21.890Z - warn: The 'type' attribute of 'ChooseActiveSkill.SkillList' is undefined when loading script
+2018-06-13T12:51:24.928Z - normal: Start building with options : {
   "androidStudio": true,
   "apiLevel": "",
   "appABIs": [],
@@ -626,102 +624,23 @@
   "projectName": "Dodger",
   "debugBuildWorker": false
 }
-2018-05-31T08:48:34.165Z - normal: Building D:\Project\Dodger-cocos
-2018-05-31T08:48:34.165Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
-2018-05-31T08:48:34.166Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
-2018-05-31T08:48:36.619Z - normal: Compiled project javascript file successfully
-2018-05-31T08:48:36.619Z - normal: Start building assets
-2018-05-31T08:48:36.619Z - normal: Start spawn build-worker
-2018-05-31T08:48:37.471Z - normal: Finish spawn build-worker
-2018-05-31T08:48:37.472Z - normal: Start init build-worker
-2018-05-31T08:48:39.583Z - normal: 1.9.1
-2018-05-31T08:48:39.644Z - normal: Finish init build-worker
-2018-05-31T08:48:39.645Z - normal: Start build-assets in worker
-2018-05-31T08:48:40.010Z - normal: Finish build-assets in worker
-2018-05-31T08:48:40.016Z - normal: Finish building assets
-2018-05-31T08:48:40.023Z - normal: Start building raw assets
-2018-05-31T08:48:40.023Z - normal: Start building plugin scripts
-2018-05-31T08:48:40.046Z - normal: Finish building raw assets
-2018-05-31T08:48:40.047Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
-2018-05-31T08:48:40.136Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
-2018-06-01T08:07:19.892Z - normal: Start building with options : {
-  "androidStudio": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "appKey": "",
-  "appSecret": "",
-  "buildPath": "D:\\Project\\Dodger-cocos\\build",
-  "debug": false,
-  "dest": "D:\\Project\\Dodger-cocos\\build\\web-mobile",
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeAnySDK": false,
-  "includeEruda": false,
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "jailbreakPlatform": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "oauthLoginServer": "",
-  "optimizeHotUpdate": false,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.helloworld",
-  "platform": "web-mobile",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "privateKey": "",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait"
-  },
-  "renderMode": "0",
-  "scenes": [
-    "2d2f792f-a40c-49bb-a189-ed176a246e49"
-  ],
-  "sourceMaps": false,
-  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
-  "template": "link",
-  "title": "Dodger",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "landscape",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx8b8e5e1ce338c472",
-    "isSubdomain": false,
-    "orientation": "landscape",
-    "subContext": ""
-  },
-  "xxteaKey": "5289e606-00b5-47",
-  "zipCompressJs": true,
-  "project": "D:\\Project\\Dodger-cocos",
-  "projectName": "Dodger",
-  "debugBuildWorker": false
-}
-2018-06-01T08:07:19.909Z - normal: Building D:\Project\Dodger-cocos
-2018-06-01T08:07:19.909Z - normal: Destination D:\Project\Dodger-cocos\build\web-mobile
-2018-06-01T08:07:19.912Z - normal: Delete D:\Project\Dodger-cocos\build\web-mobile\**\*
-2018-06-01T08:07:23.499Z - normal: Compiled project javascript file successfully
-2018-06-01T08:07:23.499Z - normal: Start building assets
-2018-06-01T08:07:23.500Z - normal: Start spawn build-worker
-2018-06-01T08:07:24.145Z - normal: Finish spawn build-worker
-2018-06-01T08:07:24.145Z - normal: Start init build-worker
-2018-06-01T08:07:26.100Z - normal: 1.9.1
-2018-06-01T08:07:26.186Z - normal: Finish init build-worker
-2018-06-01T08:07:26.186Z - normal: Start build-assets in worker
-2018-06-01T08:07:26.533Z - normal: Finish build-assets in worker
-2018-06-01T08:07:26.538Z - normal: Finish building assets
-2018-06-01T08:07:26.548Z - normal: Start building raw assets
-2018-06-01T08:07:26.548Z - normal: Start building plugin scripts
-2018-06-01T08:07:26.569Z - normal: Finish building raw assets
-2018-06-01T08:07:26.580Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
-2018-06-01T08:07:26.635Z - normal: Generating html from D:\Program Files\CocosCreator\resources\static\build-templates\web-mobile\template\index.html
-2018-06-01T08:07:26.639Z - normal: Built to "D:\Project\Dodger-cocos\build\web-mobile" successfully
+2018-06-13T12:51:24.934Z - normal: Building D:\Project\Dodger-cocos
+2018-06-13T12:51:24.934Z - normal: Destination D:\Project\Dodger-cocos\build\wechatgame
+2018-06-13T12:51:24.935Z - normal: Delete D:\Project\Dodger-cocos\build\wechatgame\**\*
+2018-06-13T12:51:27.302Z - normal: Compiled project javascript file successfully
+2018-06-13T12:51:27.302Z - normal: Start building assets
+2018-06-13T12:51:27.302Z - normal: Start spawn build-worker
+2018-06-13T12:51:28.006Z - normal: Finish spawn build-worker
+2018-06-13T12:51:28.006Z - normal: Start init build-worker
+2018-06-13T12:51:30.030Z - normal: 1.9.1
+2018-06-13T12:51:30.079Z - warn: Warning 5511, please go to https://github.com/cocos-creator/engine/blob/master/EngineErrorMap.md#5511 to see details. Arguments: ChooseActiveSkill, SkillList
+2018-06-13T12:51:30.099Z - normal: Finish init build-worker
+2018-06-13T12:51:30.099Z - normal: Start build-assets in worker
+2018-06-13T12:51:30.497Z - normal: Finish build-assets in worker
+2018-06-13T12:51:30.504Z - normal: Finish building assets
+2018-06-13T12:51:30.511Z - normal: Start building raw assets
+2018-06-13T12:51:30.512Z - normal: Start building plugin scripts
+2018-06-13T12:51:30.523Z - normal: Finish building raw assets
+2018-06-13T12:51:30.525Z - normal: Generating main.js from D:\Program Files\CocosCreator\resources\static\build-templates\shares\main.js
+2018-06-13T12:51:30.607Z - normal: Built to "D:\Project\Dodger-cocos\build\wechatgame" successfully
+2018-06-13T15:25:22.779Z - info: shutdown preview server

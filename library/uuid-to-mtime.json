@@ -230,17 +230,17 @@
     "relativePath": "Scene"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1527144464752,
+    "asset": 1528878780294,
     "meta": 1525273541486,
     "relativePath": "Script"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1527756511523,
-    "meta": 1527756511530,
+    "asset": 1528894078983,
+    "meta": 1528894078994,
     "relativePath": "Scene\\Main.fire"
   },
   "6e6f79e4-8f19-4e40-be9a-485f4a9bfaaf": {
-    "asset": 1527144309962,
+    "asset": 1528878475247,
     "meta": 1525273782488,
     "relativePath": "Picture"
   },
@@ -270,8 +270,8 @@
     "relativePath": "Picture\\Picture_Turret.png"
   },
   "4e365874-d408-46c6-87e9-e6d42ea8eae7": {
-    "asset": 1526115458469,
-    "meta": 1526115458473,
+    "asset": 1528793977831,
+    "meta": 1528793977853,
     "relativePath": "Prefab\\Bullet.prefab"
   },
   "1ffc9c0c-de4b-4142-ae7f-b5fcf6a06c05": {
@@ -384,11 +384,6 @@
     "meta": 1527157710409,
     "relativePath": "Prefab\\Item\\GetShield.prefab"
   },
-  "49131e55-711e-4893-bee1-5760cae4e69d": {
-    "asset": 1527058729068,
-    "meta": 1527058730319,
-    "relativePath": "Script\\GameCommon.js"
-  },
   "07fb6b86-36b7-48b5-a5d4-eb3647b2ab8f": {
     "asset": 1527144309958,
     "meta": 1527144309971,
@@ -439,11 +434,6 @@
     "meta": 1527151349641,
     "relativePath": "Prefab\\Point\\5.prefab"
   },
-  "8e45c786-7257-4a55-b7c8-9358b9acaabb": {
-    "asset": 1527157102916,
-    "meta": 1527157115570,
-    "relativePath": "Script\\BulletControl.js"
-  },
   "6b891f31-d4d1-4113-b7b6-359dc1645253": {
     "asset": 1527157100908,
     "meta": 1527157115632,
@@ -464,11 +454,6 @@
     "meta": 1527157115780,
     "relativePath": "Script\\Keyboard.js"
   },
-  "f3ad8cf2-895e-4cdc-a3b6-be9b68d4aae4": {
-    "asset": 1527157110412,
-    "meta": 1527157115827,
-    "relativePath": "Script\\PlayerControl.js"
-  },
   "32e2a412-7c08-442e-868d-eb26987e8be7": {
     "asset": 1527157103492,
     "meta": 1527157115836,
@@ -479,29 +464,79 @@
     "meta": 1527157093989,
     "relativePath": "Script\\Test"
   },
-  "b9721992-4b52-4fb9-946d-af0a3cc5e8f2": {
-    "asset": 1527157104068,
-    "meta": 1527157115850,
-    "relativePath": "Script\\SkillButton.js"
-  },
   "280c3aec-6492-4a9d-9f51-a9b00b570b4a": {
     "asset": 1526107143126,
     "meta": 1527157115876,
     "relativePath": "Script\\Test\\HelloWorld.js"
   },
-  "3fe89d80-56b0-4709-b3d6-b8d8e285afe8": {
-    "asset": 1527736157672,
-    "meta": 1527736189113,
-    "relativePath": "Script\\GuideUIControl.js"
+  "8e45c786-7257-4a55-b7c8-9358b9acaabb": {
+    "asset": 1528285064509,
+    "meta": 1528285067101,
+    "relativePath": "Script\\BulletControl.js"
+  },
+  "2273905c-6ab4-4362-88ff-402e75c76817": {
+    "asset": 1528791638240,
+    "meta": 1528791646971,
+    "relativePath": "Picture\\Shield.png"
   },
   "dfdec900-1255-4700-8909-5f97f54a1f3f": {
-    "asset": 1527736602337,
-    "meta": 1527736604544,
+    "asset": 1528876471531,
+    "meta": 1528876471970,
     "relativePath": "Script\\TurretControl.js"
   },
+  "decc92d3-f5fc-4b43-b8e4-56170a29867f": {
+    "asset": 1528878475235,
+    "meta": 1528878475264,
+    "relativePath": "Picture\\choost.png"
+  },
+  "49131e55-711e-4893-bee1-5760cae4e69d": {
+    "asset": 1528879752227,
+    "meta": 1528879753397,
+    "relativePath": "Script\\GameCommon.js"
+  },
+  "3fe89d80-56b0-4709-b3d6-b8d8e285afe8": {
+    "asset": 1528880785470,
+    "meta": 1528880786268,
+    "relativePath": "Script\\GuideUIControl.js"
+  },
+  "22e73d3d-3a70-4fd9-ac91-0d855564774e": {
+    "asset": 1528890148457,
+    "meta": 1528890148498,
+    "relativePath": "Picture\\bomb.png"
+  },
+  "b9721992-4b52-4fb9-946d-af0a3cc5e8f2": {
+    "asset": 1528890725532,
+    "meta": 1528890740196,
+    "relativePath": "Script\\SkillButton.js"
+  },
+  "ef3392e1-2dd9-44eb-b771-032d23f3b4cb": {
+    "asset": 1528891044277,
+    "meta": 1528891050914,
+    "relativePath": "Script\\OneActiveSkill.js"
+  },
+  "085b9b56-d58d-469c-872a-39b4d458671c": {
+    "asset": 1528893351548,
+    "meta": 1528893355357,
+    "relativePath": "Script\\ChooseActiveSkill.js"
+  },
   "b3132a90-a6c2-4549-8788-c2fa993d38b8": {
-    "asset": 1527756435795,
-    "meta": 1527756437989,
+    "asset": 1528893699580,
+    "meta": 1528893717527,
     "relativePath": "Script\\GameManager.js"
+  },
+  "f3ad8cf2-895e-4cdc-a3b6-be9b68d4aae4": {
+    "asset": 1528894005582,
+    "meta": 1528894007654,
+    "relativePath": "Script\\PlayerControl.js"
+  },
+  "f006d388-ea23-4734-bcab-478d7bb3dc15": {
+    "asset": 1528894058101,
+    "meta": 1528894058875,
+    "relativePath": "Script\\BombControl.js"
+  },
+  "ee69b7cb-e191-44f0-b15d-373db93de22a": {
+    "asset": 1528894280462,
+    "meta": 1528894281671,
+    "relativePath": "Script\\ShieldControl.js"
   }
 }

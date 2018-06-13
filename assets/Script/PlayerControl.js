@@ -17,11 +17,15 @@ cc.Class({
             default: null,
             visible: false,
         },
+        Bomb: {
+            default: null,
+            type: cc.Node,
+        },
         ItemLock :{
             default: null,
             visible: false,
         },
-        Timer :{
+        BulletLock :{
             default: null,
             visible: false,
         },
@@ -29,22 +33,39 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
-
-    start () {
+    onLoad () {
         this.GameManager = cc.find("Canvas/GameManager");
-
-        this.PlyaerInit();
     },
 
-    PlyaerInit :function(){
+    start () {
+    },
+
+    GameInit :function(){
         this.ItemLock = false;
-        this.Shield.active = false;
+        this.BulletLock = false; 
         this.HaveShield = false;
+
+        this.node.getComponent(cc.RigidBody).angularVelocity = 0;
+        this.node.rotation = 0;
+
+       // this.Bomb.active = true;
+        //this.Bomb.getComponent('BombControl').GameInit();
+        this.Bomb.active = false;
+
+        //this.Shield.active = true;
+        //this.Shield.getComponent('ShieldControl').GameInit();
+        this.Shield.active = false;
+    },
+
+    update (dt) {
     },
 
     UnlockItemLock :function(){
         this.ItemLock = false;
+    },
+
+    UnlockBulletLock :function(){
+        this.BulletLock = false;
     },
 
     GetShield :function(){
@@ -53,8 +74,14 @@ cc.Class({
     },
 
     LoseShield :function(){
-        this.Shield.active = false;
+        //this.Shield.active = false;
+        this.Shield.getComponent('ShieldControl').Timer = 0.3;
         this.HaveShield = false;
+    },
+
+    UseBomb :function(){
+        this.Bomb.active = true;
+        this.Bomb.getComponent('BombControl').Timer=0.2;
     },
 
 
@@ -65,12 +92,18 @@ cc.Class({
             if(this.HaveShield){
                 this.LoseShield();
                 otherCollider.node.destroy();
+                this.BulletLock = true;
+                this.scheduleOnce(function() {
+                    this.UnlockBulletLock();
+                    }, 0.2);
             }
             else
             {
-                otherCollider.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
-                this.node.getComponent(cc.RigidBody).angularVelocity = 500;
-                this.GameManager.getComponent('GameManager').GameOver();
+                if(!this.BulletLock){
+                    otherCollider.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
+                    this.node.getComponent(cc.RigidBody).angularVelocity = 500;
+                    this.GameManager.getComponent('GameManager').GameOver();
+                }
             }
             
         }
@@ -85,7 +118,7 @@ cc.Class({
             }
             otherCollider.node.destroy();
             var Item = otherCollider.node.getComponent('Item')
-            cc.log(Item.Type);
+            //cc.log(Item.Type);
             if(Item.Type == Common.ItemType.upRotationSpeed)
                 this.GameManager.getComponent('GameManager').upRotationSpeed();
             if(Item.Type == Common.ItemType.upShootSpeed)
@@ -105,5 +138,5 @@ cc.Class({
             }
         }
     },
-    //update (dt) {},
+    
 });

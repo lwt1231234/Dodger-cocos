@@ -17,46 +17,51 @@ cc.Class({
             type: cc.Node,
             visible: false,
         },
-        TouchOnce: {
+        Timer :{
             default: null,
             visible: false,
         },
-
+        Timer2 :{
+            default: null,
+            visible: false,
+        },
     },
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
-
-    start () {
+    onLoad () {
         this.GameManager = cc.find("Canvas/GameManager");
-        this._initTouchEvent();
-        this.TouchOnce = false;
+        this.Timer = -1;
+        this.Timer2 = -1
+
+        var manager = cc.director.getCollisionManager();
+        manager.enabled = true;
     },
 
-    _initTouchEvent: function()
-    {
-        var self = this;
-
-        self.node.on(cc.Node.EventType.TOUCH_START, self._touchStartEvent, self);
-    },
-
-    _touchStartEvent: function(event) {
-        if(this.TouchOnce){
-            this.node.active = false;
-            this.GameManager.getComponent('GameManager').ChooseActiveSkill();
+    update (dt) {
+        if(this.Timer>0)
+        {
+            this.Timer-=dt;
+            var tmp = this.node.scale;
+            this.node.scale=cc.v2(tmp+dt*150,tmp+dt*150);
+            if(this.Timer<=0){
+                this.Timer2 = 0.1;
+            }
         }
-        else{
-            this.TouchOnce = true;
-            this.scheduleOnce(function() {
-                    this.UntouchOvertime();
-                    }, 0.2);
+        if(this.Timer2 >0){
+            this.Timer2-=dt;
+            if(this.Timer2<=0){
+                this.node.active = false;
+                this.node.scale=cc.v2(1,1);
+            }
         }
     },
 
-    UntouchOvertime(){
-        this.TouchOnce = false;
-    }
-
-    // update (dt) {},
+    onCollisionEnter: function (other, self) {
+        if(this.GameManager.getComponent('GameManager').GamePause)
+            return;
+        if(other.node.name=='Bullet'){
+            other.node.destroy();
+        }
+    },
 });

@@ -31,6 +31,7 @@ cc.Class({
 
     _touchStartEvent: function(){
         this.GameManager.getComponent('GameManager').Skill_1_On = true;
+        this.GameManager.getComponent('GameManager').Skill_1_Start();
     },
 
     _touchEndEvent: function(){
