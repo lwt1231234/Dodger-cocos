@@ -18,23 +18,23 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 467.65625,
+                "height": 436,
                 "type": "panel",
-                "width": 207.59375
+                "width": 204
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 448.34375,
+                "height": 418,
                 "type": "panel",
-                "width": 207.59375
+                "width": 204
               }
             ],
-            "height": 919,
+            "height": 857,
             "type": "dock-v",
-            "width": 207.59375
+            "width": 204
           },
           {
             "children": [
@@ -43,9 +43,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 652.140625,
+                "height": 608,
                 "type": "panel",
-                "width": 755.046875
+                "width": 741.984375
               },
               {
                 "active": 0,
@@ -53,23 +53,23 @@
                   "console",
                   "timeline"
                 ],
-                "height": 263.859375,
+                "height": 246,
                 "type": "panel",
-                "width": 755.046875
+                "width": 741.984375
               }
             ],
-            "height": 919,
+            "height": 857,
             "type": "dock-v",
-            "width": 755.046875
+            "width": 741.984375
           },
           {
             "active": 0,
             "children": [
               "inspector"
             ],
-            "height": 919,
+            "height": 857,
             "type": "panel",
-            "width": 309.34375
+            "width": 304
           }
         ],
         "type": "dock-h"
@@ -82,7 +82,9 @@
         "scene",
         "timeline"
       ]
-    }
+    },
+    "window-1528963296661": {},
+    "worker": {}
   },
   "panels": {
     "preferences": {
@@ -98,7 +100,7 @@
       "height": 562
     },
     "builder": {
-      "x": 824,
+      "x": 493,
       "y": 166,
       "width": 516,
       "height": 736

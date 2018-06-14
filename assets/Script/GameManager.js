@@ -176,6 +176,10 @@ cc.Class({
             type: cc.Node,
         }, 
                             //UI
+        MainMenuUI: {
+            default: null,
+            type: cc.Node,
+        },
         GuideUI: {
             default: null,
             type: cc.Node,
@@ -189,6 +193,10 @@ cc.Class({
             type: cc.Node,
         }, 
         GameAreaUI: {
+            default: null,
+            type: cc.Node,
+        }, 
+        UpdateLogUI: {
             default: null,
             type: cc.Node,
         }, 
@@ -259,8 +267,12 @@ cc.Class({
         this.GameSpeed = 0;
         this.GamePause = true;
         //初始化游戏参数
-        this.GuideUI.active = true;
+        this.MainMenuUI.active = true;
+        this.GuideUI.active = false;
         this.GameAreaUI.active = false;
+        this.ChooseActiveSkillUI.active = false;
+        this.GameOverUI.active = false;
+        this.UpdateLogUI.active = false;
         //this.GameInit();
     },
 
@@ -323,7 +335,7 @@ cc.Class({
         }
 
         this.Turret.getComponent('TurretControl').GameReset();
-
+        this.GameAreaUI.active = false;
         this.GameOverUI.active = true;
         this.label_GameOverScore.string='得分：'+this.Score.toString();
     },
@@ -583,9 +595,45 @@ cc.Class({
         if(this.Skill_1_Type == Common.ActiveSkillType.Bomb){
             if(this.Skill_1_Time>=5){
                 this.Player.getComponent('PlayerControl').UseBomb();
-                this.Skill_1_Time-=0;
+                this.Skill_1_Time-=5;
                 this.UpdateData();
             }
+            else
+                this.PlayerPowerFlash(3);
         }
+    },
+
+    PlayerPowerFlash: function(num){
+        if(num>0){
+            this.label_Skill_1_Time.node.color = new cc.color(245,62,62);
+            this.scheduleOnce(function() {
+                        this.PlayerPowerFlashEnd(num);
+                        }, 0.2);
+        }
+        
+    },
+
+    PlayerPowerFlashEnd: function(num){
+        this.label_Skill_1_Time.node.color = new cc.color(255,255,255);
+        this.scheduleOnce(function() {
+                    this.PlayerPowerFlash(num-1);
+                    }, 0.2);
+    },
+
+    OnPressLabel:function(type){
+        if(type == 0){
+            this.MainMenuUI.active = false;
+            this.UpdateLogUI.active = true;
+        }
+    },
+
+    OnPressGameGuide: function(){
+        this.MainMenuUI.active = false;
+        this.GuideUI.active = true;
+    },
+
+    OnPressGameStart: function(){
+        this.MainMenuUI.active = false;
+        this.ChooseActiveSkill();
     },
 });

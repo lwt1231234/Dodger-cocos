@@ -26,4 +26,9 @@ module.exports = {
         Bomb: 1,
     }),
 
+    LabelType : cc.Enum({
+        UpdateLog: 0,
+        Bomb: 1,
+    }),
+
 };

@@ -230,17 +230,17 @@
     "relativePath": "Scene"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1528878780294,
+    "asset": 1528962805608,
     "meta": 1525273541486,
     "relativePath": "Script"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1528894078983,
-    "meta": 1528894078994,
+    "asset": 1528963295492,
+    "meta": 1528963295512,
     "relativePath": "Scene\\Main.fire"
   },
   "6e6f79e4-8f19-4e40-be9a-485f4a9bfaaf": {
-    "asset": 1528878475247,
+    "asset": 1528962128933,
     "meta": 1525273782488,
     "relativePath": "Picture"
   },
@@ -489,15 +489,10 @@
     "meta": 1528878475264,
     "relativePath": "Picture\\choost.png"
   },
-  "49131e55-711e-4893-bee1-5760cae4e69d": {
-    "asset": 1528879752227,
-    "meta": 1528879753397,
-    "relativePath": "Script\\GameCommon.js"
-  },
   "3fe89d80-56b0-4709-b3d6-b8d8e285afe8": {
     "asset": 1528880785470,
-    "meta": 1528880786268,
-    "relativePath": "Script\\GuideUIControl.js"
+    "meta": 1528962805672,
+    "relativePath": "Script\\GameOverUIControl.js"
   },
   "22e73d3d-3a70-4fd9-ac91-0d855564774e": {
     "asset": 1528890148457,
@@ -519,11 +514,6 @@
     "meta": 1528893355357,
     "relativePath": "Script\\ChooseActiveSkill.js"
   },
-  "b3132a90-a6c2-4549-8788-c2fa993d38b8": {
-    "asset": 1528893699580,
-    "meta": 1528893717527,
-    "relativePath": "Script\\GameManager.js"
-  },
   "f3ad8cf2-895e-4cdc-a3b6-be9b68d4aae4": {
     "asset": 1528894005582,
     "meta": 1528894007654,
@@ -538,5 +528,35 @@
     "asset": 1528894280462,
     "meta": 1528894281671,
     "relativePath": "Script\\ShieldControl.js"
+  },
+  "e50e1cf4-5d75-4a79-9b43-563e16fa162b": {
+    "asset": 1528940968570,
+    "meta": 1528963313293,
+    "relativePath": "Picture\\Button1.png"
+  },
+  "49131e55-711e-4893-bee1-5760cae4e69d": {
+    "asset": 1528944976836,
+    "meta": 1528944991545,
+    "relativePath": "Script\\GameCommon.js"
+  },
+  "f11849ee-f4d0-4635-9a80-841175db4181": {
+    "asset": 1528945062325,
+    "meta": 1528945112659,
+    "relativePath": "Script\\PressLabel.js"
+  },
+  "576f8f3b-ffdb-4d0e-a0e6-a7fe96fd8788": {
+    "asset": 1528946457928,
+    "meta": 1528946459572,
+    "relativePath": "Script\\UIcontrol.js"
+  },
+  "fbaf2e4c-32d7-46e3-a001-b5e6c17c4438": {
+    "asset": 1528962128923,
+    "meta": 1528962128974,
+    "relativePath": "Picture\\未标题-1.png"
+  },
+  "b3132a90-a6c2-4549-8788-c2fa993d38b8": {
+    "asset": 1528963276442,
+    "meta": 1528963294929,
+    "relativePath": "Script\\GameManager.js"
   }
 }
