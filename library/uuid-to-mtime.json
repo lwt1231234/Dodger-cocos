@@ -50,8 +50,8 @@
     "relativePath": "Script"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1529491482279,
-    "meta": 1529491482310,
+    "asset": 1529497761957,
+    "meta": 1529497761989,
     "relativePath": "Scene\\Main.fire"
   },
   "6e6f79e4-8f19-4e40-be9a-485f4a9bfaaf": {
@@ -564,11 +564,6 @@
     "meta": 1529480081614,
     "relativePath": "prefab\\webview.prefab"
   },
-  "b3132a90-a6c2-4549-8788-c2fa993d38b8": {
-    "asset": 1529482345153,
-    "meta": 1529483034729,
-    "relativePath": "Script\\GameManager.js"
-  },
   "3fe89d80-56b0-4709-b3d6-b8d8e285afe8": {
     "asset": 1529482412745,
     "meta": 1529483034735,
@@ -580,8 +575,13 @@
     "relativePath": "Script\\UIcontrol.js"
   },
   "8f72315a-ab9a-4f1e-a076-edd711c5f6d1": {
-    "asset": 1529484436751,
-    "meta": 1529484478165,
+    "asset": 1529492766453,
+    "meta": 1529492767418,
     "relativePath": "Script\\GameRankControl.js"
+  },
+  "b3132a90-a6c2-4549-8788-c2fa993d38b8": {
+    "asset": 1529496914621,
+    "meta": 1529496920577,
+    "relativePath": "Script\\GameManager.js"
   }
 }

@@ -8,8 +8,8 @@ cc.Class({
         if (CC_WECHATGAME) {
             //window.wx.showShareMenu({withShareTicket: true});//设置分享按钮，方便获取群id展示群排行榜
             this.tex = new cc.Texture2D();
-            window.sharedCanvas.width = 650;
-            window.sharedCanvas.height = 500;
+            window.sharedCanvas.width = 640;
+            window.sharedCanvas.height = 900;
             console.log("GameRankControl.start");
         }
     },

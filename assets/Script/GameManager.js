@@ -448,12 +448,12 @@ cc.Class({
                 max_distance = 400;
             }
 
-            max = Math.min(315,this.Player.getPosition().x+max_distance);
-            min = Math.max(-315,this.Player.getPosition().x-max_distance);
+            max = Math.min(290,this.Player.getPosition().x+max_distance);
+            min = Math.max(-290,this.Player.getPosition().x-max_distance);
             x = Math.random()*(max-min+1)+min;
 
-            max = Math.min(285,this.Player.getPosition().y+max_distance);
-            min = Math.max(-285,this.Player.getPosition().y-max_distance);
+            max = Math.min(290,this.Player.getPosition().y+max_distance);
+            min = Math.max(-290,this.Player.getPosition().y-max_distance);
             y = Math.random()*(max-min+1)+min;
             //是否离4个方块太近
             if(this._getDistance(cc.v2(x,y),this.Block1.getPosition())<35)
@@ -684,15 +684,6 @@ cc.Class({
             });
         } else {
             cc.log("提交得分:Score:" + this.Score);
-        }
-        if (CC_WECHATGAME) {
-            window.wx.postMessage({
-                messageType: Common.MessageType.SubmitData,
-                MAIN_MENU_NUM: "Time",
-                Data: testDate.getTime(),
-            });
-        } else {
-            cc.log("提交得分:Time:" + testDate.getTime().toString());
         }
     },
 });
