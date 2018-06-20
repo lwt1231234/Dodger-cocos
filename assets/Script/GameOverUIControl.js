@@ -30,33 +30,23 @@ cc.Class({
 
     start () {
         this.GameManager = cc.find("Canvas/GameManager");
-        this._initTouchEvent();
         this.TouchOnce = false;
     },
 
-    _initTouchEvent: function()
-    {
-        var self = this;
-
-        self.node.on(cc.Node.EventType.TOUCH_START, self._touchStartEvent, self);
+    Retry: function() {
+        if(!this.GameManager.getComponent('GameManager').CanClick)
+            return;
+        this.GameManager.getComponent('GameManager').ChooseActiveSkill();
+        this.node.active = false;
     },
 
-    _touchStartEvent: function(event) {
-        if(this.TouchOnce){
-            this.node.active = false;
-            this.GameManager.getComponent('GameManager').ChooseActiveSkill();
-        }
-        else{
-            this.TouchOnce = true;
-            this.scheduleOnce(function() {
-                    this.UntouchOvertime();
-                    }, 0.2);
-        }
+    BackToMenu: function() {
+        if(!this.GameManager.getComponent('GameManager').CanClick)
+            return;
+        this.GameManager.getComponent('GameManager').GameAreaUI.active = false;
+        this.GameManager.getComponent('GameManager').MainMenuUI.active = true;
+        this.node.active = false;
     },
-
-    UntouchOvertime(){
-        this.TouchOnce = false;
-    }
 
     // update (dt) {},
 });

@@ -9,6 +9,14 @@ cc.Class({
             type: cc.Node,
             visible: false,
         },
+        Picture: {
+            default: null,
+            type: cc.Node,
+        },
+        DiePicture: {
+            default: null,
+            type: cc.Node,
+        },
         Shield: {
             default: null,
             type: cc.Node,
@@ -55,6 +63,8 @@ cc.Class({
         //this.Shield.active = true;
         //this.Shield.getComponent('ShieldControl').GameInit();
         this.Shield.active = false;
+        this.Picture.active = true;
+        this.DiePicture.active = false;
     },
 
     update (dt) {
@@ -82,6 +92,12 @@ cc.Class({
     UseBomb :function(){
         this.Bomb.active = true;
         this.Bomb.getComponent('BombControl').Timer=0.2;
+    },
+
+    Die: function(){
+        this.Picture.active = false;
+        this.DiePicture.active = true;
+        this.DiePicture.getComponent('DieAction').LetDie();
     },
 
 

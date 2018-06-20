@@ -33,8 +33,8 @@
     "REMOTE_SERVER_ROOT": "",
     "appid": "wx8b8e5e1ce338c472",
     "isSubdomain": false,
-    "orientation": "landscape",
-    "subContext": ""
+    "orientation": "portrait",
+    "subContext": "RankList"
   },
   "xxteaKey": "5289e606-00b5-47",
   "zipCompressJs": true

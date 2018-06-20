@@ -32,5 +32,10 @@ cc.Class({
         this.node.active = false;
     },
 
+    OnPressClose: function(){
+        this.node.active = false;
+        this.GameManager.getComponent('GameManager').CanClick = true;
+    },
+
     // update (dt) {},
 });

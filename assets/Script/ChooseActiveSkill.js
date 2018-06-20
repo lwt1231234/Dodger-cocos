@@ -19,7 +19,6 @@ cc.Class({
         },
         SkillList: {
             default: null,
-            type: cc.Array,
             visible: false,
         },
         SkillTypeNum :{
@@ -50,7 +49,6 @@ cc.Class({
     ChooseSkill :function(Type){
         var i;
         this.SkillType = Type;
-        cc.log(this.SkillType);
         for(i=0;i<this.SkillTypeNum;i++){
             if(i==Type)
                 this.SkillList[i].getComponent('OneActiveSkill').Choosed.active=true;
@@ -61,7 +59,6 @@ cc.Class({
 
     PressOK :function(){
         if(this.SkillType!=null){
-            cc.log(this.SkillType);
             this.GameManager.getComponent('GameManager').Skill_1_Type = this.SkillType;
             this.GameManager.getComponent('GameManager').GameInit();
             this.node.active = false;

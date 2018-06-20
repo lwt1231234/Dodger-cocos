@@ -139,6 +139,7 @@ cc.Class({
     _touchEndEvent: function(){
         this.dot.setPosition(this.ring.node.getPosition());
         this.ring._speed = 0;
+        this._createStickSprite();
     },
 
 });

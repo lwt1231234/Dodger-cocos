@@ -15,7 +15,6 @@ cc.Class({
         GameManager: {
             default: null,
             type: cc.Node,
-            visible: false,
         },
         NormalBulletSpeed: {
             default: null,

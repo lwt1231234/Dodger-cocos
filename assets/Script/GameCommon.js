@@ -31,4 +31,17 @@ module.exports = {
         Bomb: 1,
     }),
 
+    DieActionType : cc.Enum({
+        Up: 0,
+        Down: 1,
+        Left: 2,
+        Right: 3,
+    }),
+
+    MessageType : cc.Enum({
+        RemoveData: 0,
+        SubmitData: 1,
+        RankFriend: 2,
+    }),
+
 };

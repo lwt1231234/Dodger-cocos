@@ -202,6 +202,10 @@ cc.Class({
             default: null,
             type: cc.Node
         },
+        GameRankUI: {
+            default: null,
+            type: cc.Node
+        },
         UpdateLogUI: {
             default: null,
             type: cc.Node
@@ -272,17 +276,20 @@ cc.Class({
 
         this.GameSpeed = 0;
         this.GamePause = true;
+        this.CanClick = true;
         //初始化游戏参数
         this.MainMenuUI.active = true;
         this.GuideUI.active = false;
         this.GameAreaUI.active = false;
         this.ChooseActiveSkillUI.active = false;
         this.GameOverUI.active = false;
+        this.GameRankUI.active = false;
         this.UpdateLogUI.active = false;
         //this.GameInit();
     },
 
     ChooseActiveSkill: function ChooseActiveSkill() {
+        this.GameAreaUI.active = false;
         this.ChooseActiveSkillUI.active = true;
     },
 
@@ -310,6 +317,7 @@ cc.Class({
 
         this.GameSpeed = 1;
         this.GamePause = false;
+        this.CanClick = true;
 
         this.ItemLifeTime1 = 0;
         this.ItemLifeTime2 = 10;
@@ -324,8 +332,14 @@ cc.Class({
     GameOver: function GameOver() {
         this.GamePause = true;
         this.scheduleOnce(function () {
+            this.PlayerDead();
+        }, 1);
+    },
+    PlayerDead: function PlayerDead() {
+        this.Player.getComponent('PlayerControl').Die();
+        this.scheduleOnce(function () {
             this.GameReset();
-        }, 5);
+        }, 1);
     },
     GameReset: function GameReset() {
         var childernlist = this.node.children;
@@ -336,9 +350,12 @@ cc.Class({
         }
 
         this.Turret.getComponent('TurretControl').GameReset();
-        this.GameAreaUI.active = false;
+        //this.GameAreaUI.active = false;
         this.GameOverUI.active = true;
         this.label_GameOverScore.string = '得分：' + this.Score.toString();
+        this.GameRankUI.active = true;
+        this.SubmitScore();
+        this.GameRankUI.getComponent('GameRankControl').GetFirendRank();
     },
     start: function start() {},
     update: function update(dt) {
@@ -551,10 +568,11 @@ cc.Class({
     },
 
     Skill_1_Start: function Skill_1_Start() {
+        if (this.GamePause) return;
         if (this.Skill_1_Type == Common.ActiveSkillType.Bomb) {
-            if (this.Skill_1_Time >= 5) {
+            if (this.Skill_1_Time >= 3) {
                 this.Player.getComponent('PlayerControl').UseBomb();
-                this.Skill_1_Time -= 5;
+                this.Skill_1_Time -= 3;
                 this.UpdateData();
             } else this.PlayerPowerFlash(3);
         }
@@ -577,6 +595,7 @@ cc.Class({
     },
 
     OnPressLabel: function OnPressLabel(type) {
+        if (!this.CanClick) return;
         if (type == 0) {
             this.MainMenuUI.active = false;
             this.UpdateLogUI.active = true;
@@ -584,13 +603,47 @@ cc.Class({
     },
 
     OnPressGameGuide: function OnPressGameGuide() {
+        if (!this.CanClick) return;
         this.MainMenuUI.active = false;
         this.GuideUI.active = true;
+        this.GuideUI.getComponent('GuideUIControl').Init();
     },
 
     OnPressGameStart: function OnPressGameStart() {
+        if (!this.CanClick) return;
         this.MainMenuUI.active = false;
         this.ChooseActiveSkill();
+    },
+
+    OnPressGameRank: function OnPressGameRank() {
+        if (!this.CanClick) return;
+        this.GameRankUI.active = true;
+        this.SubmitScore();
+        this.GameRankUI.getComponent('GameRankControl').GetFirendRank();
+        this.CanClick = false;
+    },
+
+    SubmitScore: function SubmitScore() {
+        if (this.Score == null) this.Score = 0;
+        var testDate = new Date();
+        if (CC_WECHATGAME) {
+            window.wx.postMessage({
+                messageType: Common.MessageType.SubmitData,
+                MAIN_MENU_NUM: "Score",
+                Data: this.Score
+            });
+        } else {
+            cc.log("提交得分:Score:" + this.Score);
+        }
+        if (CC_WECHATGAME) {
+            window.wx.postMessage({
+                messageType: Common.MessageType.SubmitData,
+                MAIN_MENU_NUM: "Time",
+                Data: testDate.getTime()
+            });
+        } else {
+            cc.log("提交得分:Time:" + testDate.getTime().toString());
+        }
     }
 });
 

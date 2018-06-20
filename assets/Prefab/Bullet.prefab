@@ -62,8 +62,8 @@
     "_scaleY": 0.5,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 331.38,
-      "y": 281.95
+      "x": 302,
+      "y": 101
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -140,7 +140,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 27
+    "_radius": 25
   },
   {
     "__type__": "8e45ceGcldKVbfIk1i5rKq7",
@@ -170,7 +170,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 27
+    "_radius": 25
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -180,7 +180,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "10S9Z3/7NLfaB72aLfBIIj",
+    "fileId": "90TM7m1oFItpXa2sbEZgk3",
     "sync": false
   }
 ]
