@@ -115,6 +115,18 @@ cc.Class({
             else
                 this._playerNode.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
         }
+
+        if(this.GameManager.getComponent('DeviceMotionControl').InUse == true){
+            var DevAngle = this.GameManager.getComponent('DeviceMotionControl').Angle;
+            this._speed2 = this.GameManager.getComponent('GameManager').PlayerSpeed2;
+            var Devv2 = cc.v2(Math.cos(DevAngle) * this._speed2 * 5,
+                        Math.sin(DevAngle) * this._speed2 * 5);
+
+            if(!this.GameManager.getComponent('GameManager').GamePause)
+                this._playerNode.getComponent(cc.RigidBody).linearVelocity = Devv2;
+            else
+                this._playerNode.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
+        }
         
     },
 

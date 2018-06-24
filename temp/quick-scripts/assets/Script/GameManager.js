@@ -15,18 +15,6 @@ cc.Class({
             type: cc.Node
         },
         //玩家属性
-        PlayerSpeed1: {
-            default: null,
-            visible: false
-        },
-        PlayerSpeed2: {
-            default: null,
-            visible: false
-        },
-        PlayerSpeed2UI: {
-            default: null,
-            visible: false
-        },
         label_PlayerSpeed: {
             default: null,
             type: cc.Label
@@ -36,118 +24,33 @@ cc.Class({
             default: null,
             type: cc.Label
         },
-        Skill_1_Type: {
-            default: null,
-            visible: false
-        },
-        Skill_1_On: {
-            default: null,
-            visible: false
-        },
-        Skill_1_Level: {
-            default: null,
-            visible: false
-        },
-        Skill_1_Time: {
-            default: null,
-            visible: false
-        },
         label_Skill_1_Time: {
             default: null,
             type: cc.Label
         },
-        Skill_1_Max: {
-            default: null,
-            visible: false
-        },
-        GameSpeed: {
-            default: null,
-            visible: false
-        },
-        GamePause: {
-            default: null,
-            visible: false
-        },
         //难度属性
-        RotationSpeed: {
-            default: null,
-            visible: false
-        },
-        RotationSpeedUi: {
-            default: null,
-            visible: false
-        },
+
         label_RotationSpeed: {
             default: null,
             type: cc.Label
         },
 
-        BulletScale: {
-            default: null,
-            visible: false
-        },
-        BulletScaleUI: {
-            default: null,
-            visible: false
-        },
-
-        ShootSpeed: {
-            default: null,
-            visible: false
-        },
-        ShootSpeedUI: {
-            default: null,
-            visible: false
-        },
         label_ShootSpeed: {
             default: null,
             type: cc.Label
         },
 
-        BulletSpeed: {
-            default: null,
-            visible: false
-        },
-        BulletSpeedUI: {
-            default: null,
-            visible: false
-        },
         label_BulletSpeed: {
             default: null,
             type: cc.Label
         },
 
-        BulletLifeTime: {
-            default: null,
-            visible: false
-        },
-        BulletLifeTimeUI: {
-            default: null,
-            visible: false
-        },
         label_BulletLifeTime: {
             default: null,
             type: cc.Label
         },
 
-        ItemLifeTime1: {
-            default: null,
-            visible: false
-        },
-        ItemLifeTime2: {
-            default: null,
-            visible: false
-        },
-
         //游戏进程
-        Score: {
-            default: null,
-            visible: false
-        },
-        ItemNum: {
-            default: null,
-            visible: false
-        },
         label_Score: {
             default: null,
             type: cc.Label
@@ -190,7 +93,7 @@ cc.Class({
             default: null,
             type: cc.Node
         },
-        ChooseActiveSkillUI: {
+        GameSetUI: {
             default: null,
             type: cc.Node
         },
@@ -209,6 +112,11 @@ cc.Class({
         UpdateLogUI: {
             default: null,
             type: cc.Node
+        },
+        //按钮
+        UseEnergyBarUI: {
+            default: null,
+            type: cc.Toggle
         },
 
         //预构体
@@ -273,6 +181,7 @@ cc.Class({
         //开启物理引擎
         this.physicsManager = cc.director.getPhysicsManager();
         this.physicsManager.enabled = true;
+        //this.node.getComponent('DeviceMotionControl').Prepare();
 
         this.GameSpeed = 0;
         this.GamePause = true;
@@ -281,7 +190,7 @@ cc.Class({
         this.MainMenuUI.active = true;
         this.GuideUI.active = false;
         this.GameAreaUI.active = false;
-        this.ChooseActiveSkillUI.active = false;
+        this.GameSetUI.active = false;
         this.GameOverUI.active = false;
         this.GameRankUI.active = false;
         this.UpdateLogUI.active = false;
@@ -290,7 +199,7 @@ cc.Class({
 
     ChooseActiveSkill: function ChooseActiveSkill() {
         this.GameAreaUI.active = false;
-        this.ChooseActiveSkillUI.active = true;
+        this.GameSetUI.active = true;
     },
 
     GameInit: function GameInit() {
@@ -326,8 +235,11 @@ cc.Class({
         this.ItemNum++;
         this.SwapBadItem();
 
+        this.UseEnergyBar = this.UseEnergyBarUI.isChecked;
+
         this.Turret.getComponent('TurretControl').GameInit();
         this.Player.getComponent('PlayerControl').GameInit();
+        this.node.getComponent('DeviceMotionControl').GameInit();
     },
     GameOver: function GameOver() {
         this.GamePause = true;
@@ -366,7 +278,7 @@ cc.Class({
                     this.UpdateData();
                 }
             }
-            if (this.Skill_1_Type == Common.ActiveSkillType.SlowTime) {
+            if (this.Skill_1_Type == Common.ActiveSkillNum.SlowTime) {
                 if (this.Skill_1_On) {
                     if (this.Skill_1_Time > 0) {
                         this.GameSpeed = 1 / (1 + this.Skill_1_Level);
@@ -387,6 +299,7 @@ cc.Class({
 
 
     UpdateData: function UpdateData() {
+        //更新UI数据
         this.label_PlayerSpeed.string = this.PlayerSpeed2UI.toString();
         this.label_RotationSpeed.string = this.RotationSpeedUI.toString();
         this.label_ShootSpeed.string = this.ShootSpeedUI.toString();
@@ -397,10 +310,12 @@ cc.Class({
         if (tmp.length < 3) tmp += '.0';
         this.label_Skill_1_Time.string = tmp;
 
+        this.Player.getComponent('PlayerControl').EnergyBar.getComponent('EnergyBarControl').UpdateData(this.Skill_1_Time, this.Skill_1_Max);
+
         //计算具体参数
 
         this.PlayerSpeed2 = (this.PlayerSpeed2UI - 1) * 2 + 20;
-        this.PlayerSpeed1 = this.PlayerSpeed2 / 2;
+        this.PlayerSpeed1 = this.PlayerSpeed2;
         this.RotationSpeed = 10 + this.RotationSpeedUI;
         this.ShootSpeed = 2 * 15 / (15 + this.ShootSpeedUI);
         this.BulletSpeed = 200 + 3 * this.BulletSpeedUI;
@@ -555,6 +470,7 @@ cc.Class({
 
     upSkill_1_MAX: function upSkill_1_MAX() {
         this.Skill_1_Max += 1;
+        this.Skill_1_Time = this.Skill_1_Max;
         this.Score += 1;
         this.UpdateData();
         this.SwapItem();
@@ -569,12 +485,15 @@ cc.Class({
 
     Skill_1_Start: function Skill_1_Start() {
         if (this.GamePause) return;
-        if (this.Skill_1_Type == Common.ActiveSkillType.Bomb) {
+        if (this.Skill_1_Type == Common.ActiveSkillNum.Bomb) {
             if (this.Skill_1_Time >= 3) {
                 this.Player.getComponent('PlayerControl').UseBomb();
                 this.Skill_1_Time -= 3;
                 this.UpdateData();
-            } else this.PlayerPowerFlash(3);
+            } else {
+                this.PlayerPowerFlash(3);
+                this.Player.getComponent('PlayerControl').EnergyBar.getComponent('EnergyBarControl').EnergyBarFlash(3);
+            }
         }
     },
 
@@ -613,6 +532,15 @@ cc.Class({
         if (!this.CanClick) return;
         this.MainMenuUI.active = false;
         this.ChooseActiveSkill();
+    },
+
+    OnPressGameSettingOk: function OnPressGameSettingOk() {
+        if (this.Skill_1_Type != null && this.Skill_2_Type != null) {
+            cc.log(this.Skill_1_Type);
+            cc.log(this.Skill_2_Type);
+            this.GameInit();
+            this.GameSetUI.active = false;
+        }
     },
 
     OnPressGameRank: function OnPressGameRank() {

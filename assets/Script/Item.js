@@ -30,6 +30,7 @@ cc.Class({
 
     start () {
         this.GameManager = cc.find("Canvas/GameManager");
+        this.Player = cc.find("Canvas/GameArea/Player");
         if(this.Type<Common.ItemType.upPlayerSpeed)
             this.LifeTime = this.GameManager.getComponent('GameManager').ItemLifeTime1;
         else
@@ -42,19 +43,46 @@ cc.Class({
         this.OnMove = false;
     },
 
-     update (dt) {
-        if(this.LifeTime>0&&!this.GameManager.getComponent('GameManager').GamePause)
-        {
-            this.LifeTime-= dt*this.GameManager.getComponent('GameManager').GameSpeed;
-            if(this.LifeTime <0){
-                if(this.Type<Common.ItemType.upPlayerSpeed)
-                    this.GameManager.getComponent('GameManager').SwapBadItem();
+    update (dt) {
+        if(!this.GameManager.getComponent('GameManager').GamePause){
+            if(this.LifeTime>0){
+                this.LifeTime-= dt*this.GameManager.getComponent('GameManager').GameSpeed;
+                if(this.LifeTime <0){
+                    if(this.Type<Common.ItemType.upPlayerSpeed)
+                        this.GameManager.getComponent('GameManager').SwapBadItem();
+                    else
+                        this.GameManager.getComponent('GameManager').SwapGoodItem();
+                    this.node.destroy();
+                }
                 else
-                    this.GameManager.getComponent('GameManager').SwapGoodItem();
-                this.node.destroy();
+                    this.laberTimer.string = Math.floor(this.LifeTime).toString();
+            }
+
+            let xx = this.Player.getPosition().x - this.node.getPosition().x;
+            let yy = this.Player.getPosition().y - this.node.getPosition().y;
+            let distance = Math.sqrt(Math.pow(xx, 2) + Math.pow(yy, 2));
+            let angle = Math.atan2(yy, xx);
+
+            if(this.GameManager.getComponent('GameManager').Skill_2_Type == Common.PassiveSkillNum.Magnet){
+                if(distance < 120){
+                    let moveSpeed = 200-distance;
+                    this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(Math.cos(angle) * moveSpeed, Math.sin(angle) * moveSpeed);
+                }
+                else
+                    this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
             }
             else
-                this.laberTimer.string = Math.floor(this.LifeTime).toString();
+                if(distance < 50){
+                    let moveSpeed = 100-distance;
+                    this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(Math.cos(angle) * moveSpeed, Math.sin(angle) * moveSpeed);
+                }
+                else
+                    this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
+               
+        }
+        else{
+            this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
         }
      },
+        
 });

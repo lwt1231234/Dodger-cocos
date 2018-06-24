@@ -21,9 +21,19 @@ module.exports = {
         GetShield: 6,
     }),
 
-    ActiveSkillType : cc.Enum({
+    SkillType : cc.Enum({
+        Active: 0,
+        Passive: 1,
+    }),
+
+    ActiveSkillNum : cc.Enum({
         SlowTime: 0,
         Bomb: 1,
+    }),
+
+    PassiveSkillNum : cc.Enum({
+        Magnet: 0,
+        Reborn: 1,
     }),
 
     LabelType : cc.Enum({

@@ -13,11 +13,19 @@ cc.Class({
             default: null,
             type: cc.Node,
         },
+        EnergyBar: {
+            default: null,
+            type: cc.Node,
+        },
         DiePicture: {
             default: null,
             type: cc.Node,
         },
         Shield: {
+            default: null,
+            type: cc.Node,
+        },
+        Reborn: {
             default: null,
             type: cc.Node,
         },
@@ -53,6 +61,7 @@ cc.Class({
         this.BulletLock = false; 
         this.HaveShield = false;
 
+
         this.node.getComponent(cc.RigidBody).angularVelocity = 0;
         this.node.rotation = 0;
 
@@ -65,6 +74,15 @@ cc.Class({
         this.Shield.active = false;
         this.Picture.active = true;
         this.DiePicture.active = false;
+        this.Reborn.active = false;
+        if(this.GameManager.getComponent('GameManager').UseEnergyBar == true){
+            this.EnergyBar.active = true;
+
+        }
+        else{
+            this.EnergyBar.active = false;
+
+        }
     },
 
     update (dt) {
@@ -72,6 +90,13 @@ cc.Class({
 
     UnlockItemLock :function(){
         this.ItemLock = false;
+    },
+
+    LockBulletLock:function(time){
+        this.BulletLock = true;
+        this.scheduleOnce(function() {
+            this.UnlockBulletLock();
+            }, time);
     },
 
     UnlockBulletLock :function(){
@@ -100,6 +125,23 @@ cc.Class({
         this.DiePicture.getComponent('DieAction').LetDie();
     },
 
+    RebornFlash: function(num){
+        if(num>0){
+            this.Reborn.active = true;
+            this.scheduleOnce(function() {
+                        this.RebornFlashEnd(num);
+                        }, 0.2);
+        }
+        
+    },
+
+    RebornFlashEnd: function(num){
+        this.Reborn.active = false;
+        this.scheduleOnce(function() {
+                    this.RebornFlash(num-1);
+                    }, 0.2);
+    },
+
 
     onPreSolve: function (contact, selfCollider, otherCollider) {
         if(this.GameManager.getComponent('GameManager').GamePause)
@@ -108,18 +150,32 @@ cc.Class({
             if(this.HaveShield){
                 this.LoseShield();
                 otherCollider.node.destroy();
-                this.BulletLock = true;
-                this.scheduleOnce(function() {
-                    this.UnlockBulletLock();
-                    }, 0.2);
+                this.LockBulletLock(0.2);
             }
             else
             {
                 if(!this.BulletLock){
-                    otherCollider.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
-                    this.node.getComponent(cc.RigidBody).angularVelocity = 500;
-                    this.GameManager.getComponent('GameManager').GameOver();
+                    if(this.GameManager.getComponent('GameManager').Skill_2_Type==1 && this.GameManager.getComponent('GameManager').Skill_1_Time>=5){
+                        this.GameManager.getComponent('GameManager').Skill_1_Time -=5;
+                        otherCollider.node.destroy();
+                        this.LockBulletLock(1);
+                        this.RebornFlash(5);
+                        if(this.GameManager.getComponent('GameManager').Skill_1_Time<5){
+                            this.GameManager.getComponent('GameManager').PlayerPowerFlash(3);
+                            this.EnergyBar.getComponent('EnergyBarControl').EnergyBarFlash(3);
+                        }
+                    }
+                        
+                    else{
+                        otherCollider.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
+                        this.node.getComponent(cc.RigidBody).angularVelocity = 500;
+                        this.EnergyBar.active = false;
+                        this.GameManager.getComponent('GameManager').GameOver();
+                    }
+                    
                 }
+                else
+                    otherCollider.node.destroy();
             }
             
         }

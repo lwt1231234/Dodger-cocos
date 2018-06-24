@@ -9,15 +9,13 @@ cc.Class({
             type: cc.Node,
             visible: false,
         },
-        ChooseActiveSkill: {
+        ChooseSkill: {
             default: null,
             type: cc.Node,
-            visible: false,
         },
-        Type: {
-            default: Common.ActiveSkillType.SlowTime,
-            type: Common.ActiveSkillType,
-            displayName: '类型',
+        SkillNum: {
+            default: 0,
+            displayName: '编号',
         },
         Choosed: {
             default: null,
@@ -30,7 +28,6 @@ cc.Class({
 
     onLoad () {
         this.GameManager = cc.find("Canvas/GameManager");
-        this.ChooseActiveSkill = cc.find("Canvas/ChooseActiveSkill");
         this.Choosed = this.node.getChildByName("Choosed");
         this.Choosed.active=false;
 
@@ -49,7 +46,7 @@ cc.Class({
     },
 
     _touchStartEvent: function(event) {
-        this.ChooseActiveSkill.getComponent('ChooseActiveSkill').ChooseSkill(this.Type);
+        this.ChooseSkill.getComponent('ChooseSkill').ChooseSkill(this.SkillNum);
     },
 
     // update (dt) {},

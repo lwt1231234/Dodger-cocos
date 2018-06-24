@@ -155,7 +155,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "5e181923-f2ce-44a3-a28a-4dbeba142f20"
     },
     "fileId": "fcjkd5BjxHzpmcBBzJEoRf",
     "sync": false
@@ -209,7 +209,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_type": 0,
+    "_type": 2,
     "_allowSleep": true,
     "_gravityScale": 0,
     "_linearDamping": 0,
@@ -251,7 +251,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "5e181923-f2ce-44a3-a28a-4dbeba142f20"
     },
     "fileId": "0aIicfSZhJnLT/5ZlABXxa",
     "sync": false
