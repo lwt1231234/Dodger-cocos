@@ -65,7 +65,7 @@ cc.Class({
 
             if(this.GameManager.getComponent('GameManager').Skill_2_Type == Common.PassiveSkillNum.Magnet){
                 if(distance < 120){
-                    let moveSpeed = 200-distance;
+                    let moveSpeed = 200-distance+this.GameManager.getComponent('GameManager').PlayerSpeed2*5;
                     this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(Math.cos(angle) * moveSpeed, Math.sin(angle) * moveSpeed);
                 }
                 else
@@ -73,7 +73,7 @@ cc.Class({
             }
             else
                 if(distance < 50){
-                    let moveSpeed = 100-distance;
+                    let moveSpeed = 100-distance+this.GameManager.getComponent('GameManager').PlayerSpeed2*5;
                     this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(Math.cos(angle) * moveSpeed, Math.sin(angle) * moveSpeed);
                 }
                 else

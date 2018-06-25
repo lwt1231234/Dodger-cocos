@@ -318,9 +318,9 @@ cc.Class({
         this.PlayerSpeed1 = this.PlayerSpeed2;
         this.RotationSpeed = 10 + this.RotationSpeedUI;
         this.ShootSpeed = 2 * 15 / (15 + this.ShootSpeedUI);
-        this.BulletSpeed = 200 + 3 * this.BulletSpeedUI;
+        this.BulletSpeed = 200 + 2 * this.BulletSpeedUI;
         this.BulletLifeTime = 4 + this.BulletLifeTimeUI * 0.5;
-        this.BulletScale = 20 / (20 + this.BulletScaleUI) + 0.2;
+        this.BulletScale = 40 / (40 + this.BulletScaleUI) + 0.2;
     },
 
     _getARandomPositon: function _getARandomPositon() {
@@ -470,7 +470,8 @@ cc.Class({
 
     upSkill_1_MAX: function upSkill_1_MAX() {
         this.Skill_1_Max += 1;
-        this.Skill_1_Time = this.Skill_1_Max;
+        this.Skill_1_Time += 5;
+        if (this.Skill_1_Time > this.Skill_1_Max) this.Skill_1_Time = this.Skill_1_Max;
         this.Score += 1;
         this.UpdateData();
         this.SwapItem();
