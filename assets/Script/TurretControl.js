@@ -35,27 +35,33 @@ cc.Class({
 
     GameInit(){
         this.BulletParent = new cc.Node("BulletParent");
-        this.BulletParent.parent = this.node;
+        this.BulletParent.x =0;
+        this.BulletParent.y =0;
+        this.BulletParent.parent = this.GameManager;
         this.BulletParent.x=0;
         this.BulletParent.y=0;
         this.CreateBullet();
     },
 
     GameReset :function(){
-        this.BulletParent.destroy();
+        //this.BulletParent.destroy();
     },
 
     update :function(dt) {
+        if(!this.GameManager.getComponent('GameManager').GamePause){
+            var RotationSpeed = this.GameManager.getComponent('GameManager').RotationSpeed;
+            RotationSpeed = RotationSpeed * this.GameManager.getComponent('GameManager').GameSpeed;
+            this.node.rotation += dt*RotationSpeed;
 
-        var RotationSpeed = this.GameManager.getComponent('GameManager').RotationSpeed;
-        RotationSpeed = RotationSpeed * this.GameManager.getComponent('GameManager').GameSpeed;
-        this.node.rotation += dt*RotationSpeed;
-
-        this.ShootTimer -= dt*this.GameManager.getComponent('GameManager').GameSpeed;
-        if(this.ShootTimer<=0){
-            this.CreateBullet();
+            if(this.GameManager.getComponent('GameManager').Skill_1_Active){
+                this.ShootTimer -= dt/2;
+            }
+            else
+                this.ShootTimer -= dt;
+            if(this.ShootTimer<=0){
+                this.CreateBullet();
+            }
         }
-
     },
 
     CreateBullet(){
@@ -65,7 +71,15 @@ cc.Class({
         newBullet.parent = this.BulletParent;
         //子弹速度
         var BulletSpeed = this.GameManager.getComponent('GameManager').BulletSpeed;
+        newBullet.getComponent('BulletControl').BulletSpeed = BulletSpeed;
+
+        var GameSpeed = this.GameManager.getComponent('GameManager').GameSpeed;
+        newBullet.getComponent('BulletControl').GameSpeed = GameSpeed;
+
+        BulletSpeed = BulletSpeed * GameSpeed
         newBullet.getComponent(cc.RigidBody).linearVelocity = cc.v2(cc.pForAngle(this.node.rotation*Math.PI/180).y*BulletSpeed,cc.pForAngle(this.node.rotation*Math.PI/180).x*BulletSpeed);
+        newBullet.getComponent('BulletControl').Angle = this.node.rotation*Math.PI/180;
+        
 
         var BulletScale = this.GameManager.getComponent('GameManager').BulletScale;
         newBullet.scale=cc.v2(BulletScale,BulletScale);

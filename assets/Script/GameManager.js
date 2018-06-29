@@ -107,6 +107,26 @@ cc.Class({
             default: null,
             type: cc.Node,
         }, 
+
+                            //UI
+        JoyUI: {
+            default: null,
+            type: cc.Node,
+        },
+
+        SkillButton1: {
+            default: null,
+            type: cc.Node,
+        },
+        SkillButton2: {
+            default: null,
+            type: cc.Node,
+        },
+        SkillButton3: {
+            default: null,
+            type: cc.Node,
+        },
+
                             //按钮
         UseEnergyBarUI: {
             default: null,
@@ -189,8 +209,19 @@ cc.Class({
         this.GameRankUI.active = false;
         this.UpdateLogUI.active = false;
         //this.GameInit();
+        this.SetPara();
 
     },
+
+    SetPara: function(){
+        this.ActiveSkill1Energy = 1;
+        this.PlayerMaxSpeed = 12;
+
+        this.ActiveSkill2Energy = 5;
+
+        this.PassiveSkill2Energy = 5;
+    },
+
 
     ChooseActiveSkill :function(){
         this.GameAreaUI.active = false;
@@ -208,13 +239,15 @@ cc.Class({
         this.BulletLifeTimeUI = 1;
 
         this.Skill_1_On = false;
+        this.Skill_1_Active = false;
         this.Skill_1_Level = 1;
-        this.Skill_1_Time = 5;
-        this.Skill_1_Max = 5;
+        this.Skill_1_Time = 10;
+        this.Skill_1_Max = 10;
 
         this.GameSpeed = 1;
+        this.PlayerSlow = 1;
         this.Score = 0;
-        this.ItemNum = 0;
+        this.ItemNum = 1;
 
         this.Player.x = -200;
         this.Player.y = 0;
@@ -228,15 +261,33 @@ cc.Class({
         
 
         this.UpdateData();
-        this.ItemNum++;
         this.SwapBadItem();
 
         this.UseEnergyBar = this.UseEnergyBarUI.isChecked;
+        this.UseJoy = true;
+        this.UseDevice = false;
+        this.UseTouch = false;
 
         this.Turret.getComponent('TurretControl').GameInit();
         this.Player.getComponent('PlayerControl').GameInit();
         this.node.getComponent('DeviceMotionControl').GameInit();
 
+        if(this.UseJoy){
+            this.JoyUI.active =true;
+            this.SkillButton1.active = true;
+        }
+        else{
+            this.JoyUI.active =false;
+            this.SkillButton1.active = false;
+        }
+        if(this.UseDevice)
+            this.SkillButton2.active = true;
+        else
+            this.SkillButton2.active = false;
+        if(this.UseTouch)
+            this.SkillButton3.active = true;
+        else
+            this.SkillButton3.active = false;
     },
 
     GameOver(){
@@ -266,8 +317,10 @@ cc.Class({
         this.GameOverUI.active = true;
         this.label_GameOverScore.string='得分：'+this.Score.toString();
         this.GameRankUI.active = true;
+        
         this.SubmitScore();
         this.GameRankUI.getComponent('GameRankControl').GetFirendRank();
+        this.CanClick = false;
     },
 
     start () {
@@ -280,26 +333,29 @@ cc.Class({
         else{
             if(!this.Skill_1_On){
                 if(this.Skill_1_Time<this.Skill_1_Max){
-                        this.Skill_1_Time+=dt/3;
+                        this.Skill_1_Time+=dt/2;
                         this.UpdateData();
                     }
             }
             if(this.Skill_1_Type == Common.ActiveSkillNum.SlowTime){
                 if(this.Skill_1_On){
                     if (this.Skill_1_Time>0) {
-                        this.GameSpeed = 1/(1+this.Skill_1_Level);
-                        this.Skill_1_Time -=dt;
+                        this.Skill_1_Active = true;
+                        this.GameSpeed = 1;
+                        this.Skill_1_Time -=dt*this.ActiveSkill1Energy;
                         if(this.Skill_1_Time<0)
                             this.Skill_1_Time = 0;
                         this.UpdateData();
                     }
                     else{
+                        this.Skill_1_Active = false;
                         this.GameSpeed = 1;
                         this.Skill_1_Time = 0;
                     }
                          
                 }
                 else{
+                    this.Skill_1_Active = false;
                     this.GameSpeed = 1;
                 }
             }
@@ -324,13 +380,17 @@ cc.Class({
 
         //计算具体参数
 
-        this.PlayerSpeed2 = (this.PlayerSpeed2UI-1)*2+20;
+        // let i;
+        // for(i=1;i<20;i++)
+        //     cc.log(Math.log(i)*6+20);
+
+        this.PlayerSpeed2 = Math.log(this.PlayerSpeed2UI)*5+20;
         this.PlayerSpeed1 = this.PlayerSpeed2;
         this.RotationSpeed = 10+this.RotationSpeedUI;
         this.ShootSpeed = 2*15/(15+this.ShootSpeedUI);
         this.BulletSpeed = 200+2*this.BulletSpeedUI;
         this.BulletLifeTime = 4+this.BulletLifeTimeUI*0.5;
-        this.BulletScale = 40/(40+this.BulletScaleUI)+0.2
+        this.BulletScale = 20/(40+this.BulletScaleUI)+0.2
     },
 
     _getARandomPositon :function(){
@@ -435,7 +495,8 @@ cc.Class({
     },
 
     SwapItem :function(){
-        
+        if(this.ItemNum==5)
+            return;
         if(this.Score==5){
             this.SwapBadItem();
         }
@@ -511,7 +572,7 @@ cc.Class({
     },
 
     upSkill_1_MAX: function(){
-        this.Skill_1_Max+=1;
+        this.Skill_1_Max+=2;
         this.Skill_1_Time +=5;
         if(this.Skill_1_Time>this.Skill_1_Max)
             this.Skill_1_Time = this.Skill_1_Max;
@@ -531,9 +592,9 @@ cc.Class({
         if(this.GamePause)
             return;
         if(this.Skill_1_Type == Common.ActiveSkillNum.Bomb){
-            if(this.Skill_1_Time>=3){
+            if(this.Skill_1_Time>=this.ActiveSkill2Energy){
                 this.Player.getComponent('PlayerControl').UseBomb();
-                this.Skill_1_Time-=3;
+                this.Skill_1_Time-=this.ActiveSkill2Energy;
                 this.UpdateData();
             }
             else{
@@ -586,8 +647,6 @@ cc.Class({
 
     OnPressGameSettingOk: function(){
         if(this.Skill_1_Type!=null&&this.Skill_2_Type!=null){
-            cc.log(this.Skill_1_Type);
-            cc.log(this.Skill_2_Type);
             this.GameInit();
             this.GameSetUI.active = false;
         }
@@ -601,6 +660,11 @@ cc.Class({
         this.GameRankUI.getComponent('GameRankControl').GetFirendRank();
         this.CanClick = false;
     },
+
+    OnPressShare:function(){
+        window.wx.shareAppMessage();
+    },
+
 
     SubmitScore: function(){
         if(this.Score==null)

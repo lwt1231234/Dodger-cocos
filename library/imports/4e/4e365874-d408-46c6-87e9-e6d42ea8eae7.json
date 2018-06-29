@@ -54,17 +54,17 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 52,
-      "height": 52
+      "width": 20,
+      "height": 20
     },
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 0.5,
-    "_scaleY": 0.5,
+    "_scaleX": 1,
+    "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 302,
-      "y": 101
+      "x": 215.9,
+      "y": 543.4
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -85,7 +85,7 @@
       "__uuid__": "dd3bded7-697b-4eed-8368-5e21beaa7612"
     },
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -141,7 +141,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 25
+    "_radius": 9.5
   },
   {
     "__type__": "8e45ceGcldKVbfIk1i5rKq7",
@@ -152,7 +152,7 @@
     },
     "_enabled": true,
     "GameManager": null,
-    "NormalBulletSpeed": null,
+    "BulletSpeed": null,
     "GameSpeedThis": null,
     "Enlargex": null,
     "Enlargey": null
@@ -171,7 +171,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 25
+    "_radius": 9.5
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -181,7 +181,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "90TM7m1oFItpXa2sbEZgk3",
+    "fileId": "a5kTP4/ehJ+Ywj0HWbyxUj",
     "sync": false
   }
 ]

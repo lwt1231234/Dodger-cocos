@@ -2,11 +2,7 @@
 cc._RF.push(module, '8e45ceGcldKVbfIk1i5rKq7', 'BulletControl');
 // Script/BulletControl.js
 
-'use strict';
-
-var _properties;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+"use strict";
 
 // Learn cc.Class:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
@@ -21,40 +17,41 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 cc.Class({
     extends: cc.Component,
 
-    properties: (_properties = {
+    properties: {
         GameManager: {
             default: null,
             type: cc.Node
         },
-        NormalBulletSpeed: {
+        BulletSpeed: {
             default: null,
             visible: false
         },
-        GameSpeedThis: {
+        GameSpeed: {
+            default: null,
+            visible: false
+        },
+        Angle: {
+            default: null,
+            visible: false
+        },
+        Enlargex: {
+            default: null,
+            visible: false
+        },
+        Enlargey: {
             default: null,
             visible: false
         }
 
-    }, _defineProperty(_properties, 'GameSpeedThis', {
-        default: null,
-        visible: false
-    }), _defineProperty(_properties, 'Enlargex', {
-        default: null,
-        visible: false
-    }), _defineProperty(_properties, 'Enlargey', {
-        default: null,
-        visible: false
-    }), _properties),
+    },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad: function onLoad() {
         this.GameManager = cc.find("Canvas/GameManager");
-        var BulletLifeTime = this.GameManager.getComponent('GameManager').BulletLifeTime;
-        this.scheduleOnce(function () {
-            this.TImeOut();
-        }, BulletLifeTime);
-        this.GameSpeedThis = 1;
+        this.Player = cc.find("Canvas/GameArea/Player");
+        this.BulletLifeTime = this.GameManager.getComponent('GameManager').BulletLifeTime;
+
         this.Enlargex = false;
         this.Enlargey = false;
     },
@@ -64,27 +61,55 @@ cc.Class({
         this.node.destroy();
     },
     update: function update(dt) {
-        var GameSpeed = this.GameManager.getComponent('GameManager').GameSpeed;
-        if (this.GameSpeedThis == 1 && GameSpeed != 1) {
+        this.BulletLifeTime -= dt;
+        if (this.BulletLifeTime <= 0) {
+            this.node.destroy();
+        }
+        var GameSpeedNow = 1;
+        if (this.GameManager.getComponent('GameManager').GamePause) GameSpeedNow = 0;else {
+            if (this.GameManager.getComponent('GameManager').Skill_1_Active) {
+                var xx = this.Player.getPosition().x - this.node.x;
+                var yy = this.Player.getPosition().y - this.node.y;
+                var distance = Math.sqrt(Math.pow(xx, 2) + Math.pow(yy, 2));
+
+                var distance_zero = 1;
+                var distance_max = 700;
+                if (distance < distance_zero) {
+                    GameSpeedNow = 0;
+                    this.BulletLifeTime -= dt;
+                }
+                if (distance >= distance_zero && distance < distance_max) {
+                    GameSpeedNow = (distance - distance_zero) / (distance_max - distance_zero);
+                    this.BulletLifeTime -= dt;
+                }
+                if (distance >= distance_max) GameSpeedNow = 1;
+            } else GameSpeedNow = 1;
+        }
+        //cc.log(1,GameSpeedNow);
+        if (GameSpeedNow != this.GameSpeed) {
             var xspeed = this.node.getComponent(cc.RigidBody).linearVelocity.x;
             var yspeed = this.node.getComponent(cc.RigidBody).linearVelocity.y;
-            this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(xspeed * GameSpeed, yspeed * GameSpeed);
-            this.GameSpeedThis = GameSpeed;
-        }
-        if (this.GameSpeedThis != 1 && GameSpeed == 1) {
-            var xspeed = this.node.getComponent(cc.RigidBody).linearVelocity.x;
-            var yspeed = this.node.getComponent(cc.RigidBody).linearVelocity.y;
-            this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(xspeed / this.GameSpeedThis, yspeed / this.GameSpeedThis);
-            this.GameSpeedThis = 1;
-        }
-        if (this.GameSpeedThis != 1 && GameSpeed == 0) {
-            this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0, 0);
-            this.GameSpeedThis = 1;
+            if (GameSpeedNow == 0) {
+                this.Angle = Math.atan2(yspeed, xspeed);
+            }
+            if (this.GameSpeed == 0) {
+                xspeed = Math.cos(this.Angle) * this.BulletSpeed;
+                yspeed = Math.sin(this.Angle) * this.BulletSpeed;
+            } else {
+                this.Angle = Math.atan2(yspeed, xspeed);
+                xspeed = xspeed / this.GameSpeed;
+                yspeed = yspeed / this.GameSpeed;
+            }
+            xspeed *= GameSpeedNow;
+            yspeed *= GameSpeedNow;
+            this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(xspeed, yspeed);
+            this.GameSpeed = GameSpeedNow;
         }
     },
 
 
     onBeginContact: function onBeginContact(contact, selfCollider, otherCollider) {
+
         var xspeed = this.node.getComponent(cc.RigidBody).linearVelocity.x;
         if (xspeed < 33 && xspeed >= 0) {
             xspeed += 35;
@@ -110,6 +135,11 @@ cc.Class({
     },
 
     onEndContact: function onEndContact(contact, selfCollider, otherCollider) {
+        if (otherCollider.node.name == 'Player') {
+            this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0, 0);
+            return;
+            //this.node.color = new cc.color(255,255,255);
+        }
         var xspeed = this.node.getComponent(cc.RigidBody).linearVelocity.x;
         if (this.Enlargex) {
             if (xspeed > 0) xspeed -= 35;else xspeed += 35;

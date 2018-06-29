@@ -24,6 +24,7 @@ cc.Class({
 
     start(){
         this.InUse = false;
+        this.GameManager = cc.find("Canvas/GameManager");
     },
 
     Prepare () {
@@ -52,9 +53,10 @@ cc.Class({
                     let movey = self._acc.y - self.init.y;
                     self.label.string=res.x.toFixed(2)+","+res.y.toFixed(2);
                     self.label2.string=self.init.x.toFixed(2)+","+self.init.y.toFixed(2);
-                    self.label3.string=movex.toFixed(2)+","+movey.toFixed(2);
+                    //self.label3.string=movex.toFixed(2)+","+movey.toFixed(2);
 
-                    if(movex < 0.05 && movex > -0.05 && movey < 0.05 && movey > -0.05){
+                    if(movex < 0.05 && movex >-0.05 && movey < 0.05 && movey > -0.05){
+                        self.label3.string = "1";
                         self.InUse = false;
                     }
                     else{
@@ -71,6 +73,13 @@ cc.Class({
                             //self.init.y = self._acc.y - Math.sin(nowAngle)*0.1;
                         }
                         self.Angle = nowAngle;
+                        self._speed2 = self.GameManager.getComponent('GameManager').PlayerSpeed2;
+                        let Devv2 = cc.v2(Math.cos(self.Angle) * self._speed2 * 5,
+                                Math.sin(self.Angle) * self._speed2 * 5);
+                        self.Player.getComponent('PlayerControl').DeviceDev = Devv2;
+                        
+                        self.label3.string = "0";
+
                     }
                                  
                 }
