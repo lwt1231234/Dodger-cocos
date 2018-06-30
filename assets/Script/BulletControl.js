@@ -48,6 +48,7 @@ cc.Class({
         
         this.Enlargex =false;
         this.Enlargey =false;
+        this.Used = false;
      },
 
     start () {
@@ -61,7 +62,8 @@ cc.Class({
     update (dt) {
         this.BulletLifeTime -= dt;
         if(this.BulletLifeTime <=0){
-            this.node.destroy();
+            if(this.GameManager.getComponent('GameManager').GameSpeed>0)
+                this.node.destroy();
         }
         let GameSpeedNow = 1;
         if(this.GameManager.getComponent('GameManager').GamePause)
@@ -87,7 +89,7 @@ cc.Class({
                     GameSpeedNow = 1;
             }
             else
-                GameSpeedNow = 1;
+                GameSpeedNow = this.GameManager.getComponent('GameManager').GameSpeed;
         }
         //cc.log(1,GameSpeedNow);
         if(GameSpeedNow!=this.GameSpeed){
@@ -114,8 +116,11 @@ cc.Class({
     },
 
     onBeginContact: function (contact, selfCollider, otherCollider) {
-
-
+        if(otherCollider.node.name=='Player'){
+            this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
+            return;
+            //this.node.color = new cc.color(255,255,255);
+        }
         var xspeed = this.node.getComponent(cc.RigidBody).linearVelocity.x;
         if(xspeed<33&&xspeed>=0){
             xspeed +=35;

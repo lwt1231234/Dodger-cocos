@@ -41,12 +41,14 @@ cc.Class({
             this.laberTimer.string = this.LifeTime.toString();
 
         this.OnMove = false;
+        this.Used = false;
     },
 
     update (dt) {
         if(!this.GameManager.getComponent('GameManager').GamePause){
+            let GameSpeed = this.GameManager.getComponent('GameManager').GameSpeed;
             if(this.LifeTime>0){
-                this.LifeTime-= dt*this.GameManager.getComponent('GameManager').GameSpeed;
+                this.LifeTime-= dt*GameSpeed;
                 if(this.LifeTime <0){
                     if(this.Type<Common.ItemType.upPlayerSpeed)
                         this.GameManager.getComponent('GameManager').SwapBadItem();
@@ -66,6 +68,7 @@ cc.Class({
             if(this.GameManager.getComponent('GameManager').Skill_2_Type == Common.PassiveSkillNum.Magnet){
                 if(distance < 120){
                     let moveSpeed = 200-distance+this.GameManager.getComponent('GameManager').PlayerSpeed2*5;
+                    //moveSpeed *=GameSpeed;
                     this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(Math.cos(angle) * moveSpeed, Math.sin(angle) * moveSpeed);
                 }
                 else
@@ -73,11 +76,18 @@ cc.Class({
             }
             else
                 if(distance < 50){
-                    let moveSpeed = 100-distance+this.GameManager.getComponent('GameManager').PlayerSpeed2*5;
+                    let moveSpeed = 100-distance+this.GameManager.getComponent('GameManager').PlayerSpeed2*5*GameSpeed;
+                    //moveSpeed *=GameSpeed;
                     this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(Math.cos(angle) * moveSpeed, Math.sin(angle) * moveSpeed);
                 }
                 else
-                    this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
+                    if(this.GameManager.getComponent('GameManager').Skill_2_Type == 2 && this.GameManager.getComponent('GameManager').PlayerNotMove){
+                        let moveSpeed = 50+this.GameManager.getComponent('GameManager').PlayerSpeed2*1;
+                        //moveSpeed *=GameSpeed;
+                        this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(Math.cos(angle) * moveSpeed, Math.sin(angle) * moveSpeed);
+                    }
+                    else
+                        this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
                
         }
         else{

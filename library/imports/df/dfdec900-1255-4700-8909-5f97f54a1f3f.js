@@ -54,13 +54,15 @@ cc.Class({
 
     update: function update(dt) {
         if (!this.GameManager.getComponent('GameManager').GamePause) {
+            var GameSpeed = this.GameManager.getComponent('GameManager').GameSpeed;
+
             var RotationSpeed = this.GameManager.getComponent('GameManager').RotationSpeed;
-            RotationSpeed = RotationSpeed * this.GameManager.getComponent('GameManager').GameSpeed;
+            RotationSpeed = RotationSpeed * GameSpeed;
             this.node.rotation += dt * RotationSpeed;
 
             if (this.GameManager.getComponent('GameManager').Skill_1_Active) {
-                this.ShootTimer -= dt / 2;
-            } else this.ShootTimer -= dt;
+                this.ShootTimer -= dt / 2 * GameSpeed;
+            } else this.ShootTimer -= dt * GameSpeed;
             if (this.ShootTimer <= 0) {
                 this.CreateBullet();
             }

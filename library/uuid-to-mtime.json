@@ -50,8 +50,8 @@
     "relativePath": "Script"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1530246375149,
-    "meta": 1530246375177,
+    "asset": 1530351717419,
+    "meta": 1530351717442,
     "relativePath": "Scene\\Main.fire"
   },
   "6e6f79e4-8f19-4e40-be9a-485f4a9bfaaf": {
@@ -85,8 +85,8 @@
     "relativePath": "Picture\\Item\\Picture_Turret.png"
   },
   "4e365874-d408-46c6-87e9-e6d42ea8eae7": {
-    "asset": 1530189151206,
-    "meta": 1530189151263,
+    "asset": 1530344043905,
+    "meta": 1530344043911,
     "relativePath": "Prefab\\Bullet.prefab"
   },
   "1ffc9c0c-de4b-4142-ae7f-b5fcf6a06c05": {
@@ -155,33 +155,33 @@
     "relativePath": "Picture\\Circel"
   },
   "1171d6e5-25da-4c0c-8759-18e2596a4d4f": {
-    "asset": 1529747234585,
-    "meta": 1529747234593,
+    "asset": 1530344752158,
+    "meta": 1530344752166,
     "relativePath": "Prefab\\Item\\upRotationSpeed.prefab"
   },
   "5e181923-f2ce-44a3-a28a-4dbeba142f20": {
-    "asset": 1529747239741,
-    "meta": 1529747239796,
+    "asset": 1530344757456,
+    "meta": 1530344757462,
     "relativePath": "Prefab\\Item\\upShootSpeed.prefab"
   },
   "13854aae-154c-49a8-822f-2ed40c27d807": {
-    "asset": 1529747215016,
-    "meta": 1529747215040,
+    "asset": 1530344733612,
+    "meta": 1530344733616,
     "relativePath": "Prefab\\Item\\upBulletLifeTime.prefab"
   },
   "c23cb0f8-92dc-4f30-b269-d437b5d52e35": {
-    "asset": 1529747220921,
-    "meta": 1529747220932,
+    "asset": 1530344740847,
+    "meta": 1530344740852,
     "relativePath": "Prefab\\Item\\upBulletSpeed.prefab"
   },
   "b30a9c70-e1cd-48b7-8269-a4586b0839d0": {
-    "asset": 1529747226120,
-    "meta": 1529747226132,
+    "asset": 1530344746976,
+    "meta": 1530344746981,
     "relativePath": "Prefab\\Item\\upPlayerSpeed.prefab"
   },
   "aa577df8-6294-470a-aed4-28ab3195f673": {
-    "asset": 1529747247459,
-    "meta": 1529747247471,
+    "asset": 1530344764331,
+    "meta": 1530344764337,
     "relativePath": "Prefab\\Item\\upSkill_1_MAX.prefab"
   },
   "f58949bb-3160-4170-98d9-554d8765ce89": {
@@ -195,8 +195,8 @@
     "relativePath": "Picture\\Item\\Shild.png"
   },
   "0f8c1ba8-d4f3-45d2-b7db-dac344916485": {
-    "asset": 1529747209163,
-    "meta": 1529747209167,
+    "asset": 1530344726736,
+    "meta": 1530344726753,
     "relativePath": "Prefab\\Item\\GetShield.prefab"
   },
   "07fb6b86-36b7-48b5-a5d4-eb3647b2ab8f": {
@@ -354,11 +354,6 @@
     "meta": 1529738121046,
     "relativePath": "Script\\OneSkill.js"
   },
-  "085b9b56-d58d-469c-872a-39b4d458671c": {
-    "asset": 1529748801336,
-    "meta": 1529748802429,
-    "relativePath": "Script\\ChooseSkill.js"
-  },
   "49131e55-711e-4893-bee1-5760cae4e69d": {
     "asset": 1529749629705,
     "meta": 1529749631935,
@@ -384,20 +379,10 @@
     "meta": 1529827661137,
     "relativePath": "Picture\\UI\\EnergBackground.png"
   },
-  "22cf5d9e-d45c-4391-9658-b659c8d9ec1d": {
-    "asset": 1529829010675,
-    "meta": 1529829092007,
-    "relativePath": "Script\\EnergyBarControl.js"
-  },
   "fca2096d-dd1c-40d1-8071-399c3b2fa657": {
     "asset": 1530005719054,
     "meta": 1530005720367,
     "relativePath": "Script\\JoystickBG.js"
-  },
-  "6b891f31-d4d1-4113-b7b6-359dc1645253": {
-    "asset": 1530024241153,
-    "meta": 1530024275506,
-    "relativePath": "Script\\Item.js"
   },
   "6d4201ee-c1e2-4027-af76-04972d1c6ce2": {
     "asset": 1530030619523,
@@ -413,11 +398,6 @@
     "asset": 1530031976645,
     "meta": 1530148729067,
     "relativePath": "Script\\JoyControl.js"
-  },
-  "f3ad8cf2-895e-4cdc-a3b6-be9b68d4aae4": {
-    "asset": 1530200716474,
-    "meta": 1530200717168,
-    "relativePath": "Script\\PlayerControl.js"
   },
   "c1b0bccb-5c0e-4ae4-a38b-bbaf9acc0452": {
     "asset": 1530239506629,
@@ -453,21 +433,6 @@
     "asset": 1530239889139,
     "meta": 1530239889163,
     "relativePath": "Picture\\UI\\Button_Play.png"
-  },
-  "8e45c786-7257-4a55-b7c8-9358b9acaabb": {
-    "asset": 1530241065039,
-    "meta": 1530241065611,
-    "relativePath": "Script\\BulletControl.js"
-  },
-  "dfdec900-1255-4700-8909-5f97f54a1f3f": {
-    "asset": 1530241378143,
-    "meta": 1530241379083,
-    "relativePath": "Script\\TurretControl.js"
-  },
-  "b3132a90-a6c2-4549-8788-c2fa993d38b8": {
-    "asset": 1530241515009,
-    "meta": 1530241515872,
-    "relativePath": "Script\\GameManager.js"
   },
   "71561142-4c83-4933-afca-cb7a17f67053": {
     "asset": 1529576964000,
@@ -653,5 +618,45 @@
     "asset": 1529576964000,
     "meta": 1530245439697,
     "relativePath": "prefab\\webview.prefab"
+  },
+  "085b9b56-d58d-469c-872a-39b4d458671c": {
+    "asset": 1530336639125,
+    "meta": 1530336640131,
+    "relativePath": "Script\\ChooseSkill.js"
+  },
+  "dfdec900-1255-4700-8909-5f97f54a1f3f": {
+    "asset": 1530337501662,
+    "meta": 1530337541156,
+    "relativePath": "Script\\TurretControl.js"
+  },
+  "596fa3ec-c099-45ad-b7f8-12a3da2880b0": {
+    "asset": 1530340227685,
+    "meta": 1530340227745,
+    "relativePath": "Picture\\Write.png"
+  },
+  "f3ad8cf2-895e-4cdc-a3b6-be9b68d4aae4": {
+    "asset": 1530348466793,
+    "meta": 1530348467352,
+    "relativePath": "Script\\PlayerControl.js"
+  },
+  "22cf5d9e-d45c-4391-9658-b659c8d9ec1d": {
+    "asset": 1530349155577,
+    "meta": 1530349191155,
+    "relativePath": "Script\\EnergyBarControl.js"
+  },
+  "6b891f31-d4d1-4113-b7b6-359dc1645253": {
+    "asset": 1530349190211,
+    "meta": 1530349191156,
+    "relativePath": "Script\\Item.js"
+  },
+  "8e45c786-7257-4a55-b7c8-9358b9acaabb": {
+    "asset": 1530350771347,
+    "meta": 1530350773293,
+    "relativePath": "Script\\BulletControl.js"
+  },
+  "b3132a90-a6c2-4549-8788-c2fa993d38b8": {
+    "asset": 1530351421780,
+    "meta": 1530351424069,
+    "relativePath": "Script\\GameManager.js"
   }
 }

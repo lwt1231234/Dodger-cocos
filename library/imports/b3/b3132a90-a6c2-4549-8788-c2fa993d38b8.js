@@ -219,12 +219,15 @@ cc.Class({
     },
 
     SetPara: function SetPara() {
-        this.ActiveSkill1Energy = 1;
-        this.PlayerMaxSpeed = 12;
-
+        //减速
+        this.ActiveSkill0Energy = 1;
+        //炸弹
+        this.ActiveSkill1Energy = 5;
+        //停止
         this.ActiveSkill2Energy = 5;
 
-        this.PassiveSkill2Energy = 5;
+        //保险
+        this.PassiveSkill1Energy = 3;
     },
 
     ChooseActiveSkill: function ChooseActiveSkill() {
@@ -318,9 +321,23 @@ cc.Class({
     start: function start() {},
     update: function update(dt) {
         if (this.GamePause) this.GameSpeed = 0;else {
+            var PlayerSpeedNow = this.Player.getComponent(cc.RigidBody).linearVelocity;
+
+            if (this.TheWorldTime > 0) {
+                this.TheWorldTime -= dt;
+                if (this.TheWorldTime <= 0) {
+                    this.ResumeSpeed = true;
+                    this.Player.getComponent('PlayerControl').TheWorldEnd();
+                }
+            }
+
+            if (PlayerSpeedNow.x == 0 && PlayerSpeedNow.y == 0) this.PlayerNotMove = true;else {
+                this.PlayerNotMove = false;
+            }
+
             if (!this.Skill_1_On) {
                 if (this.Skill_1_Time < this.Skill_1_Max) {
-                    this.Skill_1_Time += dt / 2;
+                    this.Skill_1_Time += dt / 2 * this.GameSpeed;
                     this.UpdateData();
                 }
             }
@@ -329,7 +346,7 @@ cc.Class({
                     if (this.Skill_1_Time > 0) {
                         this.Skill_1_Active = true;
                         this.GameSpeed = 1;
-                        this.Skill_1_Time -= dt * this.ActiveSkill1Energy;
+                        this.Skill_1_Time -= dt * this.ActiveSkill0Energy;
                         if (this.Skill_1_Time < 0) this.Skill_1_Time = 0;
                         this.UpdateData();
                     } else {
@@ -340,6 +357,11 @@ cc.Class({
                 } else {
                     this.Skill_1_Active = false;
                     this.GameSpeed = 1;
+                }
+            }
+            if (this.Skill_1_Type == 2 && this.ResumeSpeed == true) {
+                if (this.GameSpeed < 1) this.GameSpeed += dt / 2;else {
+                    this.ResumeSpeed = false;
                 }
             }
         }
@@ -540,10 +562,23 @@ cc.Class({
     Skill_1_Start: function Skill_1_Start() {
         if (this.GamePause) return;
         if (this.Skill_1_Type == Common.ActiveSkillNum.Bomb) {
-            if (this.Skill_1_Time >= this.ActiveSkill2Energy) {
+            if (this.Skill_1_Time >= this.ActiveSkill1Energy) {
                 this.Player.getComponent('PlayerControl').UseBomb();
+                this.Skill_1_Time -= this.ActiveSkill1Energy;
+                this.UpdateData();
+            } else {
+                this.PlayerPowerFlash(3);
+                this.Player.getComponent('PlayerControl').EnergyBar.getComponent('EnergyBarControl').EnergyBarFlash(3);
+            }
+        }
+        if (this.Skill_1_Type == 2) {
+            if (this.Skill_1_Time >= this.ActiveSkill2Energy) {
                 this.Skill_1_Time -= this.ActiveSkill2Energy;
                 this.UpdateData();
+                this.GameSpeed = 0;
+                this.ResumeSpeed = false;
+                this.Player.getComponent('PlayerControl').TheWorldStart();
+                this.TheWorldTime = 3;
             } else {
                 this.PlayerPowerFlash(3);
                 this.Player.getComponent('PlayerControl').EnergyBar.getComponent('EnergyBarControl').EnergyBarFlash(3);

@@ -62,8 +62,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 215.9,
-      "y": 543.4
+      "x": 163,
+      "y": 304
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -140,7 +140,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 9.5
+    "_radius": 8.5
   },
   {
     "__type__": "8e45ceGcldKVbfIk1i5rKq7",
@@ -152,7 +152,8 @@
     "_enabled": true,
     "GameManager": null,
     "BulletSpeed": null,
-    "GameSpeedThis": null,
+    "GameSpeed": null,
+    "Angle": null,
     "Enlargex": null,
     "Enlargey": null
   },
@@ -180,7 +181,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "a5kTP4/ehJ+Ywj0HWbyxUj",
+    "fileId": "08frbOQ0pFaLHGcYxMCfQ8",
     "sync": false
   }
 ]

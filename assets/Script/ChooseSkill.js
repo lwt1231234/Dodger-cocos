@@ -31,6 +31,7 @@ cc.Class({
         this.SkillList = new Array(this.SkillNum);
         this.SkillList[0] = this.node.getChildByName("view").getChildByName("content").getChildByName("Skill0");
         this.SkillList[1] = this.node.getChildByName("view").getChildByName("content").getChildByName("Skill1");
+        this.SkillList[2] = this.node.getChildByName("view").getChildByName("content").getChildByName("Skill2");
 
         if(this.SkillType == Common.SkillType.Active)
             if(this.GameManager.getComponent('GameManager').Skill_1_Type ==null){
@@ -40,8 +41,8 @@ cc.Class({
 
         if(this.SkillType == Common.SkillType.Passive)
             if(this.GameManager.getComponent('GameManager').Skill_2_Type ==null){
-                this.GameManager.getComponent('GameManager').Skill_2_Type = 0;
-                this.SkillList[0].getComponent('OneSkill').Choosed.active=true;
+                this.GameManager.getComponent('GameManager').Skill_2_Type = 1;
+                this.SkillList[1].getComponent('OneSkill').Choosed.active=true;
             }
     },
 

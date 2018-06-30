@@ -37,6 +37,10 @@ cc.Class({
             default: null,
             type: cc.Node,
         },
+        TheWorld: {
+            default: null,
+            type: cc.Node,
+        },
         ItemLock :{
             default: null,
             visible: false,
@@ -51,6 +55,8 @@ cc.Class({
 
     onLoad () {
         this.GameManager = cc.find("Canvas/GameManager");
+        var manager = cc.director.getCollisionManager();
+        manager.enabled = true;
     },
 
     start () {
@@ -75,9 +81,9 @@ cc.Class({
         this.Picture.active = true;
         this.DiePicture.active = false;
         this.Reborn.active = false;
+        this.TheWorld.active = false;
         if(this.GameManager.getComponent('GameManager').UseEnergyBar == true){
             this.EnergyBar.active = true;
-
         }
         else{
             this.EnergyBar.active = false;
@@ -111,6 +117,15 @@ cc.Class({
                 if(this.GameManager.getComponent('GameManager').UseTouch && !this.DevCompare(this.TouchDev,0,0)){
                     this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(this.TouchDev.x*GameSpeed,this.TouchDev.y*GameSpeed);
                 }
+            }
+
+            if(this.TheWorldActive==1){
+                var tmp = this.TheWorld.scale;
+                this.TheWorld.scale=cc.v2(tmp+dt*1500,tmp+dt*1500);
+            }
+            if(this.TheWorldActive==-1){
+                var tmp = this.TheWorld.scale;
+                this.TheWorld.scale=cc.v2(tmp-dt*1500,tmp-dt*1500);
             }
         }
         else
@@ -172,55 +187,77 @@ cc.Class({
                     }, 0.2);
     },
 
+    TheWorldStart: function(num){
+        this.TheWorld.active= true;
+        this.TheWorld.scale = cc.v2(1,1);
+        this.TheWorldActive = 1;
+        this.scheduleOnce(function() {
+                        this.TheWorldActive = 0;
+                        }, 0.2);
+    },
 
-    onPreSolve: function (contact, selfCollider, otherCollider) {
+    TheWorldEnd: function(num){
+        this.TheWorldActive = -1;
+        this.scheduleOnce(function() {
+                        this.TheWorldActive = 0;
+                        this.TheWorld.active= false;
+                        }, 0.2);
+    },
+
+    onCollisionEnter: function (other, self) {
         if(this.GameManager.getComponent('GameManager').GamePause)
             return;
-        if(otherCollider.node.name=='Bullet'){
+        if(other.node.name=='Bullet'){
             if(this.HaveShield){
                 this.LoseShield();
-                otherCollider.node.destroy();
+                other.node.destroy();
                 this.LockBulletLock(0.2);
             }
             else
             {
-                if(!this.BulletLock){
-                    if(this.GameManager.getComponent('GameManager').Skill_2_Type==1 && this.GameManager.getComponent('GameManager').Skill_1_Time>=this.GameManager.getComponent('GameManager').PassiveSkill2Energy){
-                        this.GameManager.getComponent('GameManager').Skill_1_Time -=this.GameManager.getComponent('GameManager').PassiveSkill2Energy;
-                        otherCollider.node.destroy();
-                        this.LockBulletLock(1);
-                        this.RebornFlash(5);
-                        if(this.GameManager.getComponent('GameManager').Skill_1_Time<this.GameManager.getComponent('GameManager').PassiveSkill2Energy){
-                            this.GameManager.getComponent('GameManager').PlayerPowerFlash(3);
-                            this.EnergyBar.getComponent('EnergyBarControl').EnergyBarFlash(3);
-                        }
-                    }
-                        
-                    else{
-                        otherCollider.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
-                        this.node.getComponent(cc.RigidBody).angularVelocity = 500;
-                        this.EnergyBar.active = false;
-                        this.GameManager.getComponent('GameManager').GameOver();
-                    }
-                    
+                if(other.node.getComponent('BulletControl').Used !=false){
+                    return;
                 }
-                else
-                    otherCollider.node.destroy();
+                other.node.getComponent('BulletControl').Used = true;
+                if(this.BulletLock){
+                    other.node.destroy();
+                    return;
+                }
+                if(this.GameManager.getComponent('GameManager').Skill_2_Type==1 && this.GameManager.getComponent('GameManager').Skill_1_Time>=this.GameManager.getComponent('GameManager').PassiveSkill1Energy){
+                    this.GameManager.getComponent('GameManager').Skill_1_Time -=this.GameManager.getComponent('GameManager').PassiveSkill1Energy;
+                    other.node.destroy();
+                    this.LockBulletLock(1);
+                    this.RebornFlash(5);
+                    if(this.GameManager.getComponent('GameManager').Skill_1_Time<this.GameManager.getComponent('GameManager').PassiveSkill1Energy){
+                        this.GameManager.getComponent('GameManager').PlayerPowerFlash(3);
+                        this.EnergyBar.getComponent('EnergyBarControl').EnergyBarFlash(3);
+                    }
+                } 
+                else{
+                    //other.node.destroy();
+                    other.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
+                    this.node.getComponent(cc.RigidBody).angularVelocity = 500;
+                    this.EnergyBar.active = false;
+                    this.GameManager.getComponent('GameManager').GameOver();
+                }
             }
             
         }
-        if(otherCollider.node.getComponent('Item')!=null){
-            if(this.ItemLock)
+        if(other.node.getComponent('Item')!=null){
+            // if(this.ItemLock)
+            //     return;
+            // else{
+            //     this.ItemLock = true;
+            //     this.scheduleOnce(function() {
+            //         this.UnlockItemLock();
+            //         }, 0.05);
+            // }
+            if(other.node.getComponent('Item').Used !=false)
                 return;
-            else{
-                this.ItemLock = true;
-                this.scheduleOnce(function() {
-                    this.UnlockItemLock();
-                    }, 0.05);
-            }
-            otherCollider.node.destroy();
+            other.node.getComponent('Item').Used = true;
+            other.node.destroy();
             this.GameManager.getComponent('GameManager').ItemNum--;
-            var Item = otherCollider.node.getComponent('Item')
+            var Item = other.node.getComponent('Item')
             //cc.log(Item.Type);
             if(Item.Type == Common.ItemType.upRotationSpeed)
                 this.GameManager.getComponent('GameManager').upRotationSpeed();
@@ -240,5 +277,6 @@ cc.Class({
             }
         }
     },
+
     
 });
