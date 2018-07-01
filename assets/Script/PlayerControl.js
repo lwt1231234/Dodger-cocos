@@ -255,7 +255,7 @@ cc.Class({
             if(other.node.getComponent('Item').Used !=false)
                 return;
             other.node.getComponent('Item').Used = true;
-            other.node.destroy();
+            other.node.getComponent('Item').Eaten();
             this.GameManager.getComponent('GameManager').ItemNum--;
             var Item = other.node.getComponent('Item')
             //cc.log(Item.Type);

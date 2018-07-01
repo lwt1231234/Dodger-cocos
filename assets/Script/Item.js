@@ -22,6 +22,10 @@ cc.Class({
             default: null,
             type: cc.Label,
         },
+        PareItem: {
+            default: null,
+            visible: false,
+        }, 
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -31,10 +35,14 @@ cc.Class({
     start () {
         this.GameManager = cc.find("Canvas/GameManager");
         this.Player = cc.find("Canvas/GameArea/Player");
-        if(this.Type<Common.ItemType.upPlayerSpeed)
+        if(this.Type<Common.ItemType.upPlayerSpeed){
             this.LifeTime = this.GameManager.getComponent('GameManager').ItemLifeTime1;
-        else
+            this.node.getComponent(cc.RigidBody).angularVelocity = 0;
+        }
+        else{
             this.LifeTime = this.GameManager.getComponent('GameManager').ItemLifeTime2;
+            this.node.getComponent(cc.RigidBody).angularVelocity = 100;
+        }
         if(this.LifeTime == 0)
             this.laberTimer.string = '';
         else
@@ -42,6 +50,18 @@ cc.Class({
 
         this.OnMove = false;
         this.Used = false;
+    },
+
+    Init :function(position,pare){
+        this.node.x = position.x;
+        this.node.y = position.y;
+        this.PareItem = pare;
+    },
+
+    Eaten :function(){
+        if(this.PareItem!=null)
+            this.PareItem.destroy();
+        this.node.destroy();
     },
 
     update (dt) {

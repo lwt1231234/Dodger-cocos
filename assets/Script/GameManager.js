@@ -220,7 +220,7 @@ cc.Class({
         this.ActiveSkill1Energy = 5;
         //停止
         this.ActiveSkill2Energy = 5;
-        
+
         //保险
         this.PassiveSkill1Energy = 3;
     },
@@ -236,7 +236,6 @@ cc.Class({
         this.PlayerSpeed2UI = 1;
 
         this.RotationSpeedUI = 1;
-        this.BulletScaleUI = 1;
         this.ShootSpeedUI = 1;
         this.BulletSpeedUI = 1;
         this.BulletLifeTimeUI = 1;
@@ -260,11 +259,12 @@ cc.Class({
         this.CanClick = true;
 
         this.ItemLifeTime1 = 0;
-        this.ItemLifeTime2 = 10;
+        this.ItemLifeTime2 = 0;
         
 
         this.UpdateData();
         this.SwapBadItem();
+        //this.SwapGoodItem();
 
         this.UseEnergyBar = this.UseEnergyBarUI.isChecked;
         this.UseJoy = true;
@@ -408,7 +408,7 @@ cc.Class({
 
         // let i;
         // for(i=1;i<20;i++)
-        //     cc.log(Math.log(i)*6+20);
+        //     cc.log(i,Math.log(i)*5+20);
 
         this.PlayerSpeed2 = Math.log(this.PlayerSpeed2UI)*5+20;
         this.PlayerSpeed1 = this.PlayerSpeed2;
@@ -416,47 +416,42 @@ cc.Class({
         this.ShootSpeed = 2*15/(15+this.ShootSpeedUI);
         this.BulletSpeed = 200+2*this.BulletSpeedUI;
         this.BulletLifeTime = 4+this.BulletLifeTimeUI*0.5;
-        this.BulletScale = 20/(40+this.BulletScaleUI)+0.2
+        this.BulletScale = 20/(40+this.Score/5)+0.2
     },
 
-    _getARandomPositon :function(){
-        var max,min,x,y;
+    _getARandomPositon :function(postion,min_distance_input,max_distance_input){
+        var max,min,x,y,min_distance,max_distance;
+
+        if(min_distance_input == null)
+            min_distance = 20;
+        else
+            min_distance = min_distance_input;
+
+        if(max_distance_input == null)
+            max_distance = 1000;
+        else
+            max_distance = max_distance_input;
+        //cc.log(min_distance,max_distance);
+        let count =0;
         do{
-            var min_distance = 20;
-            var max_distance = 1000;
-
-            if(this.Score >= 0 && this.Score < 5){
-                min_distance = 100;
-                max_distance = 150;
-            }
-            if(this.Score >= 5 && this.Score < 15)
-                {
-                min_distance = 150;
-                max_distance = 200;
-            }
-            if(this.Score >= 15 && this.Score < 25)
-                {
-                min_distance = 200;
-                max_distance = 250;
-            }
-            if(this.Score >= 25 && this.Score < 35)
-                {
-                min_distance = 250;
-                max_distance = 300;
-            }
-            if(this.Score >= 35 && this.Score < 50)
-                {
-                min_distance = 300;
-                max_distance = 400;
+            count++;
+            if(count >100){
+                cc.log("too many random times");
+                return cc.v2(x,y);
             }
 
-            max = Math.min(290,this.Player.getPosition().x+max_distance);
-            min = Math.max(-290,this.Player.getPosition().x-max_distance);
+            max = Math.min(290,postion.x + max_distance);
+            min = Math.max(-290,postion.x - max_distance);
             x = Math.random()*(max-min+1)+min;
 
-            max = Math.min(290,this.Player.getPosition().y+max_distance);
-            min = Math.max(-290,this.Player.getPosition().y-max_distance);
+            max = Math.min(290,postion.y + max_distance);
+            min = Math.max(-290,postion.y - max_distance);
             y = Math.random()*(max-min+1)+min;
+
+            if(this._getDistance(cc.v2(x,y),postion)<min_distance)
+                continue;
+            if(this._getDistance(cc.v2(x,y),postion)>max_distance)
+                continue;
             //是否离4个方块太近
             if(this._getDistance(cc.v2(x,y),this.Block1.getPosition())<35)
                 continue;
@@ -472,7 +467,7 @@ cc.Class({
                 continue;
             break;
         }while(true);
-        
+        //cc.log(cc.v2(x,y));
         return cc.v2(x,y);
     },
 
@@ -481,26 +476,35 @@ cc.Class({
         return Math.sqrt(Math.pow(pos1.x - pos2.x, 2) + Math.pow(pos1.y - pos2.y, 2));
     },
 
-    SwapGoodItem :function(ItemType){
-        var Itemlist = new Array(this.upPlayerSpeedPrefab,
+    SwapGoodItemSingle :function(ItemType){
+        let newItem = cc.instantiate(ItemType);
+        let postion= this._getARandomPositon(this.Player.getPosition(),200,300);
+        newItem.parent = this.node;
+        newItem.getComponent('Item').Init(postion,null);
+    },
+
+    SwapGoodItem :function(){
+        let Itemlist = new Array(this.upPlayerSpeedPrefab,
                                 this.upSkill_1_MAXPrefab,
                                 this.GetShieldPrefab);
-        var i;
-        if(this.Player.getComponent('PlayerControl').HaveShield)
-            i = Math.floor(Math.random()*2);
-        else
-            i = Math.floor(Math.random()*3);
+        let newItem1;
+        let newItem2;
+        if(this.Player.getComponent('PlayerControl').HaveShield){
+            newItem1 = cc.instantiate(Itemlist[0]);
+            newItem2 = cc.instantiate(Itemlist[1]);
+        }
+        else{
+            newItem1 = cc.instantiate(this.GetShieldPrefab);
+            let i = Math.floor(Math.random()*2);
+            newItem2 = cc.instantiate(Itemlist[i]);
+        }
 
-        var newItem;
-        if(ItemType == null)
-             newItem = cc.instantiate(Itemlist[i]);
-         else
-            newItem = cc.instantiate(ItemType);
-
-        newItem.parent = this.node;
-        var postion= this._getARandomPositon();
-        newItem.x = postion.x;
-        newItem.y = postion.y;
+        newItem1.parent = this.node;
+        newItem2.parent = this.node;
+        let postion1 = this._getARandomPositon(this.Player.getPosition(),200,1000);
+        let postion2 = this._getARandomPositon(postion1,300,400);
+        newItem1.getComponent('Item').Init(postion1,newItem2);
+        newItem2.getComponent('Item').Init(postion2,newItem1);
     },
 
     SwapBadItem :function(){
@@ -515,7 +519,24 @@ cc.Class({
         var newItem = cc.instantiate(Itemlist[i]);
 
         newItem.parent = this.node;
-        var postion= this._getARandomPositon();
+        let postion;
+        if(this.Score >= 0 && this.Score < 5){
+            postion = this._getARandomPositon(this.Player.getPosition(),100,150);
+        }
+        if(this.Score >= 5 && this.Score < 15){
+            postion = this._getARandomPositon(this.Player.getPosition(),150,200);
+        }
+        if(this.Score >= 15 && this.Score < 25){
+            postion = this._getARandomPositon(this.Player.getPosition(),200,250);
+        }
+        if(this.Score >= 25 && this.Score < 35){
+           postion = this._getARandomPositon(this.Player.getPosition(),250,300);
+        }
+        if(this.Score >= 35 && this.Score < 50){
+            postion = this._getARandomPositon(this.Player.getPosition(),300,400);
+        }
+        if(this.Score >= 50)
+            postion = this._getARandomPositon(this.Player.getPosition(),200,1000);
         newItem.x = postion.x;
         newItem.y = postion.y;
     },
@@ -534,7 +555,7 @@ cc.Class({
         }
         if((this.Score%5)==0){
             if(this.Score == 5)
-                this.SwapGoodItem(this.GetShieldPrefab);
+                this.SwapGoodItemSingle(this.GetShieldPrefab);
             else
                 this.SwapGoodItem();
         }
@@ -559,7 +580,6 @@ cc.Class({
 
     upRotationSpeed: function(){
         this.RotationSpeedUI+=1;
-        this.BulletScaleUI+=1;
         this.Score +=1;
         this.UpdateData();
         this.SwapItem();
@@ -598,10 +618,11 @@ cc.Class({
     },
 
     upSkill_1_MAX: function(){
-        this.Skill_1_Max+=2;
         this.Skill_1_Time +=5;
-        if(this.Skill_1_Time>this.Skill_1_Max)
+        if(this.Skill_1_Time>this.Skill_1_Max){
+            this.Skill_1_Max+=2;
             this.Skill_1_Time = this.Skill_1_Max;
+        }
         this.Score +=1;
         this.UpdateData();
         this.SwapItem();

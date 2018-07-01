@@ -33,6 +33,10 @@ cc.Class({
             default: null,
             type: cc.Node,
         },
+        Step5: {
+            default: null,
+            type: cc.Node,
+        },
         Pre: {
             default: null,
             type: cc.Node,
@@ -61,6 +65,7 @@ cc.Class({
         this.Step2.active = false;
         this.Step3.active = false;
         this.Step4.active = false;
+        this.Step5.active = false;
         this.Pre.active = false;
         this.Next.active = true;
         this.CurrentStep = 1;
@@ -82,9 +87,15 @@ cc.Class({
         }
         if(this.CurrentStep==3){
             this.CurrentStep++;
-            this.Next.active = false;
             this.Step4.active = true;
             this.Step3.active = false;
+            return;
+        }
+        if(this.CurrentStep==4){
+            this.CurrentStep++;
+            this.Next.active = false;
+            this.Step5.active = true;
+            this.Step4.active = false;
             return;
         }
     },
@@ -106,9 +117,15 @@ cc.Class({
         }
         if(this.CurrentStep==4){
             this.CurrentStep--;
-            this.Next.active = true;
             this.Step3.active = true;
             this.Step4.active = false;
+            return;
+        }
+        if(this.CurrentStep==5){
+            this.CurrentStep--;
+            this.Next.active = true;
+            this.Step4.active = true;
+            this.Step5.active = false;
             return;
         }
     },

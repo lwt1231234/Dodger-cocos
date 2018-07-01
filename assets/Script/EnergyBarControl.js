@@ -35,9 +35,7 @@ cc.Class({
         let nowLength = maxLength*now/max;
         this.EnergyNow.width=nowLength;
 
-        let tmp = (Math.floor(now*10)/10).toString();
-        if(tmp.length<3)
-            tmp+='.0';
+        let tmp = Math.floor(now).toString();
         this.Label.string = tmp;
     },
 
