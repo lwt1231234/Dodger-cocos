@@ -126,7 +126,10 @@ cc.Class({
             default: null,
             type: cc.Node,
         },
-
+        LevelNumUI: {
+            default: null,
+            type: cc.Label,
+        }, 
                             //按钮
         UseEnergyBarUI: {
             default: null,
@@ -225,10 +228,25 @@ cc.Class({
         this.PassiveSkill1Energy = 3;
     },
 
-
     ChooseActiveSkill :function(){
         this.GameAreaUI.active = false;
         this.GameSetUI.active = true;
+        if(this.LevelNum == null)
+        	this.LevelNum = 0;
+        else
+        	this.LevelNum = Math.floor(Math.random()*4);
+        if(this.LevelNum==0){
+        	this.LevelNumUI.string='本次游戏难度倾向：平衡';
+        }
+        if(this.LevelNum==1){
+        	this.LevelNumUI.string='本次游戏难度倾向：炮台射速快';
+        }
+        if(this.LevelNum==2){
+        	this.LevelNumUI.string='本次游戏难度倾向：子弹速度快';
+        }
+        if(this.LevelNum==3){
+        	this.LevelNumUI.string='本次游戏难度倾向：子弹时间长';
+        }
     },
 
     GameInit(){
@@ -508,14 +526,46 @@ cc.Class({
     },
 
     SwapBadItem :function(){
-        var Itemlist = new Array(this.upRotationSpeedPrefab,
+    	var Itemlist,i;
+
+    	if(this.Score<4){
+    		Itemlist = new Array(this.upRotationSpeedPrefab,
                                 this.upShootSpeedPrefab,
                                 this.upBulletSpeedPrefab,
                                 this.upBulletLifeTimePrefab);
-        var i = Math.floor(Math.random()*4);
-        if(this.Score<4)
-            i = this.Score;
-
+    		i = this.Score;
+    	}
+    	else{
+    		if(this.LevelNum == 0){
+	    		Itemlist = new Array(this.upRotationSpeedPrefab,
+	                                this.upShootSpeedPrefab,
+	                                this.upBulletSpeedPrefab,
+	                                this.upBulletLifeTimePrefab);
+	    		i = Math.floor(Math.random()*4);
+	    	}
+	    	if(this.LevelNum == 1){
+	    		Itemlist = new Array(this.upRotationSpeedPrefab,
+	                                this.upShootSpeedPrefab,this.upShootSpeedPrefab,this.upShootSpeedPrefab,
+	                                this.upBulletSpeedPrefab,
+	                                this.upBulletLifeTimePrefab);
+	    		i = Math.floor(Math.random()*6);
+	    	}
+	    	if(this.LevelNum == 2){
+	    		Itemlist = new Array(this.upRotationSpeedPrefab,
+	                                this.upShootSpeedPrefab,
+	                                this.upBulletSpeedPrefab,this.upBulletSpeedPrefab,this.upBulletSpeedPrefab,
+	                                this.upBulletLifeTimePrefab);
+	    		i = Math.floor(Math.random()*6);
+	    	}
+	    	if(this.LevelNum == 3){
+	    		Itemlist = new Array(this.upRotationSpeedPrefab,
+	                                this.upShootSpeedPrefab,
+	                                this.upBulletSpeedPrefab,
+	                                this.upBulletLifeTimePrefab,this.upBulletLifeTimePrefab,this.upBulletLifeTimePrefab);
+	    		i = Math.floor(Math.random()*6);
+	    	}
+    	}
+    	cc.log(i);
         var newItem = cc.instantiate(Itemlist[i]);
 
         newItem.parent = this.node;
@@ -709,6 +759,7 @@ cc.Class({
     OnPressGameSettingOk: function(){
         if(this.Skill_1_Type!=null&&this.Skill_2_Type!=null){
             this.GameInit();
+            //this.ChooseActiveSkill();
             this.GameSetUI.active = false;
         }
     },

@@ -81,10 +81,10 @@
         "__id__": 180
       },
       {
-        "__id__": 556
+        "__id__": 559
       },
       {
-        "__id__": 540
+        "__id__": 543
       },
       {
         "__id__": 172
@@ -100,7 +100,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 576
+        "__id__": 579
       }
     ],
     "_prefab": null,
@@ -6263,10 +6263,10 @@
       "__id__": 13
     },
     "GameRankUI": {
-      "__id__": 540
+      "__id__": 543
     },
     "UpdateLogUI": {
-      "__id__": 556
+      "__id__": 559
     },
     "JoyUI": {
       "__id__": 61
@@ -6280,8 +6280,11 @@
     "SkillButton3": {
       "__id__": 77
     },
+    "LevelNumUI": {
+      "__id__": 422
+    },
     "UseEnergyBarUI": {
-      "__id__": 539
+      "__id__": 542
     },
     "upRotationSpeedPrefab": {
       "__uuid__": "1171d6e5-25da-4c0c-8759-18e2596a4d4f"
@@ -15071,10 +15074,13 @@
         "__id__": 421
       },
       {
-        "__id__": 473
+        "__id__": 424
       },
       {
-        "__id__": 529
+        "__id__": 476
+      },
+      {
+        "__id__": 532
       }
     ],
     "_tag": -1,
@@ -15155,7 +15161,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 640,
-      "height": 843
+      "height": 938
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -15164,7 +15170,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -14
+      "y": 9
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -15226,7 +15232,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -386.5
+      "y": -434
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -15466,6 +15472,109 @@
   },
   {
     "__type__": "cc.Node",
+    "_name": "Label_LevelNum",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 411
+    },
+    "_children": [],
+    "_tag": -1,
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 422
+      },
+      {
+        "__id__": 423
+      }
+    ],
+    "_prefab": null,
+    "_id": "e9GFLa2hlD5IybNmasFgZu",
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 560,
+      "height": 40
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": -5,
+      "y": 419
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_opacityModifyRGB": false,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 421
+    },
+    "_enabled": true,
+    "_useOriginalSize": false,
+    "_actualFontSize": 40,
+    "_fontSize": 40,
+    "_lineHeight": 40,
+    "_enableWrapText": true,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
+    "_spacingX": 0,
+    "_N$string": "本次游戏难度倾向：子弹时间长",
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 0,
+    "_N$fontFamily": "Arial",
+    "_N$overflow": 0
+  },
+  {
+    "__type__": "cc.Widget",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 421
+    },
+    "_enabled": true,
+    "isAlignOnce": true,
+    "_target": null,
+    "_alignFlags": 1,
+    "_left": 193,
+    "_right": 0,
+    "_top": -439,
+    "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
+    "_originalWidth": 0,
+    "_originalHeight": 0
+  },
+  {
+    "__type__": "cc.Node",
     "_name": "ChooseActiveSkill",
     "_objFlags": 0,
     "_parent": {
@@ -15473,23 +15582,23 @@
     },
     "_children": [
       {
-        "__id__": 422
+        "__id__": 425
       },
       {
-        "__id__": 425
+        "__id__": 428
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 470
+        "__id__": 473
       },
       {
-        "__id__": 471
+        "__id__": 474
       },
       {
-        "__id__": 472
+        "__id__": 475
       }
     ],
     "_prefab": null,
@@ -15520,7 +15629,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": -285,
-      "y": 232
+      "y": 317
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -15534,17 +15643,17 @@
     "_name": "Label_ActiveSkill",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 421
+      "__id__": 424
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 423
+        "__id__": 426
       },
       {
-        "__id__": 424
+        "__id__": 427
       }
     ],
     "_prefab": null,
@@ -15575,7 +15684,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 280,
-      "y": 145
+      "y": 19
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -15589,7 +15698,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 422
+      "__id__": 425
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -15611,7 +15720,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 422
+      "__id__": 425
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -15619,7 +15728,7 @@
     "_alignFlags": 1,
     "_left": 193,
     "_right": 0,
-    "_top": 19,
+    "_top": 145,
     "_bottom": 0,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
@@ -15637,21 +15746,21 @@
     "_name": "view",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 421
+      "__id__": 424
     },
     "_children": [
       {
-        "__id__": 426
+        "__id__": 429
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 468
+        "__id__": 471
       },
       {
-        "__id__": 469
+        "__id__": 472
       }
     ],
     "_prefab": null,
@@ -15682,7 +15791,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -21
+      "y": -147
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -15696,27 +15805,27 @@
     "_name": "content",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 425
+      "__id__": 428
     },
     "_children": [
       {
-        "__id__": 427
+        "__id__": 430
       },
       {
-        "__id__": 440
+        "__id__": 443
       },
       {
-        "__id__": 451
+        "__id__": 454
       },
       {
-        "__id__": 462
+        "__id__": 465
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 467
+        "__id__": 470
       }
     ],
     "_prefab": null,
@@ -15761,30 +15870,30 @@
     "_name": "Skill0",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 426
+      "__id__": 429
     },
     "_children": [
-      {
-        "__id__": 428
-      },
       {
         "__id__": 431
       },
       {
         "__id__": 434
+      },
+      {
+        "__id__": 437
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 437
+        "__id__": 440
       },
       {
-        "__id__": 438
+        "__id__": 441
       },
       {
-        "__id__": 439
+        "__id__": 442
       }
     ],
     "_prefab": null,
@@ -15829,17 +15938,17 @@
     "_name": "Choosed",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 427
+      "__id__": 430
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 429
+        "__id__": 432
       },
       {
-        "__id__": 430
+        "__id__": 433
       }
     ],
     "_prefab": null,
@@ -15884,7 +15993,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 428
+      "__id__": 431
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -15910,7 +16019,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 428
+      "__id__": 431
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -15936,17 +16045,17 @@
     "_name": "Name",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 427
+      "__id__": 430
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 432
+        "__id__": 435
       },
       {
-        "__id__": 433
+        "__id__": 436
       }
     ],
     "_prefab": null,
@@ -15991,7 +16100,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 431
+      "__id__": 434
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -16013,7 +16122,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 431
+      "__id__": 434
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -16039,17 +16148,17 @@
     "_name": "Explan",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 427
+      "__id__": 430
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 435
+        "__id__": 438
       },
       {
-        "__id__": 436
+        "__id__": 439
       }
     ],
     "_prefab": null,
@@ -16094,7 +16203,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 434
+      "__id__": 437
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -16116,7 +16225,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 434
+      "__id__": 437
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -16142,7 +16251,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 427
+      "__id__": 430
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -16168,12 +16277,12 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 427
+      "__id__": 430
     },
     "_enabled": true,
     "GameManager": null,
     "ChooseSkill": {
-      "__id__": 421
+      "__id__": 424
     },
     "SkillNum": 0,
     "Choosed": null
@@ -16183,7 +16292,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 427
+      "__id__": 430
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -16209,30 +16318,30 @@
     "_name": "Skill1",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 426
+      "__id__": 429
     },
     "_children": [
       {
-        "__id__": 441
-      },
-      {
-        "__id__": 443
+        "__id__": 444
       },
       {
         "__id__": 446
+      },
+      {
+        "__id__": 449
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 448
+        "__id__": 451
       },
       {
-        "__id__": 449
+        "__id__": 452
       },
       {
-        "__id__": 450
+        "__id__": 453
       }
     ],
     "_prefab": null,
@@ -16277,14 +16386,14 @@
     "_name": "Choosed",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 440
+      "__id__": 443
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 442
+        "__id__": 445
       }
     ],
     "_prefab": null,
@@ -16329,7 +16438,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 441
+      "__id__": 444
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -16355,17 +16464,17 @@
     "_name": "Name",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 440
+      "__id__": 443
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 444
+        "__id__": 447
       },
       {
-        "__id__": 445
+        "__id__": 448
       }
     ],
     "_prefab": null,
@@ -16410,7 +16519,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 443
+      "__id__": 446
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -16432,7 +16541,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 443
+      "__id__": 446
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -16458,14 +16567,14 @@
     "_name": "Explan",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 440
+      "__id__": 443
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 447
+        "__id__": 450
       }
     ],
     "_prefab": null,
@@ -16510,7 +16619,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 446
+      "__id__": 449
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -16532,7 +16641,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 440
+      "__id__": 443
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -16558,12 +16667,12 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 440
+      "__id__": 443
     },
     "_enabled": true,
     "GameManager": null,
     "ChooseSkill": {
-      "__id__": 421
+      "__id__": 424
     },
     "SkillNum": 1,
     "Choosed": null
@@ -16573,7 +16682,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 440
+      "__id__": 443
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -16599,30 +16708,30 @@
     "_name": "Skill2",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 426
+      "__id__": 429
     },
     "_children": [
       {
-        "__id__": 452
-      },
-      {
-        "__id__": 454
+        "__id__": 455
       },
       {
         "__id__": 457
+      },
+      {
+        "__id__": 460
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 459
+        "__id__": 462
       },
       {
-        "__id__": 460
+        "__id__": 463
       },
       {
-        "__id__": 461
+        "__id__": 464
       }
     ],
     "_prefab": null,
@@ -16667,14 +16776,14 @@
     "_name": "Choosed",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 451
+      "__id__": 454
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 453
+        "__id__": 456
       }
     ],
     "_prefab": null,
@@ -16719,7 +16828,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 452
+      "__id__": 455
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -16745,17 +16854,17 @@
     "_name": "Name",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 451
+      "__id__": 454
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 455
+        "__id__": 458
       },
       {
-        "__id__": 456
+        "__id__": 459
       }
     ],
     "_prefab": null,
@@ -16800,7 +16909,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 454
+      "__id__": 457
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -16822,7 +16931,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 454
+      "__id__": 457
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -16848,14 +16957,14 @@
     "_name": "Explan",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 451
+      "__id__": 454
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 458
+        "__id__": 461
       }
     ],
     "_prefab": null,
@@ -16900,7 +17009,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 457
+      "__id__": 460
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -16922,7 +17031,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 451
+      "__id__": 454
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -16948,12 +17057,12 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 451
+      "__id__": 454
     },
     "_enabled": true,
     "GameManager": null,
     "ChooseSkill": {
-      "__id__": 421
+      "__id__": 424
     },
     "SkillNum": 2,
     "Choosed": null
@@ -16963,7 +17072,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 451
+      "__id__": 454
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -16989,21 +17098,21 @@
     "_name": "More",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 426
+      "__id__": 429
     },
     "_children": [
       {
-        "__id__": 463
+        "__id__": 466
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 465
+        "__id__": 468
       },
       {
-        "__id__": 466
+        "__id__": 469
       }
     ],
     "_prefab": null,
@@ -17048,14 +17157,14 @@
     "_name": "Explan",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 462
+      "__id__": 465
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 464
+        "__id__": 467
       }
     ],
     "_prefab": null,
@@ -17100,7 +17209,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 463
+      "__id__": 466
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -17122,7 +17231,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 462
+      "__id__": 465
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -17148,7 +17257,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 462
+      "__id__": 465
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -17174,7 +17283,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 426
+      "__id__": 429
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -17200,7 +17309,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 425
+      "__id__": 428
     },
     "_enabled": true,
     "_type": 0,
@@ -17214,7 +17323,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 425
+      "__id__": 428
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -17222,7 +17331,7 @@
     "_alignFlags": 1,
     "_left": 0,
     "_right": 0,
-    "_top": 61.5,
+    "_top": 187.5,
     "_bottom": 0,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
@@ -17240,11 +17349,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 421
+      "__id__": 424
     },
     "_enabled": true,
     "content": {
-      "__id__": 426
+      "__id__": 429
     },
     "horizontal": true,
     "vertical": false,
@@ -17262,7 +17371,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 421
+      "__id__": 424
     },
     "_enabled": true,
     "GameManager": null,
@@ -17274,7 +17383,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 421
+      "__id__": 424
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -17284,7 +17393,7 @@
     "_right": 0,
     "_top": 0,
     "_bottom": 0,
-    "_verticalCenter": 232,
+    "_verticalCenter": 317,
     "_horizontalCenter": 16.5,
     "_isAbsLeft": true,
     "_isAbsRight": true,
@@ -17304,23 +17413,23 @@
     },
     "_children": [
       {
-        "__id__": 474
+        "__id__": 477
       },
       {
-        "__id__": 477
+        "__id__": 480
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 526
+        "__id__": 529
       },
       {
-        "__id__": 527
+        "__id__": 530
       },
       {
-        "__id__": 528
+        "__id__": 531
       }
     ],
     "_prefab": null,
@@ -17351,7 +17460,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": -285,
-      "y": -91
+      "y": -132
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -17365,17 +17474,17 @@
     "_name": "Label_ActiveSkill",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 473
+      "__id__": 476
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 475
+        "__id__": 478
       },
       {
-        "__id__": 476
+        "__id__": 479
       }
     ],
     "_prefab": null,
@@ -17420,7 +17529,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 474
+      "__id__": 477
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -17442,7 +17551,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 474
+      "__id__": 477
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -17468,21 +17577,21 @@
     "_name": "view",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 473
+      "__id__": 476
     },
     "_children": [
       {
-        "__id__": 478
+        "__id__": 481
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 524
+        "__id__": 527
       },
       {
-        "__id__": 525
+        "__id__": 528
       }
     ],
     "_prefab": null,
@@ -17527,27 +17636,27 @@
     "_name": "content",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 477
+      "__id__": 480
     },
     "_children": [
       {
-        "__id__": 479
+        "__id__": 482
       },
       {
-        "__id__": 492
+        "__id__": 495
       },
       {
-        "__id__": 505
+        "__id__": 508
       },
       {
-        "__id__": 518
+        "__id__": 521
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 523
+        "__id__": 526
       }
     ],
     "_prefab": null,
@@ -17592,30 +17701,30 @@
     "_name": "Skill0",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 478
+      "__id__": 481
     },
     "_children": [
-      {
-        "__id__": 480
-      },
       {
         "__id__": 483
       },
       {
         "__id__": 486
+      },
+      {
+        "__id__": 489
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 489
+        "__id__": 492
       },
       {
-        "__id__": 490
+        "__id__": 493
       },
       {
-        "__id__": 491
+        "__id__": 494
       }
     ],
     "_prefab": null,
@@ -17660,17 +17769,17 @@
     "_name": "Choosed",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 479
+      "__id__": 482
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 481
+        "__id__": 484
       },
       {
-        "__id__": 482
+        "__id__": 485
       }
     ],
     "_prefab": null,
@@ -17715,7 +17824,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 480
+      "__id__": 483
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -17741,7 +17850,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 480
+      "__id__": 483
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -17767,17 +17876,17 @@
     "_name": "Name",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 479
+      "__id__": 482
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 484
+        "__id__": 487
       },
       {
-        "__id__": 485
+        "__id__": 488
       }
     ],
     "_prefab": null,
@@ -17822,7 +17931,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 483
+      "__id__": 486
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -17844,7 +17953,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 483
+      "__id__": 486
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -17870,17 +17979,17 @@
     "_name": "Explan",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 479
+      "__id__": 482
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 487
+        "__id__": 490
       },
       {
-        "__id__": 488
+        "__id__": 491
       }
     ],
     "_prefab": null,
@@ -17925,7 +18034,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 486
+      "__id__": 489
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -17947,7 +18056,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 486
+      "__id__": 489
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -17973,7 +18082,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 479
+      "__id__": 482
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -17999,12 +18108,12 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 479
+      "__id__": 482
     },
     "_enabled": true,
     "GameManager": null,
     "ChooseSkill": {
-      "__id__": 473
+      "__id__": 476
     },
     "SkillNum": 0,
     "Choosed": null
@@ -18014,7 +18123,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 479
+      "__id__": 482
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -18040,30 +18149,30 @@
     "_name": "Skill1",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 478
+      "__id__": 481
     },
     "_children": [
-      {
-        "__id__": 493
-      },
       {
         "__id__": 496
       },
       {
         "__id__": 499
+      },
+      {
+        "__id__": 502
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 502
+        "__id__": 505
       },
       {
-        "__id__": 503
+        "__id__": 506
       },
       {
-        "__id__": 504
+        "__id__": 507
       }
     ],
     "_prefab": null,
@@ -18108,17 +18217,17 @@
     "_name": "Choosed",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 492
+      "__id__": 495
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 494
+        "__id__": 497
       },
       {
-        "__id__": 495
+        "__id__": 498
       }
     ],
     "_prefab": null,
@@ -18163,7 +18272,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 493
+      "__id__": 496
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -18189,7 +18298,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 493
+      "__id__": 496
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -18215,17 +18324,17 @@
     "_name": "Name",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 492
+      "__id__": 495
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 497
+        "__id__": 500
       },
       {
-        "__id__": 498
+        "__id__": 501
       }
     ],
     "_prefab": null,
@@ -18270,7 +18379,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 496
+      "__id__": 499
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -18292,7 +18401,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 496
+      "__id__": 499
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -18318,17 +18427,17 @@
     "_name": "Explan",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 492
+      "__id__": 495
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 500
+        "__id__": 503
       },
       {
-        "__id__": 501
+        "__id__": 504
       }
     ],
     "_prefab": null,
@@ -18373,7 +18482,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 499
+      "__id__": 502
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -18395,7 +18504,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 499
+      "__id__": 502
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -18421,7 +18530,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 492
+      "__id__": 495
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -18447,12 +18556,12 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 492
+      "__id__": 495
     },
     "_enabled": true,
     "GameManager": null,
     "ChooseSkill": {
-      "__id__": 473
+      "__id__": 476
     },
     "SkillNum": 1,
     "Choosed": null
@@ -18462,7 +18571,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 492
+      "__id__": 495
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -18488,30 +18597,30 @@
     "_name": "Skill2",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 478
+      "__id__": 481
     },
     "_children": [
-      {
-        "__id__": 506
-      },
       {
         "__id__": 509
       },
       {
         "__id__": 512
+      },
+      {
+        "__id__": 515
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 515
+        "__id__": 518
       },
       {
-        "__id__": 516
+        "__id__": 519
       },
       {
-        "__id__": 517
+        "__id__": 520
       }
     ],
     "_prefab": null,
@@ -18556,17 +18665,17 @@
     "_name": "Choosed",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 505
+      "__id__": 508
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 507
+        "__id__": 510
       },
       {
-        "__id__": 508
+        "__id__": 511
       }
     ],
     "_prefab": null,
@@ -18611,7 +18720,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 506
+      "__id__": 509
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -18637,7 +18746,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 506
+      "__id__": 509
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -18663,17 +18772,17 @@
     "_name": "Name",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 505
+      "__id__": 508
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 510
+        "__id__": 513
       },
       {
-        "__id__": 511
+        "__id__": 514
       }
     ],
     "_prefab": null,
@@ -18718,7 +18827,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 509
+      "__id__": 512
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -18740,7 +18849,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 509
+      "__id__": 512
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -18766,17 +18875,17 @@
     "_name": "Explan",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 505
+      "__id__": 508
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 513
+        "__id__": 516
       },
       {
-        "__id__": 514
+        "__id__": 517
       }
     ],
     "_prefab": null,
@@ -18821,7 +18930,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 512
+      "__id__": 515
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -18843,7 +18952,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 512
+      "__id__": 515
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -18869,7 +18978,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 505
+      "__id__": 508
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -18895,12 +19004,12 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 505
+      "__id__": 508
     },
     "_enabled": true,
     "GameManager": null,
     "ChooseSkill": {
-      "__id__": 473
+      "__id__": 476
     },
     "SkillNum": 2,
     "Choosed": null
@@ -18910,7 +19019,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 505
+      "__id__": 508
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -18936,21 +19045,21 @@
     "_name": "More",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 478
+      "__id__": 481
     },
     "_children": [
       {
-        "__id__": 519
+        "__id__": 522
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 521
+        "__id__": 524
       },
       {
-        "__id__": 522
+        "__id__": 525
       }
     ],
     "_prefab": null,
@@ -18995,14 +19104,14 @@
     "_name": "Explan",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 518
+      "__id__": 521
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 520
+        "__id__": 523
       }
     ],
     "_prefab": null,
@@ -19047,7 +19156,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 519
+      "__id__": 522
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -19069,7 +19178,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 518
+      "__id__": 521
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -19095,7 +19204,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 518
+      "__id__": 521
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -19121,7 +19230,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 478
+      "__id__": 481
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -19147,7 +19256,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 477
+      "__id__": 480
     },
     "_enabled": true,
     "_type": 0,
@@ -19161,7 +19270,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 477
+      "__id__": 480
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -19187,11 +19296,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 473
+      "__id__": 476
     },
     "_enabled": true,
     "content": {
-      "__id__": 478
+      "__id__": 481
     },
     "horizontal": true,
     "vertical": false,
@@ -19209,7 +19318,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 473
+      "__id__": 476
     },
     "_enabled": true,
     "GameManager": null,
@@ -19221,7 +19330,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 473
+      "__id__": 476
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -19231,7 +19340,7 @@
     "_right": 0,
     "_top": 0,
     "_bottom": 0,
-    "_verticalCenter": -91,
+    "_verticalCenter": -132,
     "_horizontalCenter": 16.5,
     "_isAbsLeft": true,
     "_isAbsRight": true,
@@ -19251,20 +19360,20 @@
     },
     "_children": [
       {
-        "__id__": 530
-      },
-      {
         "__id__": 533
       },
       {
         "__id__": 536
+      },
+      {
+        "__id__": 539
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 539
+        "__id__": 542
       }
     ],
     "_prefab": null,
@@ -19295,7 +19404,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": -269,
-      "y": -307
+      "y": -337
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -19309,17 +19418,17 @@
     "_name": "Background",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 529
+      "__id__": 532
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 531
+        "__id__": 534
       },
       {
-        "__id__": 532
+        "__id__": 535
       }
     ],
     "_prefab": null,
@@ -19364,7 +19473,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 530
+      "__id__": 533
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -19390,7 +19499,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 530
+      "__id__": 533
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -19416,17 +19525,17 @@
     "_name": "checkmark",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 529
+      "__id__": 532
     },
     "_children": [],
     "_tag": -1,
     "_active": false,
     "_components": [
       {
-        "__id__": 534
+        "__id__": 537
       },
       {
-        "__id__": 535
+        "__id__": 538
       }
     ],
     "_prefab": null,
@@ -19471,7 +19580,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 533
+      "__id__": 536
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -19497,7 +19606,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 533
+      "__id__": 536
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -19523,17 +19632,17 @@
     "_name": "New Label",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 529
+      "__id__": 532
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 537
+        "__id__": 540
       },
       {
-        "__id__": 538
+        "__id__": 541
       }
     ],
     "_prefab": null,
@@ -19578,7 +19687,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 536
+      "__id__": 539
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -19600,7 +19709,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 536
+      "__id__": 539
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -19626,7 +19735,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 529
+      "__id__": 532
     },
     "_enabled": true,
     "transition": 3,
@@ -19670,11 +19779,11 @@
     "hoverSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
-      "__id__": 530
+      "__id__": 533
     },
     "toggleGroup": null,
     "checkMark": {
-      "__id__": 534
+      "__id__": 537
     },
     "checkEvents": [],
     "_N$isChecked": false
@@ -19688,29 +19797,29 @@
     },
     "_children": [
       {
-        "__id__": 541
+        "__id__": 544
       },
       {
-        "__id__": 543
+        "__id__": 546
       },
       {
-        "__id__": 545
+        "__id__": 548
       },
       {
-        "__id__": 551
+        "__id__": 554
       }
     ],
     "_tag": -1,
     "_active": false,
     "_components": [
       {
-        "__id__": 553
+        "__id__": 556
       },
       {
-        "__id__": 554
+        "__id__": 557
       },
       {
-        "__id__": 555
+        "__id__": 558
       }
     ],
     "_prefab": null,
@@ -19755,14 +19864,14 @@
     "_name": "New Sprite(Splash)",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 540
+      "__id__": 543
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 542
+        "__id__": 545
       }
     ],
     "_prefab": null,
@@ -19807,7 +19916,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 541
+      "__id__": 544
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -19833,14 +19942,14 @@
     "_name": "Sprite",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 540
+      "__id__": 543
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 544
+        "__id__": 547
       }
     ],
     "_prefab": null,
@@ -19885,7 +19994,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 543
+      "__id__": 546
     },
     "_enabled": true,
     "_spriteFrame": null,
@@ -19909,21 +20018,21 @@
     "_name": "Back",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 540
+      "__id__": 543
     },
     "_children": [
       {
-        "__id__": 546
+        "__id__": 549
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 548
+        "__id__": 551
       },
       {
-        "__id__": 549
+        "__id__": 552
       }
     ],
     "_prefab": null,
@@ -19968,14 +20077,14 @@
     "_name": "Label",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 545
+      "__id__": 548
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 547
+        "__id__": 550
       }
     ],
     "_prefab": null,
@@ -20020,7 +20129,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 546
+      "__id__": 549
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -20042,7 +20151,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 545
+      "__id__": 548
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -20068,7 +20177,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 545
+      "__id__": 548
     },
     "_enabled": true,
     "transition": 2,
@@ -20090,7 +20199,7 @@
     "zoomScale": 1.2,
     "clickEvents": [
       {
-        "__id__": 550
+        "__id__": 553
       }
     ],
     "_N$interactable": true,
@@ -20128,13 +20237,13 @@
       "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
     },
     "_N$target": {
-      "__id__": 545
+      "__id__": 548
     }
   },
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 540
+      "__id__": 543
     },
     "component": "UIcontrol",
     "handler": "OnPressClose",
@@ -20145,14 +20254,14 @@
     "_name": "New Label",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 540
+      "__id__": 543
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 552
+        "__id__": 555
       }
     ],
     "_prefab": null,
@@ -20197,7 +20306,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 551
+      "__id__": 554
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -20219,7 +20328,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 540
+      "__id__": 543
     },
     "_enabled": true,
     "GameManager": null
@@ -20229,11 +20338,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 540
+      "__id__": 543
     },
     "_enabled": true,
     "rankingScrollView": {
-      "__id__": 544
+      "__id__": 547
     }
   },
   {
@@ -20241,7 +20350,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 540
+      "__id__": 543
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -20271,26 +20380,26 @@
     },
     "_children": [
       {
-        "__id__": 557
+        "__id__": 560
       },
       {
-        "__id__": 559
+        "__id__": 562
       },
       {
-        "__id__": 561
+        "__id__": 564
       },
       {
-        "__id__": 567
+        "__id__": 570
       }
     ],
     "_tag": -1,
-    "_active": false,
+    "_active": true,
     "_components": [
       {
-        "__id__": 574
+        "__id__": 577
       },
       {
-        "__id__": 575
+        "__id__": 578
       }
     ],
     "_prefab": null,
@@ -20335,14 +20444,14 @@
     "_name": "Point",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 556
+      "__id__": 559
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 558
+        "__id__": 561
       }
     ],
     "_prefab": null,
@@ -20387,7 +20496,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 557
+      "__id__": 560
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -20413,14 +20522,14 @@
     "_name": "Title",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 556
+      "__id__": 559
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 560
+        "__id__": 563
       }
     ],
     "_prefab": null,
@@ -20465,7 +20574,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 559
+      "__id__": 562
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -20487,21 +20596,21 @@
     "_name": "Back",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 556
+      "__id__": 559
     },
     "_children": [
       {
-        "__id__": 562
+        "__id__": 565
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 564
+        "__id__": 567
       },
       {
-        "__id__": 565
+        "__id__": 568
       }
     ],
     "_prefab": null,
@@ -20546,14 +20655,14 @@
     "_name": "Label",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 561
+      "__id__": 564
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 563
+        "__id__": 566
       }
     ],
     "_prefab": null,
@@ -20598,7 +20707,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 562
+      "__id__": 565
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -20620,7 +20729,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 561
+      "__id__": 564
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -20646,7 +20755,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 561
+      "__id__": 564
     },
     "_enabled": true,
     "transition": 2,
@@ -20668,7 +20777,7 @@
     "zoomScale": 1.2,
     "clickEvents": [
       {
-        "__id__": 566
+        "__id__": 569
       }
     ],
     "_N$interactable": true,
@@ -20706,13 +20815,13 @@
       "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
     },
     "_N$target": {
-      "__id__": 561
+      "__id__": 564
     }
   },
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 556
+      "__id__": 559
     },
     "component": "UIcontrol",
     "handler": "OnPressBcakToMenue",
@@ -20723,21 +20832,21 @@
     "_name": "New ScrollView",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 556
+      "__id__": 559
     },
     "_children": [
       {
-        "__id__": 568
+        "__id__": 571
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 572
+        "__id__": 575
       },
       {
-        "__id__": 573
+        "__id__": 576
       }
     ],
     "_prefab": null,
@@ -20782,18 +20891,18 @@
     "_name": "view",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 567
+      "__id__": 570
     },
     "_children": [
       {
-        "__id__": 569
+        "__id__": 572
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 571
+        "__id__": 574
       }
     ],
     "_prefab": null,
@@ -20838,14 +20947,14 @@
     "_name": "Guide3",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 568
+      "__id__": 571
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 570
+        "__id__": 573
       }
     ],
     "_prefab": null,
@@ -20867,7 +20976,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 550,
-      "height": 3198
+      "height": 3428
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -20876,7 +20985,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -1170
+      "y": -1405
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -20890,7 +20999,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 569
+      "__id__": 572
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -20901,7 +21010,7 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
-    "_N$string": "玩法建议及BUG反馈请私信\n知乎-命运sniper\n\n1.10-2018.07.01\n升级道具改为了方块\n升级道具现在会同时刷新2种，捡起一种后另一种消失\n更新了道具刷新位置的生成算法\n\n1.9-2018.06.30\n新增了主动技能-TheWorld\n新增了被动技能-坐享其成\n修改了一些碰撞规则以保证坐享其成技能的稳定性\n应急保险的能量消耗由5降低到3\n\n\n1.8-2018.06.29\n调整了移动速度的增长曲线，加快了前期提升速度，降低了后期提升速度\n重做了减速技能，现在减速技能根据子弹到玩家的距离确定减速程度，而且减速时子弹持续时间减半，发射间隔加倍\n降低了炸弹的作用范围\n略微修改了部分UI图标\n\nv1.7a-2018.06.25\n增加能量上限的小球现在回复5点能量，而非回满\n调整了吸引附近道具的速度，以匹配游戏后期玩家的移动速度\n调整了部分游戏参数，降低了后期子弹的速度、增加了后期子弹的大小\n修复了一个好友排名的bug\n\nv1.7-2018.06.24\n增加了被动技能-应急保险\n增加了能在小球上方显示当前剩余能量状态的功能\n现在不选择磁铁技能时也能吸引小范围内的加分道具\n现在增加能量上限的小球能够立刻回复所有能量\n\nv1.6-2018.06.23\n增加了被动技能选择\n增加了被动技能-磁铁\n略微提升了摇杆控制的流畅度\n\nv1.5a-2018.06.21\n修改了好友排名界面布局\n增加了好友排名得分每周清零功能\n\nv1.5-2018.06.20\n增加了好友排名系统\n改为竖屏操作\n\nv1.4-2018.06.17\n修改了游戏说明，分页展示不同内容\n修改了被击中后的动画效果和动画时间，现在小球被击中后会炸开\n\nv.1.3-2018.06.15\n修改了游戏结束界面，将“双击任意位置”改为通过按钮选择返回主菜单或再来一局\n\nv1.2-2018.06.14\n增加了主动技能选择功能\n增加了主动技能“炸弹”\n增加了护盾被打破时的动画及小范围消弹效果\n增加了游戏主界面，修改了游戏跳转流程\n\nv1.1-2018.06.10\n改善了游戏玩伐说明中的表述\n为防止误触，将“触摸任意位置”改为“双击任意位置”\n\nv1.0-2018.06.08\n完成基本游戏玩法",
+    "_N$string": "玩法建议及BUG反馈请私信\n知乎-命运sniper\n\n1.11-2018.07.24\n增加了难度倾向，每次游戏会随机一种难度倾向，提升该项难度的小球刷新概率更高\n\n1.10-2018.07.01\n升级道具改为了方块\n升级道具现在会同时刷新2种，捡起一种后另一种消失\n更新了道具刷新位置的生成算法\n\n1.9-2018.06.30\n新增了主动技能-TheWorld\n新增了被动技能-坐享其成\n修改了一些碰撞规则以保证坐享其成技能的稳定性\n应急保险的能量消耗由5降低到3\n\n\n1.8-2018.06.29\n调整了移动速度的增长曲线，加快了前期提升速度，降低了后期提升速度\n重做了减速技能，现在减速技能根据子弹到玩家的距离确定减速程度，而且减速时子弹持续时间减半，发射间隔加倍\n降低了炸弹的作用范围\n略微修改了部分UI图标\n\nv1.7a-2018.06.25\n增加能量上限的小球现在回复5点能量，而非回满\n调整了吸引附近道具的速度，以匹配游戏后期玩家的移动速度\n调整了部分游戏参数，降低了后期子弹的速度、增加了后期子弹的大小\n修复了一个好友排名的bug\n\nv1.7-2018.06.24\n增加了被动技能-应急保险\n增加了能在小球上方显示当前剩余能量状态的功能\n现在不选择磁铁技能时也能吸引小范围内的加分道具\n现在增加能量上限的小球能够立刻回复所有能量\n\nv1.6-2018.06.23\n增加了被动技能选择\n增加了被动技能-磁铁\n略微提升了摇杆控制的流畅度\n\nv1.5a-2018.06.21\n修改了好友排名界面布局\n增加了好友排名得分每周清零功能\n\nv1.5-2018.06.20\n增加了好友排名系统\n改为竖屏操作\n\nv1.4-2018.06.17\n修改了游戏说明，分页展示不同内容\n修改了被击中后的动画效果和动画时间，现在小球被击中后会炸开\n\nv.1.3-2018.06.15\n修改了游戏结束界面，将“双击任意位置”改为通过按钮选择返回主菜单或再来一局\n\nv1.2-2018.06.14\n增加了主动技能选择功能\n增加了主动技能“炸弹”\n增加了护盾被打破时的动画及小范围消弹效果\n增加了游戏主界面，修改了游戏跳转流程\n\nv1.1-2018.06.10\n改善了游戏玩伐说明中的表述\n为防止误触，将“触摸任意位置”改为“双击任意位置”\n\nv1.0-2018.06.08\n完成基本游戏玩法",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
     "_N$fontFamily": "Arial",
@@ -20912,7 +21021,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 568
+      "__id__": 571
     },
     "_enabled": true,
     "_type": 0,
@@ -20926,7 +21035,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 567
+      "__id__": 570
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -20952,11 +21061,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 567
+      "__id__": 570
     },
     "_enabled": true,
     "content": {
-      "__id__": 569
+      "__id__": 572
     },
     "horizontal": false,
     "vertical": true,
@@ -20974,7 +21083,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 556
+      "__id__": 559
     },
     "_enabled": true,
     "GameManager": null
@@ -20984,7 +21093,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 556
+      "__id__": 559
     },
     "_enabled": true,
     "isAlignOnce": true,
